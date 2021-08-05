@@ -7,26 +7,27 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://nus-cs1010.github.io/2021-s1/pe2.html">
       
+      
+        <link rel="canonical" href="https://nus-cs1010.github.io/2122-s1/pe2.html">
       
       <link rel="shortcut icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
     
     
       
-        <title>PE2 - CS1010 Programming Methodology</title>
+        <title>Practice Exam 2 - CS1010 Programming Methodology</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.38780c08.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.3b61ea93.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.3f72e892.min.css">
+        <link rel="stylesheet" href="assets/stylesheets/palette.39b8e14a.min.css">
         
           
           
-          <meta name="theme-color" content="#009485">
+          <meta name="theme-color" content="#546d78">
         
       
     
@@ -34,7 +35,7 @@
     
       
         
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
@@ -59,9 +60,10 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="teal" data-md-color-accent="">
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="">
       
   
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -77,9 +79,11 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="https://nus-cs1010.github.io/2021-s1" title="CS1010 Programming Methodology" class="md-header-nav__button md-logo" aria-label="CS1010 Programming Methodology">
+    <a href="https://nus-cs1010.github.io/2122-s1" title="CS1010 Programming Methodology" class="md-header-nav__button md-logo" aria-label="CS1010 Programming Methodology">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -89,18 +93,20 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
     <div class="md-header-nav__title" data-md-component="header-title">
-      
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
             CS1010 Programming Methodology
           </span>
-          <span class="md-header-nav__topic md-ellipsis">
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
             
-              PE2
+              Practice Exam 2
             
           </span>
         </div>
-      
+      </div>
     </div>
     
       <label class="md-header-nav__button md-icon" for="__search">
@@ -111,7 +117,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -146,12 +152,18 @@
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://nus-cs1010.github.io/2021-s1" title="CS1010 Programming Methodology" class="md-nav__button md-logo" aria-label="CS1010 Programming Methodology">
+    <a href="https://nus-cs1010.github.io/2122-s1" title="CS1010 Programming Methodology" class="md-nav__button md-logo" aria-label="CS1010 Programming Methodology">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -167,6 +179,7 @@
       
 
 
+
   <li class="md-nav__item">
     <a href="index.html" class="md-nav__link">
       Home
@@ -179,206 +192,19 @@
       
 
 
-  <li class="md-nav__item">
-    <a href="midterm.html" class="md-nav__link">
-      Midterm
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="final.html" class="md-nav__link">
-      Final
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="pe1.html" class="md-nav__link">
-      PE1
-    </a>
-  </li>
-
-    
-      
-      
-      
 
   
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        PE2
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="pe2.html" class="md-nav__link md-nav__link--active">
-      PE2
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#basic-info" class="md-nav__link">
-    Basic Info
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#special-restrictions" class="md-nav__link">
-    Special Restrictions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vim-configuration" class="md-nav__link">
-    Vim Configuration
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#e-exam-procedure" class="md-nav__link">
-    E-Exam Procedure
-  </a>
-  
-    <nav class="md-nav" aria-label="E-Exam Procedure">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-exam-taking-software" class="md-nav__link">
-    2.1 Exam Taking Software
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22-proctoring-protocol" class="md-nav__link">
-    2.2 Proctoring Protocol
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#24-seeking-clarifications-on-exam-questions" class="md-nav__link">
-    2.4. Seeking Clarifications on Exam Questions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#25-multi-part-exam" class="md-nav__link">
-    2.5. Multi-part Exam
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#96-completion-of-exam" class="md-nav__link">
-    9.6. Completion of Exam
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#zoom-session-assignment" class="md-nav__link">
-    Zoom Session Assignment
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#invigilators" class="md-nav__link">
-    Invigilators
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#emergency-contact-examination-issues" class="md-nav__link">
-    Emergency Contact (Examination issues)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#emergency-contact-for-technical-issues" class="md-nav__link">
-    Emergency Contact for Technical Issues
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#general-advice" class="md-nav__link">
-    General Advice
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#practice-paper" class="md-nav__link">
-    Practice Paper
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
-  </li>
-
-    
-      
-      
-      
-
-
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
-    <label class="md-nav__link" for="nav-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    
+    <label class="md-nav__link" for="nav-2">
       General
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="General" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-2">
         <span class="md-nav__icon md-icon"></span>
         General
       </label>
@@ -388,6 +214,7 @@
           
           
           
+
 
 
   <li class="md-nav__item">
@@ -402,6 +229,7 @@
           
 
 
+
   <li class="md-nav__item">
     <a href="outcomes.html" class="md-nav__link">
       Learning Outcomes
@@ -412,6 +240,7 @@
           
           
           
+
 
 
   <li class="md-nav__item">
@@ -426,6 +255,7 @@
           
 
 
+
   <li class="md-nav__item">
     <a href="accounts.html" class="md-nav__link">
       Accounts
@@ -436,6 +266,7 @@
           
           
           
+
 
 
   <li class="md-nav__item">
@@ -455,16 +286,19 @@
       
 
 
+
+  
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
-    <label class="md-nav__link" for="nav-7">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+    
+    <label class="md-nav__link" for="nav-3">
       Notes
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Notes" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+      <label class="md-nav__title" for="nav-3">
         <span class="md-nav__icon md-icon"></span>
         Notes
       </label>
@@ -474,6 +308,7 @@
           
           
           
+
 
 
   <li class="md-nav__item">
@@ -488,6 +323,7 @@
           
 
 
+
   <li class="md-nav__item">
     <a href="02-algo.html" class="md-nav__link">
       2. Computational Problem & Algorithms
@@ -495,330 +331,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="03-func.html" class="md-nav__link">
-      3. Functions
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="04-type.html" class="md-nav__link">
-      4. Types
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="05-first-c.html" class="md-nav__link">
-      5. First C Program
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="06-cs1010-io.html" class="md-nav__link">
-      6. CS1010 I/O Library
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="07-arithmetic-ops.html" class="md-nav__link">
-      7. Arithmetic Operations
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="08-if-else.html" class="md-nav__link">
-      8. Conditionals
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="09-logical-exp.html" class="md-nav__link">
-      9. Logical Expressions
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="10-assert.html" class="md-nav__link">
-      10. Assertion
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="11-loop.html" class="md-nav__link">
-      11. Loops
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="12-invariant.html" class="md-nav__link">
-      12. Loop Invariant
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="13-call-stack.html" class="md-nav__link">
-      13. Call Stack
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="14-pointers.html" class="md-nav__link">
-      14. Memory Addresses
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="15-array.html" class="md-nav__link">
-      15. Array
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="16-string.html" class="md-nav__link">
-      16. String
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="17-call-by-reference.html" class="md-nav__link">
-      17. Call by Reference
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="18-heap.html" class="md-nav__link">
-      18. Heap
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="19-md-array.html" class="md-nav__link">
-      19. Multi-dimensional Arrays
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="20-macro.html" class="md-nav__link">
-      20. C Preprocessing
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="21-assert.html" class="md-nav__link">
-      21. The assert macro
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="22-efficiency.html" class="md-nav__link">
-      22. Efficiency
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="23-search.html" class="md-nav__link">
-      23. Searching
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="24-sort.html" class="md-nav__link">
-      24. Sorting
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="25-tower.html" class="md-nav__link">
-      25. Tower of Hanoi
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="26-permutation.html" class="md-nav__link">
-      26. Permutation
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="27-queens.html" class="md-nav__link">
-      27. N Queens
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="28-struct.html" class="md-nav__link">
-      28. Struct
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="29-stdio.html" class="md-nav__link">
-      29. Standard I/O
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -829,102 +341,19 @@
       
 
 
+
+  
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
-    <label class="md-nav__link" for="nav-8">
-      Exercises
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Exercises" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
-        <span class="md-nav__icon md-icon"></span>
-        Exercises
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="ex00.html" class="md-nav__link">
-      0. Echo, Divide, Quadratic
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="ex01.html" class="md-nav__link">
-      1. GCD, Day, Leap
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="ex02.html" class="md-nav__link">
-      2. Binary, Rectangle, Fibonacci
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="ex03.html" class="md-nav__link">
-      3. Weekday, Circle, Histogram
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="ex04.html" class="md-nav__link">
-      4. Fill, Sudoku
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
     
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
-    
-    <label class="md-nav__link" for="nav-9">
+    <label class="md-nav__link" for="nav-4">
       Assignments
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Assignments" data-md-level="1">
-      <label class="md-nav__title" for="nav-9">
+      <label class="md-nav__title" for="nav-4">
         <span class="md-nav__icon md-icon"></span>
         Assignments
       </label>
@@ -936,117 +365,10 @@
           
 
 
+
   <li class="md-nav__item">
     <a href="assignment.html" class="md-nav__link">
       Overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="as01.html" class="md-nav__link">
-      1. Box, Digits, Suffix, Taxi
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="as02.html" class="md-nav__link">
-      2. Collatz, Triangle, Prime, Pattern
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="as03.html" class="md-nav__link">
-      3. ID, Kendall, Max, CountingSort
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="as04.html" class="md-nav__link">
-      4. SelectionSort, Mastermind
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="as05.html" class="md-nav__link">
-      5. Contact, Social, Life
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="as06.html" class="md-nav__link">
-      6. Add, Frequency, Permutation
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="as07.html" class="md-nav__link">
-      7. Peak, Sort, Inversion
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="as08.html" class="md-nav__link">
-      8. Walk, Maze
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="as09.html" class="md-nav__link">
-      9. Digits
     </a>
   </li>
 
@@ -1059,6 +381,7 @@
       
       
       
+
 
 
   <li class="md-nav__item">
@@ -1073,6 +396,7 @@
       
 
 
+
   <li class="md-nav__item">
     <a href="c-in-cs1010.html" class="md-nav__link">
       C in CS1010
@@ -1083,6 +407,7 @@
       
       
       
+
 
 
   <li class="md-nav__item">
@@ -1097,6 +422,7 @@
       
 
 
+
   <li class="md-nav__item">
     <a href="style.html" class="md-nav__link">
       C Style Convention
@@ -1108,17 +434,6 @@
       
       
 
-
-  <li class="md-nav__item">
-    <a href="documentation.html" class="md-nav__link">
-      C Documentation Guide
-    </a>
-  </li>
-
-    
-      
-      
-      
 
 
   <li class="md-nav__item">
@@ -1133,16 +448,19 @@
       
 
 
+
+  
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-16" type="checkbox" id="nav-16">
     
-    <label class="md-nav__link" for="nav-16">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10" >
+    
+    <label class="md-nav__link" for="nav-10">
       Software/Tools
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Software/Tools" data-md-level="1">
-      <label class="md-nav__title" for="nav-16">
+      <label class="md-nav__title" for="nav-10">
         <span class="md-nav__icon md-icon"></span>
         Software/Tools
       </label>
@@ -1152,6 +470,7 @@
           
           
           
+
 
 
   <li class="md-nav__item">
@@ -1166,6 +485,7 @@
           
 
 
+
   <li class="md-nav__item">
     <a href="unix.html" class="md-nav__link">
       UNIX
@@ -1176,6 +496,7 @@
           
           
           
+
 
 
   <li class="md-nav__item">
@@ -1190,6 +511,7 @@
           
 
 
+
   <li class="md-nav__item">
     <a href="vim.html" class="md-nav__link">
       Vim
@@ -1202,6 +524,7 @@
           
 
 
+
   <li class="md-nav__item">
     <a href="tmate.html" class="md-nav__link">
       TMate
@@ -1212,6 +535,7 @@
           
           
           
+
 
 
   <li class="md-nav__item">
@@ -1231,21 +555,10 @@
       
 
 
-  <li class="md-nav__item">
-    <a href="archive.html" class="md-nav__link">
-      Older Announcements
-    </a>
-  </li>
-
-    
-      
-      
-      
-
 
   <li class="md-nav__item">
     <a href="1819s1.html" class="md-nav__link">
-      18/19 Sem 1
+      18/19 Semester 1
     </a>
   </li>
 
@@ -1257,7 +570,8 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1507,47 +821,12 @@
         
 <footer class="md-footer">
   
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="pe1.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                PE1
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="about.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                About CS1010
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright by Department of Computer Science, National University of Singapore 2020
+            Copyright by Department of Computer Science, National University of Singapore 2021
           </div>
         
         Made with
@@ -1562,15 +841,15 @@
       
     </div>
     
-      <script src="assets/javascripts/vendor.77e55a48.min.js"></script>
-      <script src="assets/javascripts/bundle.9554a270.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
           base: ".",
           features: [],
           search: Object.assign({
-            worker: "assets/javascripts/worker/search.4ac00218.min.js"
+            worker: "assets/javascripts/worker/search.8c7e0a7e.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
