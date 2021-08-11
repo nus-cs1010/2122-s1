@@ -1,0 +1,948 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://nus-cs1010.github.io/2122-s1/slides/xterm/index.html">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+    
+    
+      
+        <title>[![xterm.js logo](logo-full.png)](https://xtermjs.org) - CS1010 Programming Methodology</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://nus-cs1010.github.io/2122-s1" title="CS1010 Programming Methodology" class="md-header-nav__button md-logo" aria-label="CS1010 Programming Methodology">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            CS1010 Programming Methodology
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              [![xterm.js logo](logo-full.png)](https://xtermjs.org)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://nus-cs1010.github.io/2122-s1" title="CS1010 Programming Methodology" class="md-nav__button md-logo" aria-label="CS1010 Programming Methodology">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    CS1010 Programming Methodology
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../index.html" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    
+    <label class="md-nav__link" for="nav-2">
+      General
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="General" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        General
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../about.html" class="md-nav__link">
+      About CS1010
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../outcomes.html" class="md-nav__link">
+      Learning Outcomes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../schedule.html" class="md-nav__link">
+      Schedule
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../accounts.html" class="md-nav__link">
+      Accounts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../policies.html" class="md-nav__link">
+      Policies
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+    
+    <label class="md-nav__link" for="nav-3">
+      Notes
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Notes" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Notes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../01-program.html" class="md-nav__link">
+      1. What is a Program?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../02-algo.html" class="md-nav__link">
+      2. Computational Problem & Algorithms
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+    
+    <label class="md-nav__link" for="nav-4">
+      Assignments
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Assignments" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Assignments
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../assignment.html" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../readings.html" class="md-nav__link">
+      Readings
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../c-in-cs1010.html" class="md-nav__link">
+      C in CS1010
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../library.html" class="md-nav__link">
+      CS1010 I/O Library
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../style.html" class="md-nav__link">
+      C Style Convention
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../messages.html" class="md-nav__link">
+      Compiler Messages
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10" >
+    
+    <label class="md-nav__link" for="nav-10">
+      Software/Tools
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Software/Tools" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        <span class="md-nav__icon md-icon"></span>
+        Software/Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../environments.html" class="md-nav__link">
+      Programming Environments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../unix.html" class="md-nav__link">
+      UNIX
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../clang.html" class="md-nav__link">
+      CLang
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../vim.html" class="md-nav__link">
+      Vim
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tmate.html" class="md-nav__link">
+      TMate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../zoom.html" class="md-nav__link">
+      Zoom
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../1819s1.html" class="md-nav__link">
+      18/19 Semester 1
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-xtermjs-is-not" class="md-nav__link">
+    What xterm.js is not
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#importing" class="md-nav__link">
+    Importing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addons" class="md-nav__link">
+    Addons
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#browser-support" class="md-nav__link">
+    Browser Support
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    API
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-uses" class="md-nav__link">
+    Real-world uses
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#releases" class="md-nav__link">
+    Releases
+  </a>
+  
+    <nav class="md-nav" aria-label="Releases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beta-builds" class="md-nav__link">
+    Beta builds
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing" class="md-nav__link">
+    Contributing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license-agreement" class="md-nav__link">
+    License Agreement
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="_1"><a href="https://xtermjs.org"><img alt="xterm.js logo" src="logo-full.png" /></a></h1>
+<p><a href="https://dev.azure.com/xtermjs/xterm.js/_build/latest?definitionId=3"><img alt="Build Status" src="https://dev.azure.com/xtermjs/xterm.js/_apis/build/status/xtermjs.xterm.js" /></a></p>
+<p>Xterm.js is a front-end component written in TypeScript that lets applications bring fully-featured terminals to their users in the browser. It's used by popular projects such as VS Code, Hyper and Theia.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li><strong>Terminal apps just work</strong>: Xterm.js works with most terminal apps such as <code>bash</code>, <code>vim</code>, and <code>tmux</code>, including support for curses-based apps and mouse events.</li>
+<li><strong>Performant</strong>: Xterm.js is <em>really</em> fast, it even includes a GPU-accelerated renderer.</li>
+<li><strong>Rich Unicode support</strong>: Supports CJK, emojis, and IMEs.</li>
+<li><strong>Self-contained</strong>: Requires zero dependencies to work.</li>
+<li><strong>Accessible</strong>: Screen reader and minimum contrast ratio support can be turned on.</li>
+<li><strong>And much more</strong>: Links, theming, addons, well documented API, etc.</li>
+</ul>
+<h2 id="what-xtermjs-is-not">What xterm.js is not</h2>
+<ul>
+<li>Xterm.js is not a terminal application that you can download and use on your computer.</li>
+<li>Xterm.js is not <code>bash</code>. Xterm.js can be connected to processes like <code>bash</code> and let you interact with them (provide input, receive output).</li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<p>First, you need to install the module, we ship exclusively through <a href="https://www.npmjs.com/">npm</a>, so you need that installed and then add xterm.js as a dependency by running:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>npm install xterm
+</code></pre></div>
+</td></tr></table>
+<p>To start using xterm.js on your browser, add the <code>xterm.js</code> and <code>xterm.css</code> to the head of your HTML page. Then create a <code>&lt;div id="terminal"&gt;&lt;/div&gt;</code> onto which xterm can attach itself. Finally, instantiate the <code>Terminal</code> object and then call the <code>open</code> function with the DOM object of the <code>div</code>.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="cp">&lt;!doctype html&gt;</span>
+  <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;node_modules/xterm/css/xterm.css&quot;</span> <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;node_modules/xterm/lib/xterm.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;terminal&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+        <span class="kd">var</span> <span class="nx">term</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Terminal</span><span class="p">();</span>
+        <span class="nx">term</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;terminal&#39;</span><span class="p">));</span>
+        <span class="nx">term</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;Hello from \x1B[1;3;31mxterm.js\x1B[0m $ &#39;</span><span class="p">)</span>
+      <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="importing">Importing</h3>
+<p>The recommended way to load xterm.js is via the ES6 module syntax:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">Terminal</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;xterm&#39;</span><span class="p">;</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="addons">Addons</h3>
+<p>⚠️ <em>This section describes the new addon format introduced in v3.14.0, see <a href="https://github.com/xtermjs/xterm.js/blob/3.14.2/README.md#addons">here</a> for the instructions on the old format</em></p>
+<p>Addons are separate modules that extend the <code>Terminal</code> by building on the <a href="https://github.com/xtermjs/xterm.js/blob/master/typings/xterm.d.ts">xterm.js API</a>. To use an addon, you first need to install it in your project:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>npm i -S xterm-addon-web-links
+</code></pre></div>
+</td></tr></table>
+<p>Then import the addon, instantiate it and call <code>Terminal.loadAddon</code>:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">Terminal</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;xterm&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">WebLinksAddon</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;xterm-addon-web-links&#39;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">terminal</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Terminal</span><span class="p">();</span>
+<span class="c1">// Load WebLinksAddon on terminal, this is all that&#39;s needed to get web links</span>
+<span class="c1">// working in the terminal.</span>
+<span class="nx">terminal</span><span class="p">.</span><span class="nx">loadAddon</span><span class="p">(</span><span class="k">new</span> <span class="nx">WebLinksAddon</span><span class="p">());</span>
+</code></pre></div>
+</td></tr></table>
+<p>The xterm.js team maintains the following addons, but anyone can build them:</p>
+<ul>
+<li><a href="https://github.com/xtermjs/xterm.js/tree/master/addons/xterm-addon-attach"><code>xterm-addon-attach</code></a>: Attaches to a server running a process via a websocket</li>
+<li><a href="https://github.com/xtermjs/xterm.js/tree/master/addons/xterm-addon-fit"><code>xterm-addon-fit</code></a>: Fits the terminal to the containing element</li>
+<li><a href="https://github.com/xtermjs/xterm.js/tree/master/addons/xterm-addon-search"><code>xterm-addon-search</code></a>: Adds search functionality</li>
+<li><a href="https://github.com/xtermjs/xterm.js/tree/master/addons/xterm-addon-web-links"><code>xterm-addon-web-links</code></a>: Adds web link detection and interaction</li>
+</ul>
+<h2 id="browser-support">Browser Support</h2>
+<p>Since xterm.js is typically implemented as a developer tool, only modern browsers are supported officially. Specifically the latest versions of <em>Chrome</em>, <em>Edge</em>, <em>Firefox</em>, and <em>Safari</em>.</p>
+<p>We also partially support <em>Internet Explorer 11</em>, meaning xterm.js should work for the most part, but we reserve the right to not provide workarounds specifically for it unless it's absolutely necessary to get the basic input/output flow working.</p>
+<p>Xterm.js works seamlessly in <a href="https://electronjs.org/">Electron</a> apps and may even work on earlier versions of the browsers. These are the versions we strive to keep working.</p>
+<h2 id="api">API</h2>
+<p>The full API for xterm.js is contained within the <a href="https://github.com/xtermjs/xterm.js/blob/master/typings/xterm.d.ts">TypeScript declaration file</a>, use the branch/tag picker in GitHub (<code>w</code>) to navigate to the correct version of the API.</p>
+<p>Note that some APIs are marked <em>experimental</em>, these are added to enable experimentation with new ideas without committing to support it like a normal <a href="https://semver.org/">semver</a> API. Note that these APIs can change radically between versions, so be sure to read release notes if you plan on using experimental APIs.</p>
+<h2 id="real-world-uses">Real-world uses</h2>
+<p>Xterm.js is used in several world-class applications to provide great terminal experiences.</p>
+<ul>
+<li><a href="https://www.sourcelair.com/"><strong>SourceLair</strong></a>: In-browser IDE that provides its users with fully-featured Linux terminals based on xterm.js.</li>
+<li><a href="http://code.visualstudio.com/"><strong>Microsoft Visual Studio Code</strong></a>: Modern, versatile, and powerful open source code editor that provides an integrated terminal based on xterm.js.</li>
+<li><a href="https://github.com/tsl0922/ttyd"><strong>ttyd</strong></a>: A command-line tool for sharing terminal over the web, with fully-featured terminal emulation based on xterm.js.</li>
+<li><a href="https://www.katacoda.com/"><strong>Katacoda</strong></a>: Katacoda is an Interactive Learning Platform for software developers, covering the latest Cloud Native technologies.</li>
+<li><a href="http://www.eclipse.org/che"><strong>Eclipse Che</strong></a>: Developer workspace server, cloud IDE, and Eclipse next-generation IDE.</li>
+<li><a href="http://www.codenvy.com"><strong>Codenvy</strong></a>: Cloud workspaces for development teams.</li>
+<li><a href="https://coderpad.io"><strong>CoderPad</strong></a>: Online interviewing platform for programmers. Run code in many programming languages, with results displayed by xterm.js.</li>
+<li><a href="https://github.com/billchurch/WebSSH2"><strong>WebSSH2</strong></a>: A web based SSH2 client using xterm.js, socket.io, and ssh2.</li>
+<li><a href="https://github.com/spyder-ide/spyder-terminal"><strong>Spyder Terminal</strong></a>: A full fledged system terminal embedded on Spyder IDE.</li>
+<li><a href="https://cloudcmd.io" title="Cloud Commander"><strong>Cloud Commander</strong></a>: Orthodox web file manager with console and editor.</li>
+<li><a href="https://next.tech" title="Next Tech"><strong>Next Tech</strong></a>: Online platform for interactive coding and web development courses. Live container-backed terminal uses xterm.js.</li>
+<li><a href="https://www.rstudio.com/products/RStudio" title="RStudio"><strong>RStudio</strong></a>: RStudio is an integrated development environment (IDE) for R.</li>
+<li><a href="https://github.com/jsmecham/atom-terminal-tab"><strong>Terminal for Atom</strong></a>: A simple terminal for the Atom text editor.</li>
+<li><a href="https://orionhub.org"><strong>Eclipse Orion</strong></a>: A modern, open source software development environment that runs in the cloud. Code, deploy, and run in the cloud.</li>
+<li><a href="https://github.com/gravitational/teleport"><strong>Gravitational Teleport</strong></a>: Gravitational Teleport is a modern SSH server for remotely accessing clusters of Linux servers via SSH or HTTPS.</li>
+<li><a href="https://en.hexlet.io"><strong>Hexlet</strong></a>: Practical programming courses (JavaScript, PHP, Unix, databases, functional programming). A steady path from the first line of code to the first job.</li>
+<li><a href="https://github.com/aerokube/selenoid-ui"><strong>Selenoid UI</strong></a>: Simple UI for the scalable golang implementation of Selenium Hub named Selenoid. We use XTerm for streaming logs over websockets from docker containers.</li>
+<li><a href="https://portainer.io"><strong>Portainer</strong></a>: Simple management UI for Docker.</li>
+<li><a href="https://github.com/stuicey/SSHy"><strong>SSHy</strong></a>: HTML5 Based SSHv2 Web Client with E2E encryption utilising xterm.js, SJCL &amp; websockets.</li>
+<li><a href="https://github.com/jupyterlab/jupyterlab"><strong>JupyterLab</strong></a>: An extensible computational environment for Jupyter, supporting interactive data science and scientific computing across all programming languages.</li>
+<li><a href="https://github.com/theia-ide/theia"><strong>Theia</strong></a>: Theia is a cloud &amp; desktop IDE framework implemented in TypeScript.</li>
+<li><a href="https://github.com/ricktbaker/opshell"><strong>Opshell</strong></a> Ops Helper tool to make life easier working with AWS instances across multiple organizations.</li>
+<li><a href="https://www.proxmox.com/en/proxmox-ve"><strong>Proxmox VE</strong></a>: Proxmox VE is a complete open-source platform for enterprise virtualization. It uses xterm.js for container terminals and the host shell.</li>
+<li><a href="https://github.com/ioquatix/script-runner"><strong>Script Runner</strong></a>: Run scripts (or a shell) in Atom.</li>
+<li><a href="https://github.com/Microsoft/WhackWhackTerminal"><strong>Whack Whack Terminal</strong></a>: Terminal emulator for Visual Studio 2017.</li>
+<li><a href="https://github.com/vterm/vterm"><strong>VTerm</strong></a>: Extensible terminal emulator based on Electron and React.</li>
+<li><a href="http://electerm.html5beta.com"><strong>electerm</strong></a>: electerm is a terminal/ssh/sftp client(mac, win, linux) based on electron/node-pty/xterm.</li>
+<li><a href="https://github.com/astefanutti/kubebox"><strong>Kubebox</strong></a>: Terminal console for Kubernetes clusters.</li>
+<li><a href="https://shell.azure.com"><strong>Azure Cloud Shell</strong></a>: Azure Cloud Shell is a Microsoft-managed admin machine built on Azure, for Azure.</li>
+<li><a href="https://atom.io/packages/atom-xterm"><strong>atom-xterm</strong></a>: Atom plugin for providing terminals inside your Atom workspace.</li>
+<li><a href="https://github.com/zhaojh329/rtty"><strong>rtty</strong></a>: Access your terminals from anywhere via the web.</li>
+<li><a href="https://github.com/ColdGrub1384/Pisth"><strong>Pisth</strong></a>: An SFTP and SSH client for iOS.</li>
+<li><a href="https://github.com/bleenco/abstruse"><strong>abstruse</strong></a>: Abstruse CI is a continuous integration platform based on Node.JS and Docker.</li>
+<li><a href="https://github.com/Microsoft/azuredatastudio"><strong>Azure Data Studio</strong></a>: A data management tool that enables working with SQL Server, Azure SQL DB and SQL DW from Windows, macOS and Linux.</li>
+<li><a href="https://github.com/matthew-matvei/freeman"><strong>FreeMAN</strong></a>: A free, cross-platform file manager for power users.</li>
+<li><a href="https://github.com/felixse/FluentTerminal"><strong>Fluent Terminal</strong></a>: A terminal emulator based on UWP and web technologies.</li>
+<li><a href="https://hyper.is"><strong>Hyper</strong></a>: A terminal built on web technologies.</li>
+<li><a href="https://diag.ai"><strong>Diag</strong></a>: A better way to troubleshoot problems faster. Capture, share and reapply troubleshooting knowledge so you can focus on solving problems that matter.</li>
+<li><a href="https://github.com/yudai/gotty"><strong>GoTTY</strong></a>: A simple command line tool that shares your terminal as a web application based on xterm.js.</li>
+<li><a href="https://github.com/svenstaro/genact"><strong>genact</strong></a>: A nonsense activity generator.</li>
+<li><a href="https://cpanel.com"><strong>cPanel &amp; WHM</strong></a>: The hosting platform of choice.</li>
+<li><a href="https://github.com/nutanix"><strong>Nutanix</strong></a>: Nutanix Enterprise Cloud uses xterm in the webssh functionality within Nutanix Calm, and is also looking to move our old noserial (termjs) functionality to xterm.js.</li>
+<li><a href="https://github.com/roke22/PHP-SSH2-Web-Client"><strong>SSH Web Client</strong></a>: SSH Web Client with PHP.</li>
+<li><a href="http://junolab.org/"><strong>Juno</strong></a>: A flexible Julia IDE, based on Atom.</li>
+<li><a href="https://github.com/huashengdun/webssh"><strong>webssh</strong></a>: Web based ssh client.</li>
+<li><a href="https://info-beamer.com"><strong>info-beamer hosted</strong></a>: Uses xterm.js to manage digital signage devices from the web dashboard.</li>
+<li><a href="https://github.com/jumpserver/luna"><strong>Jumpserver</strong></a>: Jumpserver Luna project, Jumpserver is a bastion server project, Luna use xterm.js for web terminal emulation.</li>
+<li><a href="https://github.com/turtle0x1/LxdMosaic"><strong>LxdMosaic</strong></a>: Uses xterm.js to give terminal access to containers through LXD</li>
+<li><a href="https://codeinterview.io"><strong>CodeInterview.io</strong></a>: A coding interview platform in 25+ languages and many web frameworks. Uses xterm.js to provide shell access.</li>
+<li><a href="https://www.bastillion.io"><strong>Bastillion</strong></a>: Bastillion is an open-source web-based SSH console that centrally manages administrative access to systems.</li>
+<li><a href="https://github.com/cubiclesoft/php-app-server/"><strong>PHP App Server</strong></a>: Create lightweight, installable almost-native applications for desktop OSes.  ExecTerminal (nicely wraps the xterm.js Terminal), TerminalManager, and RunProcessSDK are self-contained, reusable ES5+ compliant Javascript components.</li>
+<li><a href="https://github.com/qwefgh90/ng-terminal"><strong>NgTerminal</strong></a>: NgTerminal is a web terminal that leverages xterm.js on Angular 7+. You can easily add it into your application by adding <code>&lt;ng-terminal&gt;&lt;/ng-terminal&gt;</code> into your component.</li>
+<li><a href="https://tty-share.com"><strong>tty-share</strong></a>: Extremely simple terminal sharing over the Internet.</li>
+<li><a href="https://github.com/saisandeepvaddi/ten-hands"><strong>Ten Hands</strong></a>: One place to run your command-line tasks.</li>
+<li><a href="https://webassembly.sh"><strong>WebAssembly.sh</strong></a>: A WebAssembly WASI browser terminal</li>
+<li><a href="https://gus.jp"><strong>Gus</strong></a>: A shared coding pad where you can run Python with xterm.js</li>
+<li><a href="https://linode.com"><strong>Linode</strong></a>: Linode uses xterm.js to provide users a web console for their Linode instances.</li>
+<li><a href="https://www.fluffos.info"><strong>FluffOS</strong></a>: Active maintained LPMUD driver with websocket support.</li>
+<li><a href="https://atom.io/packages/x-terminal"><strong>x-terminal</strong></a>: Atom plugin for providing terminals inside your Atom workspace.</li>
+<li><a href="https://cocalc.com/"><strong>CoCalc</strong></a>: Lots of free software pre-installed, to chat, collaborate, develop, program, publish, research, share, teach, in C++, HTML, Julia, Jupyter, LaTeX, Markdown, Python, R, SageMath, Scala, ...</li>
+<li><a href="https://www.DDgame.us/"><strong>Dank Domain</strong></a>: Open source multiuser medieval game supporting old &amp; new terminal emulation.</li>
+<li><a href="https://docker-stacks.com/"><strong>DockerStacks</strong></a>: Local LAMP/LEMP development studio</li>
+<li><a href="https://codecademy.com/"><strong>Codecademy</strong></a>: Uses xterm.js in its courses on Bash. </li>
+<li><a href="https://github.com/roke22/Laravel-ssh-client"><strong>Laravel Ssh Web Client</strong></a>: Laravel server inventory with ssh web client to connect at server using xterm.js</li>
+<li><a href="https://repl.it"><strong>Repl.it</strong></a>: Collaborative browser based IDE with support for 50+ different languages.</li>
+<li><a href="https://github.com/akshaykmr/TeleType"><strong>TeleType</strong></a>: cli tool that allows you to share your terminal online conveniently. Show off mad cli-fu, help a colleague, teach, or troubleshoot.</li>
+<li><a href="https://www.intervue.io"><strong>Intervue</strong></a>: Pair programming for interviews. Multiple programming languages are supported, with results displayed by xterm.js.</li>
+<li><a href="https://trasa.io"><strong>TRASA</strong></a>: Zero trust access to Web, SSH, RDP, and Database services.  </li>
+<li><a href="https://github.com/CyanSalt/commas"><strong>Commas</strong></a>: Commas is a hackable terminal and command runner.</li>
+<li><a href="https://github.com/devtron-labs/devtron"><strong>Devtron</strong></a>: Software Delivery Workflow For Kubernetes. </li>
+<li><a href="https://github.com/nxshell/nxshell"><strong>NxShell</strong></a>: An easy to use new terminal for SSH.</li>
+<li><a href="https://dstein64.github.io/gifcast/"><strong>gifcast</strong></a>: Converts an asciinema cast to an animated GIF.</li>
+<li><a href="https://gitlab.com/mikeramsey/wizardwebssh"><strong>WizardWebssh</strong></a>: A terminal with Pyqt5 Widget for embedding, which can be used as an ssh client to connect to your ssh servers. It is written in Python, based on tornado, paramiko, and xterm.js.</li>
+<li><a href="https://wizardassistant.com/"><strong>Wizard Assistant</strong></a>: Wizard Assistant comes with advanced automation tools, preloaded common and special time-saving commands, and a built-in SSH terminal. Now you can remotely administer, troubleshoot, and analyze any system with ease. </li>
+<li><a href="https://github.com/tsadarsh/ucli"><strong>ucli</strong></a>: Command Line for everyone :family_man_woman_girl_boy: at <a href="https://www.ucli.tech">www.ucli.tech</a>.</li>
+<li><a href="https://github.com/SquitchYT/Tess/"><strong>Tess</strong></a>: Simple Terminal Fully Customizable for Everyone.</li>
+<li><a href="https://github.com/xtermjs/xterm.js/network/dependents">And much more...</a></li>
+</ul>
+<p>Do you use xterm.js in your application as well? Please <a href="https://github.com/sourcelair/xterm.js/pulls">open a Pull Request</a> to include it here. We would love to have it on our list. Note: Please add any new contributions to the end of the list only.</p>
+<h2 id="releases">Releases</h2>
+<p>Xterm.js follows a monthly release cycle roughly.</p>
+<p>All current and past releases are available on this repo's <a href="https://github.com/sourcelair/xterm.js/releases">Releases page</a>, you can view the <a href="https://github.com/xtermjs/xterm.js/wiki/Roadmap">high-level roadmap on the wiki</a> and see what we're working on now by looking through <a href="https://github.com/sourcelair/xterm.js/milestones">Milestones</a>.</p>
+<h3 id="beta-builds">Beta builds</h3>
+<p>Our CI releases beta builds to npm for every change that goes into master. Install the latest beta build with:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>npm install -S xterm@beta
+</code></pre></div>
+</td></tr></table>
+<p>These should generally be stable, but some bugs may slip in. We recommend using the beta build primarily to test out new features and to verify bug fixes.</p>
+<h2 id="contributing">Contributing</h2>
+<p>You can read the <a href="https://github.com/xtermjs/xterm.js/wiki/Contributing">guide on the wiki</a> to learn how to contribute and set up xterm.js for development.</p>
+<h2 id="license-agreement">License Agreement</h2>
+<p>If you contribute code to this project, you implicitly allow your code to be distributed under the MIT license. You are also implicitly verifying that all code is your original work.</p>
+<p>Copyright (c) 2017-2019, <a href="https://github.com/xtermjs/xterm.js/graphs/contributors">The xterm.js authors</a> (MIT License)<br>
+Copyright (c) 2014-2017, SourceLair, Private Company (<a href="https://www.sourcelair.com/home">www.sourcelair.com</a>) (MIT License)<br>
+Copyright (c) 2012-2013, Christopher Jeffrey (MIT License)</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright by Department of Computer Science, National University of Singapore 2021
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.8c7e0a7e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+      
+    
+  </body>
+</html>
