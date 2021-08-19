@@ -560,6 +560,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#stability-of-network-connection" class="md-nav__link">
+    Stability of Network Connection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -702,6 +716,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#stability-of-network-connection" class="md-nav__link">
+    Stability of Network Connection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -771,7 +799,7 @@
 </code></pre></div>
 </td></tr></table></p>
 <p>Make sure that the permission for <code>.ssh</code> both on the local machine and on PE are set to <code>700</code> and the files <code>id_rsa</code> on the local machine and <code>authorized_keys</code> on the remote machine are set to <code>600</code>.  Once set up, you need not enter your password every time you run <code>ssh</code> or <code>scp</code>.  </p>
-<h1 id="stability-of-network-connection">Stability of Network Connection</h1>
+<h2 id="stability-of-network-connection">Stability of Network Connection</h2>
 <p>Note that a stable network connection is required to use the PE hosts for a long period of time without interruption.   If you encounter frequent disconnections while working at home or on campus while connected wirelessly, please make sure that your WiFi signal is strong and there is no interference from other sources. </p>
 <h2 id="troubleshooting">Troubleshooting</h2>
 <p>Suppose you try to connect to <code>pe111</code> using:
@@ -782,7 +810,7 @@ and you get the following error:</p>
 <ol>
 <li>
 <p><code>ssh: Could not resolve hostname pe111.comp.nus.edu.sg</code></p>
-<p><code>ssh</code> cannot recognize the name <code>pe111</code>, it is likely that you are not connected to the SoC VPN.</p>
+<p><code>ssh</code> cannot recognize the name <code>pe111</code>, it is likely that you are not connected to the SoC VPN, <ins class="critic">or downloaded the wrong version of FortiClient VPN</ins>.</p>
 </li>
 <li>
 <p><code>Connection closed by 192.168.48.xxx port 22</code></p>
@@ -792,7 +820,7 @@ and you get the following error:</p>
 <li>
 <p><code>Permission denied, please try again</code></p>
 <p>You did not enter the correct password or username.  Please use the username and password 
-of your SoC UNIX account which you have created here: <a href="https://mysoc.nus.edu.sg/~newacct/">https://mysoc.nus.edu.sg/~newacct/</a>.   </p>
+of your SoC UNIX account which you have created here: <a href="https://mysoc.nus.edu.sg/~newacct/">https://mysoc.nus.edu.sg/~newacct/</a>.</p>
 <p>Check that you have entered your username correctly.  It is <em>case sensitive</em>.</p>
 <p>If you have lost your password, go here: <a href="https://mysoc.nus.edu.sg/~myacct/resetpass.cgi">https://mysoc.nus.edu.sg/~myacct/resetpass.cgi</a></p>
 </li>
