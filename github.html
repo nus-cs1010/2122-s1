@@ -707,6 +707,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3-checking-your-authentication-settings" class="md-nav__link">
+    3. Checking Your Authentication Settings
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -836,6 +843,21 @@ The key&#39;s randomart image is:
 <p>I showed the above as an example, don't use my public key for your GitHub.  Otherwise I will have access to your account :)</p>
 <p>After entering the title and key above, click the green "Add SSH key" button to add the key you entered.  If prompted, confirm your GitHub password.</p>
 <p>These steps are explained in details on <a href="https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">GitHub Docs</a>.</p>
+<h2 id="3-checking-your-authentication-settings">3. Checking Your Authentication Settings</h2>
+<p>To check if you can connect to <code>git@github.com</code> using SSH keys, run:
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>ssh -T git@github.com
+</code></pre></div>
+</td></tr></table></p>
+<p>If everything is setup correct, you will see the message
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Hi ooiwt! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
+</code></pre></div>
+</td></tr></table></p>
+<p>Otherwise, you should see
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>git@github.com: Permission denied (publickey).
+</code></pre></div>
+</td></tr></table></p>
+<p>or other error messages.</p>
+<p>Note that you need to connect with username <code>git</code>.  Do not use your GitHub username (e.g., do not use <code>ssh -T ooiwt@github.com</code>)</p>
 <div class="footnote">
 <hr />
 <ol>

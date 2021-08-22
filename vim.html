@@ -782,11 +782,25 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-plugins" class="md-nav__link">
-    5. Plugins
+  <a href="#5-color-schemes" class="md-nav__link">
+    5. Color Schemes
   </a>
   
-    <nav class="md-nav" aria-label="5. Plugins">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-recovery-files" class="md-nav__link">
+    6. Recovery Files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-plugins" class="md-nav__link">
+    7. Plugins
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Plugins">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1048,11 +1062,25 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-plugins" class="md-nav__link">
-    5. Plugins
+  <a href="#5-color-schemes" class="md-nav__link">
+    5. Color Schemes
   </a>
   
-    <nav class="md-nav" aria-label="5. Plugins">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-recovery-files" class="md-nav__link">
+    6. Recovery Files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-plugins" class="md-nav__link">
+    7. Plugins
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Plugins">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1234,7 +1262,66 @@ set smartindent
 <li><code>:vsp file.c</code> splits the <code>vim</code> window vertically</li>
 <li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-w">W</kbd></span><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-w">W</kbd></span> moves between the different <code>vim</code> viewports</li>
 </ul>
-<h2 id="5-plugins">5. Plugins</h2>
+<h2 id="5-color-schemes">5. Color Schemes</h2>
+<p><ins class="critic">NEW</ins></p>
+<p>We have installed <a href="https://github.com/flazz/vim-colorschemes"><code>vim-colorscheme</code></a> bundle under <code>~cs1010/.vim/vim-colorschemes/colors</code>.</p>
+<p>To use this, run</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>ln -s ~cs1010/.vim/vim-colorschemes/colors ~/.vim/colors
+</code></pre></div>
+</td></tr></table>
+<p>After that, your can change your vim color scheme as usual.  For instance,</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>:color gruvbox
+</code></pre></div>
+</td></tr></table>
+<p>The bundle includes some of the popular color schemes among students, such as monokai, solarized, and gruvbox</p>
+<h2 id="6-recovery-files">6. Recovery Files</h2>
+<p><ins class="critic">NEW</ins> Vim automatically saves the files you are editing into temporary <em>swap</em> files, with extension <code>.swp</code>.  These files are hidden so you don't normally see them when you run <code>ls</code>.  (You need to run <code>ls -a</code> to view the hidden files)</p>
+<p>The swap files are useful if your editing session is disrupted before you save (e.g., the network is disconnected, you accidentally close the terminal, your OS crashes, etc.).</p>
+<p>When you launch <code>vim</code> to edit a file, say, <code>foo.c</code>.  <code>vim</code> will check if a swap file <code>.foo.c.swp</code> exist.  If it does, <code>vim</code> with display the following</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Found a swap file by the name &quot;.foo.c.swp&quot;
+          owned by: elsa   dated: Sat Aug 21 15:01:04 2021
+         file name: ~elsa/foo.c
+          modified: no
+         user name: elsa   host name: pe116
+        process ID: 7863 (STILL RUNNING)
+While opening file &quot;foo.c&quot;
+             dated: Mon Jul 12 18:38:37 2021
+
+(1) Another program may be editing the same file.  If this is the case,
+    be careful not to end up with two different instances of the same
+    file when making changes.  Quit, or continue with caution.
+(2) An edit session for this file crashed.
+    If this is the case, use &quot;:recover&quot; or &quot;vim -r a.c&quot;
+    to recover the changes (see &quot;:help recovery&quot;).
+    If you did this already, delete the swap file &quot;.a.c.swp&quot;
+    to avoid this message.
+
+Swap file &quot;.a.c.swp&quot; already exists!
+[O]pen Read-Only, (E)dit anyway, (R)ecover, (Q)uit, (A)bort:
+</code></pre></div>
+</td></tr></table>
+<p>The messages above is self-explanatory.  Read it carefully.  Most of the time, you want to choose "R" to recover your edits, so that you can continue editing.  Remember to remove the file <code>.foo.c.swp</code> after you have recovered.  Otherwise <code>vim</code> will prompt you the above messages every time you edit <code>foo.c</code>.</p>
+<p>Warning: if <code>foo.c</code> is newer than the state saved in <code>.foo.c.swp</code>, and you recover from <code>.foo.c.swp</code>, you will revert back to the state of the file as saved in the swap file.  This can happen if (i) you edit the file without recovery, or (ii) you recover the file, continue editing, but did not remove the <code>.foo.c.swp</code> file after.</p>
+<h2 id="7-plugins">7. Plugins</h2>
 <h3 id="syntax-and-style-checker">Syntax and Style Checker</h3>
 <p>I use <code>syntastic</code> to check for style and syntax whenever I save a file.  <a href="https://github.com/vim-syntastic/syntastic"><code>syntastic</code></a> is a <code>vim</code> plugin.</p>
 <p>My <code>.vimrc</code> configuration file contains the following:</p>
@@ -1286,6 +1373,7 @@ let g:syntastic_c_clang_tidy_post_args = &quot;&quot;
 -I/home/course/cs1010/include
 </code></pre></div>
 </td></tr></table>
+<p>Note that <code>syntastic</code> is not one of the approved plugins during CS1010 practical exams.</p>
                 
               
               
