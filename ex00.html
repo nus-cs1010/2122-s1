@@ -555,6 +555,18 @@
   
   
     <li class="md-nav__item">
+      <a href="github.html" class="md-nav__link">
+        GitHub
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="unix.html" class="md-nav__link">
         UNIX
       </a>
@@ -581,6 +593,18 @@
     <li class="md-nav__item">
       <a href="vim.html" class="md-nav__link">
         Vim
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="make.html" class="md-nav__link">
+        Make
       </a>
     </li>
   
@@ -898,7 +922,7 @@
 </code></pre></div>
 </td></tr></table></p>
 <p>To see the expected output:
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>cat oututs/echo.3.out
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>cat outputs/echo.3.out
 </code></pre></div>
 </td></tr></table></p>
 <p>To see what output your program gives,
@@ -970,8 +994,8 @@ ooiwt@pe111:~/ex00-ooiwt$ ./ones
 </td></tr></table>
 <h2 id="question-4-bmi">Question 4: BMI</h2>
 <p>Your body mass index (BMI) can be calculated by your body mass divided by the square of the body height.  BMI is expressed in units of <span class="arithmatex">\(kg/m^2\)</span>. </p>
-<p>Write a program <code>bmi</code> (source file <code>bmi.c</code>) that reads in two real numbers <span class="arithmatex">\(h\)</span> and <span class="arithmatex">\(w\)</span>. <span class="arithmatex">\(h\)</span> is the height of a person <em>in centimeters (cm)</em>, and weight is the weight of the person in kilograms (kg).</p>
-<p>Your program must include a function called <code>compute_bmi</code> that takes in two parameters, the weight in kilograms (kg), and height in meters (m) and return the corresponding BMI of the given weight and height.</p>
+<p>Write a program <code>bmi</code> (source file <code>bmi.c</code>) that reads in two real numbers <span class="arithmatex">\(h\)</span> and <span class="arithmatex">\(w\)</span> from the standard input.  <span class="arithmatex">\(h\)</span> is the height of a person <em>in centimeters (cm)</em>, and weight is the weight of the person in kilograms (kg).</p>
+<p>Your program must include a function called <code>compute_bmi</code> that takes in two parameters, the weight in kilograms (kg), and height <em>in meters (m)</em> and return the corresponding BMI of the given weight and height.</p>
 <h3 id="sample-run_3">Sample run:</h3>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2

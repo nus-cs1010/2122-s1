@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://nus-cs1010.github.io/2122-s1/clang.html">
+        <link rel="canonical" href="https://nus-cs1010.github.io/2122-s1/make.html">
       
       <link rel="shortcut icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.6">
     
     
       
-        <title>CLang - CS1010 Programming Methodology</title>
+        <title>Make - CS1010 Programming Methodology</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cs1010-compilation-guide" class="md-skip">
+        <a href="#compiling-and-testing-with-make" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              CLang
+              Make
             
           </span>
         </div>
@@ -579,84 +579,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          CLang
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="clang.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="clang.html" class="md-nav__link">
         CLang
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-compile-a-standalone-c-program" class="md-nav__link">
-    1. Compile a standalone C program
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-renaming-executable-file" class="md-nav__link">
-    2. Renaming executable file
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-warning-for-possible-bugs" class="md-nav__link">
-    3. Warning for possible bugs.
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-generating-additional-information-for-debugging" class="md-nav__link">
-    4. Generating additional information for debugging.
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-linking-with-the-standard-library" class="md-nav__link">
-    5. Linking with the standard library.
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-linking-with-3rd-party-library" class="md-nav__link">
-    6. Linking with 3rd party library
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -676,11 +603,20 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="make.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+      <a href="make.html" class="md-nav__link md-nav__link--active">
         Make
       </a>
+      
     </li>
   
 
@@ -748,56 +684,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-compile-a-standalone-c-program" class="md-nav__link">
-    1. Compile a standalone C program
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-renaming-executable-file" class="md-nav__link">
-    2. Renaming executable file
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-warning-for-possible-bugs" class="md-nav__link">
-    3. Warning for possible bugs.
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-generating-additional-information-for-debugging" class="md-nav__link">
-    4. Generating additional information for debugging.
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-linking-with-the-standard-library" class="md-nav__link">
-    5. Linking with the standard library.
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-linking-with-3rd-party-library" class="md-nav__link">
-    6. Linking with 3rd party library
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -809,73 +695,35 @@
               
                 
                 
-                <h1 id="cs1010-compilation-guide">CS1010 Compilation Guide</h1>
-<h2 id="1-compile-a-standalone-c-program">1. Compile a standalone C program</h2>
-<p>Suppose we have a standalone C program <code>teh.c</code> that does not use any external libraries.  We can compile the program using the command</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>ooiwt@pe118:~$ clang teh.c
-</code></pre></div>
-</td></tr></table>
-<p>This command should create an executable called <code>a.out</code> in the current directory, which you can then run with:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>ooiwt@pe118:~$ ./a.out
-</code></pre></div>
-</td></tr></table>
-<div class="admonition tips">
-<p>If you are looking for a test <code>teh.c</code> to try this out, there is one
-at <code>~cs1010/teh.c</code>, which you can copy over.</p>
-</div>
-<h2 id="2-renaming-executable-file">2. Renaming executable file</h2>
-<p>The name <code>a.out</code> is an abbreviation for <em>assembler output</em>, a name that many compilers kept as the default output name since the 60s.  We should, however, give our executable more descriptive name, by using the <code>-o</code> flag.  (<code>o</code> is the mnemonic for output).</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>ooiwt@pe118:~$ clang teh.c -o teh
-</code></pre></div>
-</td></tr></table>
-<p>or</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>ooiwt@pe118:~$ clang -o teh teh.c
-</code></pre></div>
-</td></tr></table>
-<p>The command above would create an executable called <code>teh</code>.</p>
-<div class="admonition warn">
-<p class="admonition-title">Beware of the order</p>
-<p>If you are not careful and run the following command instead:
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>ooiwt@pe118:~$ clang -o teh.c teh
-</code></pre></div>
-</td></tr></table>
-<code>clang</code> would overwrite your code <code>teh.c</code> -- all your hard work will be gone!!</p>
-</div>
-<h2 id="3-warning-for-possible-bugs">3. Warning for possible bugs.</h2>
-<p>The <code>clang</code> checks for syntax errors in your C files -- i.e., things that violate the C syntax rules.  The compiler, however, is smart enough to identify possible bugs -- errors that will cause your program to behave incorrectly, even if the syntax follows C's rules.  You can ask <code>clang</code> to warn you about this, using the <code>-W</code> flag (<code>W</code> is the mnemonic for warning -- note the capital W).  The manual for <code>clang</code> lists different types of warnings that <code>clang</code> can warn you about.  For instance, we can ask <code>clang</code> to warn us by enabling <code>-Wall</code> warnings.  The command to do so is:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>ooiwt@pe118:~$ clang -Wall teh.c -o teh
-</code></pre></div>
-</td></tr></table>
-<p>For beginners, it is <em>highly recommended</em> that you <em>always</em> compile with at least <code>-Wall</code>, <code>-Wextra</code>, and the <code>-Wpedantic</code> flag.</p>
-<div class="admonition tips">
-<p class="admonition-title">clang warning flags</p>
-<p><code>-Wall</code> in <code>clang</code> does not catually enable all warnings.
-<code>-Weverything</code> enables every warning but it could be overwhelming
-for beginners.   In CS1010 assignments, we will provide a <code>Makefile</code>
-so that you can use <code>make</code> to automate the compilation process. 
-Appropriate warning flags will be enabled for you.</p>
-</div>
-<h2 id="4-generating-additional-information-for-debugging">4. Generating additional information for debugging.</h2>
-<p>In order to use the debugger <code>lldb</code> to trace through and debug your program, <code>clang</code> needs to generate additional information and store them in the executable file.  We can instruct <code>clang</code> to generate them with the flag <code>-g</code> (<code>g</code> for generate).  </p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>ooiwt@pe118:~$ clang -Wall -g teh.c -o teh
-</code></pre></div>
-</td></tr></table>
-<p>It is recommended that you always compile with <code>-g</code> flags during the development phase.  If you need to measure the performance (e.g., how fast it runs) of your program or when you are releasing the program to the public, you can remove the <code>-g</code> flag and compile with the optimization flags (e.g., <code>-O</code>) instead.  </p>
-<h2 id="5-linking-with-the-standard-library">5. Linking with the standard library.</h2>
-<p>To link with a standard library, we use the <code>-l</code> flag to specify the name of the library to link.  For instance, to link with the C standard math library (abbreviated as <code>m</code>), you issue the command:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>ooiwt@pe118:~$ clang -Wall -g teh.c -o teh -lm
-</code></pre></div>
-</td></tr></table>
-<h2 id="6-linking-with-3rd-party-library">6. Linking with 3rd party library</h2>
-<p>By default, <code>clang</code> looks for headers and libraries in the systems directories (<code>/usr/include</code>, <code>/usr/lib</code>, etc) and the current working directory.  </p>
-<p>If you use a third-party library, you usually need to tell <code>clang</code> where to look for the corresponding headers and libraries.  You can use the <code>-I</code> flag and the <code>-L</code> flag for these purposes. For instance, if you have a library installed under your home called <code>citadel</code>, and the file <code>citadel.h</code> can be found under <code>~/citadel/include</code> and the file <code>libcitadel.a</code> can be found under <code>~/citadel/lib</code>, to tell <code>clang</code> where to find these files, you can compile with:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>ooiwt@pe118:~$ clang -Wall -g -I ~/citadel/include -L ~/citadel/lib teh.c -o teh -lm -lcitadel
-</code></pre></div>
-</td></tr></table>
-<p>For instance, to link with the <a href="library.html">CS1010 I/O library</a> on the PE nodes, you can run
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>ooiwt@pe118:~$ clang -Wall -g -I ~cs1010/include -L ~cs1010/lib teh.c -lcs1010
+                <h1 id="compiling-and-testing-with-make">Compiling and Testing with <code>make</code></h1>
+<p><code>make</code> is a programmer's utility to automate the workflow of the edit-compile-run cycle.  We use <code>make</code> for all your exercises, assignments, and practical exams.</p>
+<p>A <code>Makefile</code> is provided for each of your assignments, exercises, and during practical exams.  You don't have to know how to write a <code>Makefile</code>, but interested students can contact the teaching team for learning resources.</p>
+<p>For most of the situations, you only need to run:
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>make
 </code></pre></div>
 </td></tr></table></p>
+<p>Our <code>Makefile</code> is configured so that <code>make</code> performs the following three tasks, in order:
+- compile all the <code>*.c</code> files, with the correct flags and libraries, to generate the executable binaries.
+- run <code>clang-tidy</code> on all the <code>*.c</code> files to check if you follow good programming habits in your code
+- run <code>test.sh</code> on each of the programs, on each of the inputs, and cross-check if the output is correct.</p>
+<p><code>make</code> is smart enough that, if a C file has not changed since the last compilation, it will not recompile the file.</p>
+<p>If you only want to run <code>clang-tidy</code> on all the C files, you can run
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>make tidy
+</code></pre></div>
+</td></tr></table></p>
+<p>If you only want to test all the programs, you can run
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>make test
+</code></pre></div>
+</td></tr></table></p>
+<p>Sometimes it is useful to test run a particular program only.  For example, if you want to test only the program <code>digits</code>, then</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>./test.sh digits
+</code></pre></div>
+</td></tr></table>
+<p>Finally, you can also run
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>make clean
+</code></pre></div>
+</td></tr></table>
+to remove all the generated executable files.</p>
                 
               
               
@@ -894,7 +742,7 @@ Appropriate warning flags will be enabled for you.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="unix.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="vim.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -903,19 +751,19 @@ Appropriate warning flags will be enabled for you.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                UNIX
+                Vim
               </div>
             </div>
           </a>
         
         
-          <a href="vim.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="tmate.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Vim
+                TMate
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
