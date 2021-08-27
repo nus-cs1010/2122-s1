@@ -12,15 +12,15 @@
         <link rel="canonical" href="https://nus-cs1010.github.io/2122-s1/10-assert.html">
       
       <link rel="shortcut icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.6">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
     
     
       
-        <title>Unit 10: Assertion - CS1010 Programming Methodology</title>
+        <title>10. Assertions - CS1010 Programming Methodology</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.cb6bc1d0.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.3b61ea93.min.css">
       
         
         <link rel="stylesheet" href="assets/stylesheets/palette.39b8e14a.min.css">
@@ -102,7 +102,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              Unit 10: Assertion
+              10. Assertions
             
           </span>
         </div>
@@ -178,536 +178,655 @@
       
       
 
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="index.html" class="md-nav__link">
-        Home
-      </a>
-    </li>
-  
+
+
+  <li class="md-nav__item">
+    <a href="index.html" class="md-nav__link">
+      Home
+    </a>
+  </li>
 
     
       
       
       
 
+
+
   
-  
-  
+  <li class="md-nav__item md-nav__item--nested">
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
-      
-      <label class="md-nav__link" for="nav-2">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    
+    <label class="md-nav__link" for="nav-2">
+      General
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="General" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
         General
-        <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="General" data-md-level="1">
-        <label class="md-nav__title" for="nav-2">
-          <span class="md-nav__icon md-icon"></span>
-          General
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
           
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="about.html" class="md-nav__link">
-        About CS1010
-      </a>
-    </li>
-  
+          
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="outcomes.html" class="md-nav__link">
-        Learning Outcomes
-      </a>
-    </li>
-  
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="schedule.html" class="md-nav__link">
-        Schedule
-      </a>
-    </li>
-  
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="accounts.html" class="md-nav__link">
-        Accounts
-      </a>
-    </li>
-  
+  <li class="md-nav__item">
+    <a href="about.html" class="md-nav__link">
+      About CS1010
+    </a>
+  </li>
 
+        
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="policies.html" class="md-nav__link">
-        Policies
-      </a>
-    </li>
-  
+          
+          
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="tutors.html" class="md-nav__link">
-        Teaching Team
-      </a>
-    </li>
-  
 
+
+  <li class="md-nav__item">
+    <a href="outcomes.html" class="md-nav__link">
+      Learning Outcomes
+    </a>
+  </li>
+
+        
           
-        </ul>
-      </nav>
-    </li>
-  
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="schedule.html" class="md-nav__link">
+      Schedule
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="accounts.html" class="md-nav__link">
+      Accounts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="policies.html" class="md-nav__link">
+      Policies
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="tutors.html" class="md-nav__link">
+      Teaching Team
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
 
     
       
       
       
 
+
   
+
+
   
-  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
-      
-      <label class="md-nav__link" for="nav-3">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Notes
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Notes" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
         Notes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="01-program.html" class="md-nav__link">
+      1. What is a Program?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="02-algo.html" class="md-nav__link">
+      2. Computational Problem & Algorithms
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="03-func.html" class="md-nav__link">
+      3. Functions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="04-type.html" class="md-nav__link">
+      4. Types
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="05-first-c.html" class="md-nav__link">
+      5. First C Program
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="06-cs1010-io.html" class="md-nav__link">
+      6. CS1010 I/O
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="07-arithmetic-ops.html" class="md-nav__link">
+      7. Arithmetic Operations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="08-if-else.html" class="md-nav__link">
+      8. Conditional Statement
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="09-logical-exp.html" class="md-nav__link">
+      9. Logical Expression
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        10. Assertions
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Notes" data-md-level="1">
-        <label class="md-nav__title" for="nav-3">
-          <span class="md-nav__icon md-icon"></span>
-          Notes
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-          
-            
+    
+    <a href="10-assert.html" class="md-nav__link md-nav__link--active">
+      10. Assertions
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="01-program.html" class="md-nav__link">
-        1. What is a Program?
-      </a>
-    </li>
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    Learning Objectives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-assertion" class="md-nav__link">
+    What is Assertion?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#de-morgans-law" class="md-nav__link">
+    De Morgan's Law
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-set-10" class="md-nav__link">
+    Problem Set 10
+  </a>
+  
+    <nav class="md-nav" aria-label="Problem Set 10">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-101" class="md-nav__link">
+    Problem 10.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-102" class="md-nav__link">
+    Problem 10.2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="02-algo.html" class="md-nav__link">
-        2. Computational Problem & Algorithms
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="03-func.html" class="md-nav__link">
-        3. Functions
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="04-type.html" class="md-nav__link">
-        4. Types
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="05-first-c.html" class="md-nav__link">
-        5. First C Program
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="06-cs1010-io.html" class="md-nav__link">
-        6. CS1010 I/O
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="07-arithmetic-ops.html" class="md-nav__link">
-        7. Arithmetic Operations
-      </a>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
+        
+      </ul>
+    </nav>
+  </li>
 
     
       
       
       
 
+
+
   
-  
-  
+  <li class="md-nav__item md-nav__item--nested">
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
-      
-      <label class="md-nav__link" for="nav-4">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+    
+    <label class="md-nav__link" for="nav-4">
+      Exercises
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Exercises" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
         Exercises
-        <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Exercises" data-md-level="1">
-        <label class="md-nav__title" for="nav-4">
-          <span class="md-nav__icon md-icon"></span>
-          Exercises
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
           
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ex00.html" class="md-nav__link">
-        0. Echo, Divide, Ones, BMI, Quadratic
-      </a>
-    </li>
-  
+          
 
-          
-        </ul>
-      </nav>
-    </li>
-  
+
+
+  <li class="md-nav__item">
+    <a href="ex00.html" class="md-nav__link">
+      0. Echo, Divide, Ones, BMI, Quadratic
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
 
     
       
       
       
 
+
+
   
-  
-  
+  <li class="md-nav__item md-nav__item--nested">
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
-      
-      <label class="md-nav__link" for="nav-5">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+    
+    <label class="md-nav__link" for="nav-5">
+      Assignments
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Assignments" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
         Assignments
-        <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Assignments" data-md-level="1">
-        <label class="md-nav__title" for="nav-5">
-          <span class="md-nav__icon md-icon"></span>
-          Assignments
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
           
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="assignment.html" class="md-nav__link">
-        Overview
-      </a>
-    </li>
-  
-
           
-        </ul>
-      </nav>
-    </li>
-  
+
+
+
+  <li class="md-nav__item">
+    <a href="assignment.html" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
 
     
       
       
       
 
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="readings.html" class="md-nav__link">
-        Readings
-      </a>
-    </li>
-  
+
+
+  <li class="md-nav__item">
+    <a href="readings.html" class="md-nav__link">
+      Readings
+    </a>
+  </li>
 
     
       
       
       
 
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="c-in-cs1010.html" class="md-nav__link">
-        C in CS1010
-      </a>
-    </li>
-  
+
+
+  <li class="md-nav__item">
+    <a href="c-in-cs1010.html" class="md-nav__link">
+      C in CS1010
+    </a>
+  </li>
 
     
       
       
       
 
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="library.html" class="md-nav__link">
-        CS1010 I/O Library
-      </a>
-    </li>
-  
+
+
+  <li class="md-nav__item">
+    <a href="library.html" class="md-nav__link">
+      CS1010 I/O Library
+    </a>
+  </li>
 
     
       
       
       
 
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="style.html" class="md-nav__link">
-        C Style Convention
-      </a>
-    </li>
-  
+
+
+  <li class="md-nav__item">
+    <a href="style.html" class="md-nav__link">
+      C Style Convention
+    </a>
+  </li>
 
     
       
       
       
 
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="messages.html" class="md-nav__link">
-        Compiler Messages
-      </a>
-    </li>
-  
+
+
+  <li class="md-nav__item">
+    <a href="messages.html" class="md-nav__link">
+      Compiler Messages
+    </a>
+  </li>
 
     
       
       
       
 
+
+
   
-  
-  
+  <li class="md-nav__item md-nav__item--nested">
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11" >
-      
-      <label class="md-nav__link" for="nav-11">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11" >
+    
+    <label class="md-nav__link" for="nav-11">
+      Software/Tools
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Software/Tools" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        <span class="md-nav__icon md-icon"></span>
         Software/Tools
-        <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Software/Tools" data-md-level="1">
-        <label class="md-nav__title" for="nav-11">
-          <span class="md-nav__icon md-icon"></span>
-          Software/Tools
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
           
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="environments.html" class="md-nav__link">
-        Programming Environments
-      </a>
-    </li>
-  
+          
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="github.html" class="md-nav__link">
-        GitHub
-      </a>
-    </li>
-  
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="unix.html" class="md-nav__link">
-        UNIX
-      </a>
-    </li>
-  
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="clang.html" class="md-nav__link">
-        CLang
-      </a>
-    </li>
-  
+  <li class="md-nav__item">
+    <a href="environments.html" class="md-nav__link">
+      Programming Environments
+    </a>
+  </li>
 
+        
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="vim.html" class="md-nav__link">
-        Vim
-      </a>
-    </li>
-  
+          
+          
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="make.html" class="md-nav__link">
-        Make
-      </a>
-    </li>
-  
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="tmate.html" class="md-nav__link">
-        TMate
-      </a>
-    </li>
-  
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="zoom.html" class="md-nav__link">
-        Zoom
-      </a>
-    </li>
-  
+  <li class="md-nav__item">
+    <a href="github.html" class="md-nav__link">
+      GitHub
+    </a>
+  </li>
 
+        
           
-        </ul>
-      </nav>
-    </li>
-  
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="unix.html" class="md-nav__link">
+      UNIX
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="clang.html" class="md-nav__link">
+      CLang
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="vim.html" class="md-nav__link">
+      Vim
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="make.html" class="md-nav__link">
+      Make
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="tmate.html" class="md-nav__link">
+      TMate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="zoom.html" class="md-nav__link">
+      Zoom
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
 
     
       
       
       
 
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="1819s1.html" class="md-nav__link">
-        18/19 Semester 1
-      </a>
-    </li>
-  
+
+
+  <li class="md-nav__item">
+    <a href="1819s1.html" class="md-nav__link">
+      18/19 Semester 1
+    </a>
+  </li>
 
     
   </ul>
@@ -931,6 +1050,7 @@
 </td></tr></table>
 <p>We can see that, we are printing <code>C</code> when <code>score &lt; 5 &amp;&amp; score &gt;= 3</code>, which is what we want.  </p>
 <p>Note that the last assert <code>score &lt; 5 &amp;&amp; score &lt; 3</code> can be simplified to <code>score &lt; 3</code>.</p>
+<p>Note that we write assertions with Hoare's notation as C comments, so the assertions do not have to follow C's syntax.  We could have written them in English.  However, as much as possible, we use mathematical or programming notations to keep our assertion succinct and precise.</p>
 <h2 id="de-morgans-law">De Morgan's Law</h2>
 <p>To write an assertion for the false block, it is useful to know the De Morgan's law, which tells us how to negate some logical expression.  Suppose we have two logical expressions <code>e1</code> and <code>e2</code>.</p>
 <ul>
@@ -946,12 +1066,13 @@
 <p>which is just</p>
 <p><code>(birth_year &lt; 1995) || (birth_year &gt; 2005)</code>,</p>
 <p>exactly as we have written before!</p>
+<p>Assertion and De Morgan's law are two thinking tools that will help us reason about our code.  We will revisit assertion again when we discuss iterative algorithms.</p>
 <h2 id="problem-set-10">Problem Set 10</h2>
 <h3 id="problem-101">Problem 10.1</h3>
 <p>Negate the following logical expression, then apply De Morgan's Law to simplify the resulting expression.  Assume all variable names mentioned are boolean variables.</p>
 <p>(a) <code>(x &gt; 1) &amp;&amp; (y != 10)</code></p>
 <p>(b) <code>!eating &amp;&amp; drinking</code></p>
-<p>(C) <code>(has_cs2030 || has_cs2113) &amp;&amp; has_cs2040c</code></p>
+<p>(c) <code>(has_cs2030 || has_cs2113) &amp;&amp; has_cs2040c</code></p>
 <h3 id="problem-102">Problem 10.2</h3>
 <p>In the code below, replace <code>???</code> with the appropriate assertion.  What will be printed?</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
@@ -1010,6 +1131,41 @@
         
 <footer class="md-footer">
   
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="09-logical-exp.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                9. Logical Expression
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="ex00.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                0. Echo, Divide, Ones, BMI, Quadratic
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
@@ -1030,15 +1186,15 @@
       
     </div>
     
-      <script src="assets/javascripts/vendor.53cc9318.min.js"></script>
-      <script src="assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
           base: ".",
           features: [],
           search: Object.assign({
-            worker: "assets/javascripts/worker/search.9c0e82ba.min.js"
+            worker: "assets/javascripts/worker/search.8c7e0a7e.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

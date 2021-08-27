@@ -12,15 +12,15 @@
         <link rel="canonical" href="https://nus-cs1010.github.io/2122-s1/08-if-else.html">
       
       <link rel="shortcut icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.6">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
     
     
       
-        <title>Unit 8: Conditional Statement - CS1010 Programming Methodology</title>
+        <title>8. Conditional Statement - CS1010 Programming Methodology</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.cb6bc1d0.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.3b61ea93.min.css">
       
         
         <link rel="stylesheet" href="assets/stylesheets/palette.39b8e14a.min.css">
@@ -102,7 +102,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              Unit 8: Conditional Statement
+              8. Conditional Statement
             
           </span>
         </div>
@@ -178,536 +178,697 @@
       
       
 
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="index.html" class="md-nav__link">
-        Home
-      </a>
-    </li>
-  
+
+
+  <li class="md-nav__item">
+    <a href="index.html" class="md-nav__link">
+      Home
+    </a>
+  </li>
 
     
       
       
       
 
+
+
   
-  
-  
+  <li class="md-nav__item md-nav__item--nested">
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
-      
-      <label class="md-nav__link" for="nav-2">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    
+    <label class="md-nav__link" for="nav-2">
+      General
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="General" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
         General
-        <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="General" data-md-level="1">
-        <label class="md-nav__title" for="nav-2">
-          <span class="md-nav__icon md-icon"></span>
-          General
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
           
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="about.html" class="md-nav__link">
-        About CS1010
-      </a>
-    </li>
-  
+          
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="outcomes.html" class="md-nav__link">
-        Learning Outcomes
-      </a>
-    </li>
-  
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="schedule.html" class="md-nav__link">
-        Schedule
-      </a>
-    </li>
-  
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="accounts.html" class="md-nav__link">
-        Accounts
-      </a>
-    </li>
-  
+  <li class="md-nav__item">
+    <a href="about.html" class="md-nav__link">
+      About CS1010
+    </a>
+  </li>
 
+        
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="policies.html" class="md-nav__link">
-        Policies
-      </a>
-    </li>
-  
+          
+          
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="tutors.html" class="md-nav__link">
-        Teaching Team
-      </a>
-    </li>
-  
 
+
+  <li class="md-nav__item">
+    <a href="outcomes.html" class="md-nav__link">
+      Learning Outcomes
+    </a>
+  </li>
+
+        
           
-        </ul>
-      </nav>
-    </li>
-  
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="schedule.html" class="md-nav__link">
+      Schedule
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="accounts.html" class="md-nav__link">
+      Accounts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="policies.html" class="md-nav__link">
+      Policies
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="tutors.html" class="md-nav__link">
+      Teaching Team
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
 
     
       
       
       
 
+
   
+
+
   
-  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
-      
-      <label class="md-nav__link" for="nav-3">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Notes
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Notes" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
         Notes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="01-program.html" class="md-nav__link">
+      1. What is a Program?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="02-algo.html" class="md-nav__link">
+      2. Computational Problem & Algorithms
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="03-func.html" class="md-nav__link">
+      3. Functions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="04-type.html" class="md-nav__link">
+      4. Types
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="05-first-c.html" class="md-nav__link">
+      5. First C Program
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="06-cs1010-io.html" class="md-nav__link">
+      6. CS1010 I/O
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="07-arithmetic-ops.html" class="md-nav__link">
+      7. Arithmetic Operations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        8. Conditional Statement
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Notes" data-md-level="1">
-        <label class="md-nav__title" for="nav-3">
-          <span class="md-nav__icon md-icon"></span>
-          Notes
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-          
-            
+    
+    <a href="08-if-else.html" class="md-nav__link md-nav__link--active">
+      8. Conditional Statement
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="01-program.html" class="md-nav__link">
-        1. What is a Program?
-      </a>
-    </li>
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    Learning Objectives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#branching" class="md-nav__link">
+    Branching
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison-operator" class="md-nav__link">
+    Comparison Operator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nested-else-if" class="md-nav__link">
+    Nested Else-If
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avoid-skipping-the-curly-braces" class="md-nav__link">
+    Avoid Skipping the Curly Braces
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skipping-else" class="md-nav__link">
+    Skipping else
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditional-operator" class="md-nav__link">
+    Conditional Operator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparing-real-numbers" class="md-nav__link">
+    Comparing Real Numbers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-sets" class="md-nav__link">
+    Problem Sets
+  </a>
+  
+    <nav class="md-nav" aria-label="Problem Sets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-81" class="md-nav__link">
+    Problem 8.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-82" class="md-nav__link">
+    Problem 8.2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-83" class="md-nav__link">
+    Problem 8.3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
 
+        
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="02-algo.html" class="md-nav__link">
-        2. Computational Problem & Algorithms
-      </a>
-    </li>
-  
+          
+          
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="03-func.html" class="md-nav__link">
-        3. Functions
-      </a>
-    </li>
-  
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="04-type.html" class="md-nav__link">
-        4. Types
-      </a>
-    </li>
-  
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="05-first-c.html" class="md-nav__link">
-        5. First C Program
-      </a>
-    </li>
-  
+  <li class="md-nav__item">
+    <a href="09-logical-exp.html" class="md-nav__link">
+      9. Logical Expression
+    </a>
+  </li>
 
+        
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="06-cs1010-io.html" class="md-nav__link">
-        6. CS1010 I/O
-      </a>
-    </li>
-  
+          
+          
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="07-arithmetic-ops.html" class="md-nav__link">
-        7. Arithmetic Operations
-      </a>
-    </li>
-  
 
-          
-        </ul>
-      </nav>
-    </li>
-  
+
+  <li class="md-nav__item">
+    <a href="10-assert.html" class="md-nav__link">
+      10. Assertions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
 
     
       
       
       
 
+
+
   
-  
-  
+  <li class="md-nav__item md-nav__item--nested">
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
-      
-      <label class="md-nav__link" for="nav-4">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+    
+    <label class="md-nav__link" for="nav-4">
+      Exercises
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Exercises" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
         Exercises
-        <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Exercises" data-md-level="1">
-        <label class="md-nav__title" for="nav-4">
-          <span class="md-nav__icon md-icon"></span>
-          Exercises
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
           
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ex00.html" class="md-nav__link">
-        0. Echo, Divide, Ones, BMI, Quadratic
-      </a>
-    </li>
-  
+          
 
-          
-        </ul>
-      </nav>
-    </li>
-  
+
+
+  <li class="md-nav__item">
+    <a href="ex00.html" class="md-nav__link">
+      0. Echo, Divide, Ones, BMI, Quadratic
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
 
     
       
       
       
 
+
+
   
-  
-  
+  <li class="md-nav__item md-nav__item--nested">
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
-      
-      <label class="md-nav__link" for="nav-5">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+    
+    <label class="md-nav__link" for="nav-5">
+      Assignments
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Assignments" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
         Assignments
-        <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Assignments" data-md-level="1">
-        <label class="md-nav__title" for="nav-5">
-          <span class="md-nav__icon md-icon"></span>
-          Assignments
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
           
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="assignment.html" class="md-nav__link">
-        Overview
-      </a>
-    </li>
-  
-
           
-        </ul>
-      </nav>
-    </li>
-  
+
+
+
+  <li class="md-nav__item">
+    <a href="assignment.html" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
 
     
       
       
       
 
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="readings.html" class="md-nav__link">
-        Readings
-      </a>
-    </li>
-  
+
+
+  <li class="md-nav__item">
+    <a href="readings.html" class="md-nav__link">
+      Readings
+    </a>
+  </li>
 
     
       
       
       
 
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="c-in-cs1010.html" class="md-nav__link">
-        C in CS1010
-      </a>
-    </li>
-  
+
+
+  <li class="md-nav__item">
+    <a href="c-in-cs1010.html" class="md-nav__link">
+      C in CS1010
+    </a>
+  </li>
 
     
       
       
       
 
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="library.html" class="md-nav__link">
-        CS1010 I/O Library
-      </a>
-    </li>
-  
+
+
+  <li class="md-nav__item">
+    <a href="library.html" class="md-nav__link">
+      CS1010 I/O Library
+    </a>
+  </li>
 
     
       
       
       
 
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="style.html" class="md-nav__link">
-        C Style Convention
-      </a>
-    </li>
-  
+
+
+  <li class="md-nav__item">
+    <a href="style.html" class="md-nav__link">
+      C Style Convention
+    </a>
+  </li>
 
     
       
       
       
 
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="messages.html" class="md-nav__link">
-        Compiler Messages
-      </a>
-    </li>
-  
+
+
+  <li class="md-nav__item">
+    <a href="messages.html" class="md-nav__link">
+      Compiler Messages
+    </a>
+  </li>
 
     
       
       
       
 
+
+
   
-  
-  
+  <li class="md-nav__item md-nav__item--nested">
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11" >
-      
-      <label class="md-nav__link" for="nav-11">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11" >
+    
+    <label class="md-nav__link" for="nav-11">
+      Software/Tools
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Software/Tools" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        <span class="md-nav__icon md-icon"></span>
         Software/Tools
-        <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Software/Tools" data-md-level="1">
-        <label class="md-nav__title" for="nav-11">
-          <span class="md-nav__icon md-icon"></span>
-          Software/Tools
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
           
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="environments.html" class="md-nav__link">
-        Programming Environments
-      </a>
-    </li>
-  
+          
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="github.html" class="md-nav__link">
-        GitHub
-      </a>
-    </li>
-  
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="unix.html" class="md-nav__link">
-        UNIX
-      </a>
-    </li>
-  
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="clang.html" class="md-nav__link">
-        CLang
-      </a>
-    </li>
-  
+  <li class="md-nav__item">
+    <a href="environments.html" class="md-nav__link">
+      Programming Environments
+    </a>
+  </li>
 
+        
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="vim.html" class="md-nav__link">
-        Vim
-      </a>
-    </li>
-  
+          
+          
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="make.html" class="md-nav__link">
-        Make
-      </a>
-    </li>
-  
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="tmate.html" class="md-nav__link">
-        TMate
-      </a>
-    </li>
-  
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="zoom.html" class="md-nav__link">
-        Zoom
-      </a>
-    </li>
-  
+  <li class="md-nav__item">
+    <a href="github.html" class="md-nav__link">
+      GitHub
+    </a>
+  </li>
 
+        
           
-        </ul>
-      </nav>
-    </li>
-  
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="unix.html" class="md-nav__link">
+      UNIX
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="clang.html" class="md-nav__link">
+      CLang
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="vim.html" class="md-nav__link">
+      Vim
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="make.html" class="md-nav__link">
+      Make
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="tmate.html" class="md-nav__link">
+      TMate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="zoom.html" class="md-nav__link">
+      Zoom
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
 
     
       
       
       
 
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="1819s1.html" class="md-nav__link">
-        18/19 Semester 1
-      </a>
-    </li>
-  
+
+
+  <li class="md-nav__item">
+    <a href="1819s1.html" class="md-nav__link">
+      18/19 Semester 1
+    </a>
+  </li>
 
     
   </ul>
@@ -847,9 +1008,9 @@
 <li>be able to model a computational solution with different conditions as a table;</li>
 <li>understand the meaning and the use of the type <code>void</code></li>
 <li>understand the term <em>string</em> and be able to use <code>cs1010_println_string</code> to print a string to the screen.</li>
-<li>be aware that in CS1010:</li>
-<li>curly brackets must not be skipped even if a block contains only a single statement;<ul>
-<li>conditional operators are banned.</li>
+<li>be aware that in CS1010:<ul>
+<li>curly brackets must not be skipped even if a block contains only a single statement;</li>
+<li>nested conditional operators are banned.</li>
 </ul>
 </li>
 <li>be aware of floating-point numbers must not be compared using equality.</li>
@@ -1344,7 +1505,11 @@ What if <code>n</code> is not <code>0</code>?  The block that contains Line 5 <c
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>max = (x &gt; y) ? x : y;
 </code></pre></div>
 </td></tr></table>
-<p>We can nest the conditional operator as well, but it does not necessarily make your code easier to read once you start nesting them up.  We do not encourage you to nest the conditional operator in CS1010 and to limit its usage to simple cases above.</p>
+<p>We can nest the conditional operator as well, but it does not necessarily make your code easier to read once you start nesting them up.  For example,
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>a = (x &gt; y) ? ((y &gt; z) ? y : z) : ((z &gt; x) ? x : z);
+</code></pre></div>
+</td></tr></table></p>
+<p>Nesting conditional operators is therefore not allowed in CS1010.</p>
 <h2 id="comparing-real-numbers">Comparing Real Numbers</h2>
 <p>Recall that we said <a href="https://nus-cs1010.github.io/1819-s1/04-type/index.html#real-numbers">real numbers cannot be represented exactly in computers</a>.  Comparing real numbers, therefore, becomes a little bit trickier in programming.  The <code>if</code> statement</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
@@ -1416,7 +1581,7 @@ What if <code>n</code> is not <code>0</code>?  The block that contains Line 5 <c
 </code></pre></div>
 </td></tr></table>
 <h3 id="problem-82">Problem 8.2</h3>
-<p>Draw the flowcharts for the three code snippets below.</p>
+<p>Draw the flowcharts for the three code snippets below.  Identify redundant comparisons (if any), in each of the snippet.</p>
 <p>(a)
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
@@ -1566,6 +1731,41 @@ What if <code>n</code> is not <code>0</code>?  The block that contains Line 5 <c
         
 <footer class="md-footer">
   
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="07-arithmetic-ops.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                7. Arithmetic Operations
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="09-logical-exp.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                9. Logical Expression
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
@@ -1586,15 +1786,15 @@ What if <code>n</code> is not <code>0</code>?  The block that contains Line 5 <c
       
     </div>
     
-      <script src="assets/javascripts/vendor.53cc9318.min.js"></script>
-      <script src="assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
           base: ".",
           features: [],
           search: Object.assign({
-            worker: "assets/javascripts/worker/search.9c0e82ba.min.js"
+            worker: "assets/javascripts/worker/search.8c7e0a7e.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
