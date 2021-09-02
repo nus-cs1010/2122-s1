@@ -492,6 +492,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ex02.html" class="md-nav__link">
+        2. Date, GCD, Leap, Multiple
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -530,6 +542,18 @@
     <li class="md-nav__item">
       <a href="assignment.html" class="md-nav__link">
         Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="taxi.md" class="md-nav__link">
+        1. Pyramid, Digits, Suffix, Taxi
       </a>
     </li>
   
@@ -1395,7 +1419,17 @@ set smartindent
 <h2 id="5-color-schemes">5. Color Schemes</h2>
 <p><ins class="critic">NEW</ins></p>
 <p>We have installed <a href="https://github.com/flazz/vim-colorschemes"><code>vim-colorscheme</code></a> bundle under <code>~cs1010/.vim/vim-colorschemes/colors</code>.</p>
-<p>To use this, run</p>
+<p>There are a few steps needed.  First, the standard .vimrc is designed for 16 colors, and some of these color schemes are more colorful than that.  You need to comment the following three lines from your <code>~/.vimrc</code></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>&quot; The following should give 16 colors
+&quot; set t_AB=^[[%?%p1%{8}%&lt;%t%p1%{40}%+%e%p1%{92}%+%;%dm
+&quot; set t_AF=^[[%?%p1%{8}%&lt;%t%p1%{30}%+%e%p1%{82}%+%;%dm
+&quot; set t_Co=16
+</code></pre></div>
+</td></tr></table>
+<p>Then, run</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>ln -s ~cs1010/.vim/vim-colorschemes/colors ~/.vim/colors
 </code></pre></div>
 </td></tr></table>
@@ -1403,7 +1437,14 @@ set smartindent
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>:color gruvbox
 </code></pre></div>
 </td></tr></table>
-<p>The bundle includes some of the popular color schemes among students, such as monokai, solarized, and gruvbox</p>
+<p>You can add this line to your <code>~/.vimrc</code> so that the color scheme is loaded at the start of every vim session.</p>
+<p>The bundle includes some of the popular color schemes among students, such as molokai, solarized, and gruvbox.  </p>
+<p>The default color scheme:</p>
+<p><img alt="default" src="figures/color-scheme-default.png" /></p>
+<p>The molokai color scheme:</p>
+<p><img alt="molokai" src="figures/color-scheme-molokai.png" /></p>
+<p>The gruvbox color scheme:</p>
+<p><img alt="gruvbox" src="figures/color-scheme-gruvbox.png" /></p>
 <h2 id="6-recovery-files">6. Recovery Files</h2>
 <p><ins class="critic">NEW</ins> Vim automatically saves the files you are editing into temporary <em>swap</em> files, with extension <code>.swp</code>.  These files are hidden so you don't normally see them when you run <code>ls</code>.  (You need to run <code>ls -a</code> to view the hidden files)</p>
 <p>The swap files are useful if your editing session is disrupted before you save (e.g., the network is disconnected, you accidentally close the terminal, your OS crashes, etc.).</p>
