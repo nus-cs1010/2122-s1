@@ -16,7 +16,7 @@
     
     
       
-        <title>Unit 12: Reasoning About Loops - CS1010 Programming Methodology</title>
+        <title>12. Invariant - CS1010 Programming Methodology</title>
       
     
     
@@ -102,7 +102,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              Unit 12: Reasoning About Loops
+              12. Invariant
             
           </span>
         </div>
@@ -299,12 +299,14 @@
       
 
 
+  
+
 
   
-  <li class="md-nav__item md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Notes
@@ -445,6 +447,117 @@
     <a href="10-assert.html" class="md-nav__link">
       10. Assertions
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="11-loop.html" class="md-nav__link">
+      11. Loops
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        12. Invariant
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="12-invariant.html" class="md-nav__link md-nav__link--active">
+      12. Invariant
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    Learning Objectives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-assertions" class="md-nav__link">
+    Using Assertions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loop-invariant" class="md-nav__link">
+    Loop Invariant
+  </a>
+  
+    <nav class="md-nav" aria-label="Loop Invariant">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-is-an-invariant-useful" class="md-nav__link">
+    When is an Invariant Useful
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-set-12" class="md-nav__link">
+    Problem Set 12
+  </a>
+  
+    <nav class="md-nav" aria-label="Problem Set 12">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-121" class="md-nav__link">
+    Problem 12.1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -830,6 +943,19 @@
     Loop Invariant
   </a>
   
+    <nav class="md-nav" aria-label="Loop Invariant">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-is-an-invariant-useful" class="md-nav__link">
+    When is an Invariant Useful
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -870,7 +996,7 @@
 <p>After this unit, students should:</p>
 <ul>
 <li>understand how assertions can be derived in a loop;</li>
-<li>understand how assertions can help us understand the behavior of a loop</li>
+<li>understand how assertions can help us understand the behavior of a loop;</li>
 <li>understand what is a loop invariant;</li>
 <li>be able to argue why a given loop invariant is true;</li>
 <li>be able to derive simple loop invariant of a given loop.</li>
@@ -895,15 +1021,15 @@
   <span class="kt">long</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
   <span class="kt">long</span> <span class="n">x</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
   <span class="k">while</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// line A</span>
+    <span class="c1">// Line A</span>
     <span class="n">x</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="c1">// line B</span>
+    <span class="c1">// Line B</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-      <span class="c1">// line C</span>
+      <span class="c1">// Line C</span>
       <span class="n">y</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
     <span class="p">}</span>
   <span class="p">}</span>
-  <span class="c1">// line D</span>
+  <span class="c1">// Line D</span>
   <span class="k">return</span> <span class="n">y</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -911,7 +1037,7 @@
 <p>Before we continue, study this program and try to analyze what the function is counting and returning.</p>
 <p>To do this more systematically, we can use assertions.  Let's ask ourselves: what can be said about the variables <code>x</code> and <code>y</code> at Lines A, B, C?  Let start with <code>x</code> first.</p>
 <ul>
-<li>Line A is the first line after entering the loop, so we can reason that to enter the loop (the first time or subsequent times), <code>x &gt; 0</code>.</li>
+<li>Line A is the first line after entering the loop, so we can reason that, to enter the loop (the first time or subsequent times), <code>x &gt; 0</code> must be true.</li>
 <li>We can also derive that, at Line A, <code>x &lt;= n</code>.  This is less obvious: since we initialize the <code>x</code> to <code>n</code>, and after Line A, we only decrease <code>x</code>, <code>x</code> can never be more than <code>n</code>.</li>
 <li>At Line B, we decrease <code>x</code> by 1, so now <code>x &gt;= 0 &amp;&amp; x &lt; n</code> must be true.</li>
 <li>At Line C, <code>x % 5 == 0</code> (i.e., x is multiple of 5) must <em>also</em> be true (since it is in the true block of the <code>if</code> block).</li>
@@ -951,7 +1077,7 @@
 </td></tr></table></p>
 <p>What can be said about <code>y</code>?  It should be clear now that we increment <code>y</code> for every value between 0 and <code>n-1</code> (inclusive) that is a multiple of 5, based on the condition on Line C.  That is, it is counting the number of multiple of 5s between 0 and n-1.</p>
 <h2 id="loop-invariant">Loop Invariant</h2>
-<p>In the last unit, we say that there are five questions that we have to think about when designing loops.  The fifth question is: what is the <em>loop invariant</em>?  A loop invariant is an assertion that is true before the loop, after each iteration of the loop, and after the loop.  Thinking about the loop invariant is helpful to convince ourselves that a loop is correct, or to identify bugs in a loop.</p>
+<p>In the last unit, we say that there are five questions that we have to think about when designing loops.  But we only talked about four at that time.  The fifth question is: what is the <em>loop invariant</em>?  A loop invariant is an assertion that is true before the loop, after each iteration of the loop, and after the loop.  Thinking about the loop invariant is helpful to convince ourselves that a loop is correct, or to identify bugs in a loop.</p>
 <p>Let's see an example of a loop invariant.  Consider the example of calculating a factorial using a loop as before.  To make the invariant simpler, let's tweak the loop slightly and start looping from <code>i</code> equals 1 up to <code>n</code>.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
@@ -1035,19 +1161,59 @@
 <p>On Line 11, we increment <code>i</code>.  So, at Line C of the first iteration, we have <code>{ product == (i-1)! }</code>.</p>
 <p>On Line 13, we update <code>product</code> by multiplying it with <code>i</code>.  So, we have on Line D of the first iteration that <code>{ product == i! }</code> again.</p>
 <p>Now, let's look at the second iteration.  There is no change to the variables <code>product</code> and <code>i</code>, between Line D of the first iteration and Line B of the second iteration.  So the assertion <code>{ product == i! }</code> still holds.  From this point onwards, we can apply the same argument over and over again, and see that the assertions on Lines B, C, and D hold for every iteration!</p>
-<div class="admonition tips">
-<p class="admonition-title">Link to CS1231</p>
-<p>A more succinct and formal way to prove the above is to use a technique call <em>induction</em> taught in CS1231.  We will not require the use of induction in CS1010, however.</p>
-</div>
 <p>After we exit the loop, we can also assert that <code>i == n</code>, and so combining <code>product == i! &amp;&amp; i == n</code> we have <code>product == n!</code>, which is what we want.  The loop therefore correctly computes <code>n!</code>.</p>
+<p>The approach above to argue that an invariant is true, can be generalized to the following steps.  To argue that an invariant is true, we need to argue that:</p>
+<ul>
+<li>it is true before entering the loop.</li>
+<li>it is true at the end of the first iteration of the loop</li>
+<li>if it is true at the end of the <span class="arithmatex">\(k\)</span>-th iteration of the loop, then it is true at the end of the <span class="arithmatex">\((k+1)\)</span>-th iteration.</li>
+<li>it is true when we exit the loop.</li>
+</ul>
+<p>The way we argue that an invariant is true above is similar to a mathematical proof technique called <em>proof by induction</em>.  Induction is taught in CS1231.  We will not require you to give a formal proof of invariant in CS1010, however.</p>
+<h3 id="when-is-an-invariant-useful">When is an Invariant Useful</h3>
+<p>As we have seen in the example above, invariant is a useful thinking and reasoning tool to help us convince ourselves that our loop behaves correctly (e.g., <code>{ product == n! }</code>).</p>
+<p>Loop invariant, however, is not unique.  We can write down possibly infinitely many loop invariant that is true.  A good invariant, however, is one that will lead us to an assertion that we want to see (e.g., relating <code>product</code> to <code>n</code>).  We can derive other invariants in our code (such as <code>{ n != 0 }</code> below) that does not contribute to the resoning of the behavior of our loop.  <em>Such invariants should be avoided</em>.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="nf">factorial</span><span class="p">(</span><span class="kt">long</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="kt">long</span> <span class="n">product</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="c1">// { n != 0 }</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">product</span> <span class="o">*=</span> <span class="n">i</span><span class="p">;</span>
+    <span class="c1">// { n != 0 }</span>
+  <span class="p">}</span>
+  <span class="c1">// { n != 0 }</span>
+  <span class="k">return</span> <span class="n">product</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
 <h2 id="problem-set-12">Problem Set 12</h2>
 <h3 id="problem-121">Problem 12.1</h3>
 <p>(a) Consider the algorithm to find the maximum among a list of integers <span class="arithmatex">\(L\)</span> with at least one element (<span class="arithmatex">\(k &gt; 0\)</span>) below:</p>
-<p><img alt="max" src="figures/max-flowchart/max-flowchart.013.png" /></p>
+<p><img alt="max" src="figures/max-flowchart/max-flowchart.017.png" /></p>
 <p>The loop invariant for this loop must hold at the three points marked with the red dots: before the loop, after each iteration of the loop, and after the loop.</p>
 <p>State the loop invariant, explain why it holds at the three points above, and threfore argue that the loop above correctly finds the maximum among the elements of the list <span class="arithmatex">\(L\)</span>.  </p>
 <p>(b) Now, consider a slightly different algorithm to find the maximum among a list of integers <span class="arithmatex">\(L\)</span> with at least one element (<span class="arithmatex">\(k &gt; 0\)</span>) below:</p>
-<p><img alt="max" src="figures/max-flowchart/max-flowchart.014.png" /></p>
+<p><img alt="max" src="figures/max-flowchart/max-flowchart.018.png" /></p>
 <p>Explain why you cannot find a loop invariant similar to Part (a) above, and therefore show that the algorithm does not correctly find the maximum in certain cases.</p>
                 
               
@@ -1063,6 +1229,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="11-loop.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                11. Loops
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="ex00.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                0. Echo, Divide, Ones, BMI, Quadratic
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
