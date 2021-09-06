@@ -251,6 +251,10 @@ class: middle
 
 When will `C` gets printed?
 
+---
+class: middle,center
+
+# Loops
 
 ---
 class: bottom,center,wide
@@ -304,7 +308,7 @@ background-image: url(figures/lec5/lec5.007.png)
 class: bottom,wide
 background-image: url(figures/lec5/lec5.008.png)
 
-.tiny[
+.smaller[
 ```C
 for (initialize; condition; update) {
    body;
@@ -316,7 +320,7 @@ for (initialize; condition; update) {
 class: bottom,wide
 background-image: url(figures/lec5/lec5.008.png)
 
-.tiny[
+.smaller[
 ```C
 initialize;
 while (condition) {
@@ -334,7 +338,7 @@ class: middle
 class: bottom,wide
 background-image: url(figures/lec5/lec5.009.png)
 
-.tiny[
+.smaller[
 ```C
 initialize;
 do {
@@ -394,12 +398,18 @@ What does `y` count?
 long count(long n) {
   long y = 0;
   long x = n;
+
   while (x > 0) {
+
     x -= 1;
+
     if (x % 5 == 0) {
+
       y += 1;
+
     }
   }
+
   return y;
 }
 ```
@@ -444,12 +454,23 @@ long factorial(long n)
 ```
 ]
 ---
+class: middle
+
+### Homework
+
+- Assignment 1 and 2
+- Quiz for Lecture 5
+- Surveys (On-Campus Exam and Anon Feedback)
+- Exercise 3 and 4
+- Problem Sets
+
+---
 class: bottom
 
 .tiny[
 Version: 1.1
 
-Last Updated: Mon Sep  7 10:37:22 +08 2020
+Last Updated: Mon Sep  6 11:28:13 +08 2021
 ]
 </textarea>
 
