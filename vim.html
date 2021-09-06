@@ -968,11 +968,59 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-plugins" class="md-nav__link">
-    7. Plugins
+  <a href="#7-approved-plugins" class="md-nav__link">
+    7. Approved Plugins
   </a>
   
-    <nav class="md-nav" aria-label="7. Plugins">
+    <nav class="md-nav" aria-label="7. Approved Plugins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#delimitmate" class="md-nav__link">
+    DelimitMate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vim-rainbow" class="md-nav__link">
+    Vim-Rainbow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nerdtree" class="md-nav__link">
+    NERDTree
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lightline" class="md-nav__link">
+    Lightline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unavailable-plugins" class="md-nav__link">
+    Unavailable Plugins
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-other-useful-plugins-just-not-for-exams" class="md-nav__link">
+    8. Other Useful Plugins (Just Not for Exams)
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Other Useful Plugins (Just Not for Exams)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1261,11 +1309,59 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-plugins" class="md-nav__link">
-    7. Plugins
+  <a href="#7-approved-plugins" class="md-nav__link">
+    7. Approved Plugins
   </a>
   
-    <nav class="md-nav" aria-label="7. Plugins">
+    <nav class="md-nav" aria-label="7. Approved Plugins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#delimitmate" class="md-nav__link">
+    DelimitMate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vim-rainbow" class="md-nav__link">
+    Vim-Rainbow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nerdtree" class="md-nav__link">
+    NERDTree
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lightline" class="md-nav__link">
+    Lightline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unavailable-plugins" class="md-nav__link">
+    Unavailable Plugins
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-other-useful-plugins-just-not-for-exams" class="md-nav__link">
+    8. Other Useful Plugins (Just Not for Exams)
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Other Useful Plugins (Just Not for Exams)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1526,7 +1622,45 @@ Swap file &quot;.a.c.swp&quot; already exists!
 </td></tr></table>
 <p>The messages above is self-explanatory.  Read it carefully.  Most of the time, you want to choose "R" to recover your edits, so that you can continue editing.  Remember to remove the file <code>.foo.c.swp</code> after you have recovered.  Otherwise <code>vim</code> will prompt you the above messages every time you edit <code>foo.c</code>.</p>
 <p>Warning: if <code>foo.c</code> is newer than the state saved in <code>.foo.c.swp</code>, and you recover from <code>.foo.c.swp</code>, you will revert back to the state of the file as saved in the swap file.  This can happen if (i) you edit the file without recovery, or (ii) you recover the file, continue editing, but did not remove the <code>.foo.c.swp</code> file after.</p>
-<h2 id="7-plugins">7. Plugins</h2>
+<h2 id="7-approved-plugins">7. Approved Plugins</h2>
+<p><ins class="critic">UPDATED</ins></p>
+<p>The following plugins are approved for use during practical exams.  You will be given time to install them (only if you wish to use them) into your exam environment at the beginning of the practical exam.</p>
+<h3 id="delimitmate">DelimitMate</h3>
+<p><code>DelimitMate</code> is a plugin that automatically inserts a closing <code>}</code>, <code>)</code>, <code>&gt;</code>, etc when you type the opening symbol.</p>
+<p>To install this plugin in the exam environment, run
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>ln -s ~cs1010/.vim/pack/plugins/start/delimitMate.vim ~/.vim/pack/plugins/start
+</code></pre></div>
+</td></tr></table></p>
+<h3 id="vim-rainbow">Vim-Rainbow</h3>
+<p><code>vim-rainbow</code> is a plugin that matches opening and closing brackets and colors the matching pairs with matching colors.</p>
+<p>To install this plugin in the exam environment, run
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>ln -s ~cs1010/.vim/pack/plugins/start/vim-rainbow ~/.vim/pack/plugins/start
+</code></pre></div>
+</td></tr></table></p>
+<p>The following line will be added on your <code>~/.vimrc</code> in the environment:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>let g:rainbow_active = 1
+</code></pre></div>
+</td></tr></table>
+<h3 id="nerdtree">NERDTree</h3>
+<p>NERDTree provides a file browsing pane on the left (activated with <code>:NERDTree</code>).</p>
+<p>To install this plugin in the exam environment, run
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>ln -s ~cs1010/.vim/pack/plugins/start/nerdtree ~/.vim/pack/plugins/start
+</code></pre></div>
+</td></tr></table></p>
+<h3 id="lightline">Lightline</h3>
+<p>Lightline provides a more useful status line for <code>vim</code>.</p>
+<p>To install this plugin in the exam environment, run
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>ln -s ~cs1010/.vim/pack/plugins/start/lightline.vim ~/.vim/pack/plugins/start
+</code></pre></div>
+</td></tr></table></p>
+<h3 id="unavailable-plugins">Unavailable Plugins</h3>
+<p>The following plugins are not allowed as they provide too much help for writing Java programs.</p>
+<ul>
+<li><code>coc</code></li>
+<li><code>syntastic</code></li>
+<li><code>youcompleteme</code></li>
+</ul>
+<h2 id="8-other-useful-plugins-just-not-for-exams">8. Other Useful Plugins (Just Not for Exams)</h2>
 <h3 id="syntax-and-style-checker">Syntax and Style Checker</h3>
 <p>I use <code>syntastic</code> to check for style and syntax whenever I save a file.  <a href="https://github.com/vim-syntastic/syntastic"><code>syntastic</code></a> is a <code>vim</code> plugin.</p>
 <p>My <code>.vimrc</code> configuration file contains the following:</p>

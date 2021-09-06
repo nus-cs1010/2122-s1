@@ -16,7 +16,7 @@ class: middle, center
 
 ### 6 September 2021
 
-**Admin Matters**br>
+**Admin Matters**<br>
 **Unit 10:** Assertion<br>
 **Unit 11:** Loops<br>
 **Unit 12:** Loop Invariants<br>
@@ -35,28 +35,29 @@ class: middle
 ---
 class: middle
 
-### Reminders
+### Grading
 
 - Assignment 1 will be graded solely on correctness (including syntax, practices, approach, and logic) and whether the requirements given are followed.
+- One random question will be graded by tutors -- the rest by bot.
 
 ---
 class: middle
 
-### Reminders
+### Grading
 
 - Make sure that your submission compiles cleanly without errors or warnings.  (0 if cannot compile; -1 per warning)
-- Marks will be deducted if you do not demonstrate a full understanding of what we taught so far.
-    - wrong type
-    - redundant conditional checks
+- Marks will be deducted if you do not demonstrate a full understanding of what we taught so far.  E.g., wrong type, redundant conditional checks.
 
 ---
 
 ### Upcoming releases:
 
-- Exercise 2 on Tuesday.
+- Exercise 2 today
+- Exercise 3 on Thursday
 - Assignment 2 on Thursday
     - Additional grading criteria: [style](style.md) and efficiency.
-- Anonymous feedback exercise on tutors and instructors on Thursday
+- Anonymous feedback exercise on lab tutors and tutorial instructors on Friday
+- Last year's midterm question next week
 
 ---
 class: middle
@@ -96,10 +97,9 @@ class: middle
 ---
 class: middle
 
-### Midterm
+### Taking Online Exam on Campus
 
-If you need to take the online midterm on campus, please 
-  fill up the [LumiNUS Survey on "Midterm Venue"](https://luminus.nus.edu.sg/modules/c7b362a0-6aee-4b22-b4da-f9e8074249fd/survey/d834edec-3e9d-4aff-b052-ae9951e4a889) before Thursday 23:59.
+If you need to take the online midterm or onlien PE on campus, please fill up the LumiNUS Survey on "Taking Midterm/PE1 on Campus" before this Friday 23:59.
  
 ---
 class: middle
@@ -118,9 +118,10 @@ class: middle
 ### Practical Exam I
 
 - **Scope:** same as midterm
-- **Format:** Five programming problems
+- **Format:** Five programming problems 
+    - 3 on average, 4 to ace, 5 for glory
 - Open Book (printed/written notes only)
-- Calculator allowed (but not needed)
+- Calculator allowed
 - Criteria: correctness, style, and efficiency
 
 ---
@@ -153,6 +154,103 @@ class: middle
 - Assignment 1
 - Exercise 4
 - Preparing for Assignment 2
+
+---
+class: middle,center
+
+## Assertion
+
+```
+// { ... }
+```
+
+A logical expression that must always be true<br>
+at a given point in a program.
+
+---
+class: middle
+
+```C
+x = 1;
+// { x == 1 }
+```
+
+---
+class: middle
+
+```C
+if (x > y) {
+  max = x;
+} else {
+  max = y;
+}
+```
+
+how can we be sure that `max` is now the larger of the two?
+
+---
+class: middle
+
+```C
+if (x > y) {
+
+  max = x;
+
+} else {
+
+  max = y;
+
+}
+```
+---
+class: middle
+
+.tiny[
+```C
+  if (score >= 8) {
+    cs1010_println_string("A");
+  } else {
+    if (score >= 5) {
+      cs1010_println_string("B");
+    } else {
+      if (score >= 3) {
+        cs1010_println_string("C");
+      } else {
+        cs1010_println_string("D");
+      }
+    }
+  }
+```
+]
+
+When will `C` gets printed?
+
+---
+class: middle
+
+.tiny[
+```C
+  if (score >= 8) {
+    cs1010_println_string("A");
+  } else {
+
+    if (score >= 5) {
+      cs1010_println_string("B");
+    } else {
+
+      if (score >= 3) {
+
+        cs1010_println_string("C");
+      } else {
+        cs1010_println_string("D");
+      }
+    }
+  }
+```
+]
+
+When will `C` gets printed?
+
 
 ---
 class: bottom,center,wide
@@ -189,6 +287,8 @@ class: bottom,center,wide
 background-image: url(figures/lec5/lec5.012.png)
 
 Finding factorial recursively
+
+---
 
 ---
 class: bottom,center,wide
