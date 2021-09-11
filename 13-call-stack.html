@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://nus-cs1010.github.io/2122-s1/index.html">
+        <link rel="canonical" href="https://nus-cs1010.github.io/2122-s1/13-call-stack.html">
       
       <link rel="shortcut icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.6">
     
     
       
-        <title>Home - CS1010 Programming Methodology</title>
+        <title>Unit 13: Call Stack - CS1010 Programming Methodology</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#announcements" class="md-skip">
+        <a href="#unit-13-call-stack" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              Home
+              Unit 13: Call Stack
             
           </span>
         </div>
@@ -180,20 +180,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-        
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         Home
       </a>
-      
     </li>
   
 
@@ -911,6 +902,76 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    Learning Objectives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stack-frame" class="md-nav__link">
+    Stack Frame
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automatic-variable" class="md-nav__link">
+    Automatic Variable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stack-size" class="md-nav__link">
+    Stack Size
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-set-13" class="md-nav__link">
+    Problem Set 13
+  </a>
+  
+    <nav class="md-nav" aria-label="Problem Set 13">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-131" class="md-nav__link">
+    Problem 13.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-132" class="md-nav__link">
+    Problem 13.2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-133" class="md-nav__link">
+    Problem 13.3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -922,68 +983,235 @@
               
                 
                 
-                <h1 id="announcements">Announcements</h1>
-<div class="admonition announcement">
-<p class="admonition-title">Exercise 3</p>
-<p><a href="ex03.html">Exercise 3</a> is posted.  Give it a try after completing your Assignment 1.  Exercise 3 contains very simple problems that you can solve with five commonly used "patterns" of loops.  If you are new to programming, we encourage you to try it out before Exercise 4 and Assignment 2, which builds upon these patterns to solve more complex problems.</p>
-</div>
-<div class="admonition announcement">
-<p class="admonition-title">Lecture 5</p>
-<p>In Lecture 5, we will discuss how we can <a href="10-assert.html">reason about our code using assertions</a>, how we can control the flow of C programs with <a href="11-loop.html">loops</a>, and how to reason about the behavior of loops with <a href="12-invariant.html">invariants</a>.</p>
-<p><a href="https://mediaweb.ap.panopto.com/Panopto/Pages/Viewer.aspx?id=d6b9ef5a-86f6-47d9-a6d3-ad9b009b2ff4">video</a> | <a href="https://nus-cs1010.github.io/2122-s1/slides/cs1010-lec5.html#1">slides</a> | <a href="https://luminus.nus.edu.sg/modules/600de8e9-67ec-47dd-b597-a2eeadb45792/quiz/a0b56b94-e3c8-4d83-bb6d-b99009ce5b12/attempt">quiz</a> </p>
-</div>
-<div class="admonition announcement">
-<p class="admonition-title">Assignment 1</p>
-</div>
-<p><a href="as01.html">Assignment</a> 1 is released.  The assignment is due on 7 September 2021, 11:59 PM, and contributes to 3% of your final grade.</p>
-<div class="admonition announcement">
-<p class="admonition-title">Lecture 4</p>
-<p>In Lecture 4, we will see how we can control the flow of C programs with <a href="08-if-else.html">conditional <code>if-else</code> statements</a>, how to expression conditions with <a href="09-logical-exp.html">logical expressions</a>, and how we can <a href="10-assert.html">reason about our code with assertions</a>.</p>
-<p><a href="https://mediaweb.ap.panopto.com/Panopto/Pages/Viewer.aspx?id=15836fc3-f925-40bb-9e32-ad94008aa460">video</a> | <a href="https://nus-cs1010.github.io/2122-s1/slides/cs1010-lec4.html#1">slides</a> | <a href="https://luminus.nus.edu.sg/modules/600de8e9-67ec-47dd-b597-a2eeadb45792/quiz/85f625e8-9458-4754-b338-542afd8615a3/attempt-secure">quiz</a></p>
-</div>
-<div class="admonition announcement">
-<p class="admonition-title">Lecture 3</p>
-<p>In our third lecture, we will start to write some simple C programs. We will learn about <a href="05-first-c.html">how to write C functions</a>, <a href="06-cs1010-io.html">how to read and write </a>, and <a href="07-arithmetic-ops.html">how to perform arithmetic operations</a>.</p>
-<p><a href="https://mediaweb.ap.panopto.com/Panopto/Pages/Viewer.aspx?id=51efebd7-beaa-416e-8401-ad8d00963d00">video</a> | <a href="https://nus-cs1010.github.io/2122-s1/slides/cs1010-lec3.html#1">slides</a> | <a href="https://luminus.nus.edu.sg/modules/600de8e9-67ec-47dd-b597-a2eeadb45792/quiz/46e55d3d-c524-46e9-bcea-87a181f833dd/attempt-secure">quiz</a></p>
-</div>
-<div class="admonition announcement">
-<p class="admonition-title">Lecture 2</p>
-<p>This week, we will examine two concepts that are central to programming: <a href="03-func.html">functions</a> and <a href="04-type.html">types</a>. </p>
-<p><a href="https://mediaweb.ap.panopto.com/Panopto/Pages/Viewer.aspx?id=fb53c266-a379-480a-94cc-ad86008cc945"> video |
-<a href="https://nus-cs1010.github.io/2122-s1/slides/cs1010-lec2.html"> slides</a> |
-<a href="https://luminus.nus.edu.sg/modules/600de8e9-67ec-47dd-b597-a2eeadb45792/quiz/34de1e2a-b099-4c0a-9799-282cd3b18f62/attempt-secure">quiz</a></p>
-</div>
-<div class="admonition announcement">
-<p class="admonition-title">Lecture 1</p>
-<p>Given that the first lecture for CS1010 falls on the National Day, I have recorded the lecture and have posted it on LumiNUS Multimedia.</p>
-<p>We covered lots of adminsitrative details today, and started with Units 1 and 2 on what is a program, what are computational problems, and what is an algorithms.  As a concrete example, we went through finding the largest value from a given list.</p>
-<p>Here are the videos, slides, and self-diagnostic quiz (due on Wednesday 2359). </p>
-<p><a href="https://mediaweb.ap.panopto.com/Panopto/Pages/Viewer.aspx?id=ace0e66c-5349-492c-96c9-ad7f0073917e">video |
-<a href="https://nus-cs1010.github.io/2122-s1/slides/cs1010-lec1.html">
-slides</a> |
-<a href="https://luminus.nus.edu.sg/modules/600de8e9-67ec-47dd-b597-a2eeadb45792/quiz/113ccaa9-1993-42d5-9536-81bbda0efa07/attempt-secure">quiz</a></p>
-</div>
-<div class="admonition announcement">
-<p class="admonition-title">Getting Ready for CS1010</p>
-<p>Welcome to CS1010!  Here are some things that you can do while waiting for the semester to start.</p>
-<p><strong>Take a Look at General CS1010 Information</strong></p>
-<p>Take a look at the <a href="about.html">crucial information about CS1010</a> here.  Scan through the <a href="outcomes.html">learning outcomes</a> to know what you are expected to learn in this module.</p>
-<p>Note down the <a href="about.html">important dates</a> on your calendar.</p>
-<p><strong>Read about CS1010 Policies</strong></p>
-<p>The <a href="policies.html">general policies</a> for CS1010 is posted.  Go through it to see what is expected.</p>
-<p><strong>Enable Your Piazza Account</strong></p>
-<p>You should have received an email inviting you to create a Piazza account and enroll in the module Q&amp;A forum.  Please join CS1010 on Piazza.</p>
-<p><strong>Enable Your SoC Account</strong></p>
-<p>Go to <a href="https://mysoc.nus.edu.sg/~newacct">https://mysoc.nus.edu.sg/~newacct</a> and create your SoC Unix Account if you have not done so.  Activate "General Unix Servers" and "The SoC Compute Cluster" in MySoC here: <a href="https://mysoc.nus.edu.sg/~myacct/services.cgi">https://mysoc.nus.edu.sg/~myacct/services.cgi</a></p>
-<p><strong>Create a GitHub Account</strong></p>
-<p>Create a <a href="https://www.github.com">GitHub</a> account if you do not have one.  This account should stay with you for your professional career.  So choose the username wisely.  Then, <a href="https://luminus.nus.edu.sg/modules/600de8e9-67ec-47dd-b597-a2eeadb45792/survey/9ce6eba8-56de-4224-b211-7eddb16930db">tells us your GitHub Username here</a> before 13 August 2021, Friday.</p>
-<p><strong>Get a Head-Start with Unix and Vim</strong></p>
-<p>You can check out the content for <a href="https://nus-unix-workshop.github.io/2021-s1">SoC Unix@Home Workshop</a>, which was held last year.  The website contains notes with examples, which you can follow through.  If you have questions or face any issues, ask on Piazza.</p>
-<p>You can also find more notes under "Software/Tools".</p>
-<p><strong>Read Feedback on CS1010 from Last Year Ago</strong></p>
-<p>This semester's CS1010 will be conducted in a similar style with the version in AY2020/21. Read <a href="docs/feedback-2021-s1.pdf">the comments from that batch of students</a> to know what to expect.</p>
-<p><strong>Explore Some Additional Readings</strong></p>
-<p>Some extra reading materials curated by Wei Tsang are <a href="readings.html">available</a>.  If you have some programming background and are wondering why we are teaching C, read the articles under <em>Why C</em> section.</p>
+                <h1 id="unit-13-call-stack">Unit 13: Call Stack</h1>
+<p>In this unit, we will delve deeper into how variables are stored in the memory and what happens when we call a function.</p>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>After this unit, students should:</p>
+<ul>
+<li>understand the purpose of the call stack</li>
+<li>be aware that the stack frame represents the memory allocated to a particular function call</li>
+<li>be aware that the stack frame for a function is deallocated once the function terminates</li>
+<li>understand what occurs in a stack frame when a variable is declared</li>
+<li>understand what occurs in a stack frame when a variable is assigned</li>
+<li>understand how function parameters are handled within the stack frame</li>
+<li>be able to trace the contents of the call stack through nested function calls</li>
+<li>be aware that there are three different types of variables: automatic, global, and static</li>
+<li>be aware that the operating system limits the size of the call stack for each program</li>
+</ul>
+<h2 id="stack-frame">Stack Frame</h2>
+<p>Modern OS typically divides the memory into several regions.  The region that we are concerned with for now is called the <em>call stack</em>.<br />
+Every function invocation causes the OS to allocate some memory on the call stack to store (among other things) the parameters passed into the function and the variables declared and used in the function.  The memory allocated to each function call is called a <em>stack frame</em>.  When a function returns, the stack frame is deallocated and freed up for other uses.</p>
+<p>Let's start with the following simple program as an example.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">long</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="kt">long</span> <span class="n">y</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<p>When the OS runs the program above, it invokes, or calls, the function <code>main</code>.  A new stack frame is created for <code>main()</code>.  There are two variables <code>x</code> and <code>y</code> declared in <code>main</code>.  Recall from <a href="02-algo.html">Unit 2</a> that a variable is a location in the memory which holds a value.  Thus, the stack frame of the <code>main</code> will include these two variables.  We initialize <code>x</code> to 1 in the code above, so the value 1 will be placed in the memory location of <code>x</code>.  The variable <code>y</code> remains uninitialized, so it will contain whatever value that happens to be in the memory at that time.</p>
+<p><img alt="stack" src="figures/stack/stack.001.png" /></p>
+<p>Now, let's consider the program<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="nf">add</span><span class="p">(</span><span class="kt">long</span> <span class="n">a</span><span class="p">,</span> <span class="kt">long</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">long</span> <span class="n">sum</span><span class="p">;</span>
+  <span class="n">sum</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+  <span class="k">return</span> <span class="n">sum</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">long</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="kt">long</span> <span class="n">y</span><span class="p">;</span>
+  <span class="n">y</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<p>Now, the program invokes the function <code>add</code> with two parameters, using <code>x</code> and 10 as arguments.  What the OS does when <code>add</code> is called, is that it allocates another stack frame for <code>add</code>.  We can visualize the stack frame for <code>add</code> as being placed on top of the stack frame of <code>main</code>.  The stack frame for <code>add</code> includes two variables corresponding to the parameters <code>a</code>, <code>b</code>, and the variable <code>sum</code> declared in the function <code>add</code>.</p>
+<p>When the stack frame for <code>add</code> is created, <code>sum</code> is uninitialized, but <code>a</code> is initialized to whatever the value of <code>x</code> is when the function is invoked (1 in this example), and <code>b</code> is initialized to 10, since that is the argument passed into <code>add</code>.</p>
+<p><img alt="stack" src="figures/stack/stack.002.png" /></p>
+<p>After the stack frame for <code>add</code> is set up, the code is executed.  The memory location for <code>sum</code> is then initialized to the sum of <code>a</code> and <code>b</code> (11 in this example), and the return statement is executed.  </p>
+<p><img alt="stack" src="figures/stack/stack.003.png" /></p>
+<p>When a function returns, the stack frame for <code>sum</code> is removed.  The variables <code>sum</code>, <code>a</code>, <code>b</code> crumble into dust and no longer exist in the memory.  The value of the variable being returned (<code>sum</code> in this case) is then copied back to the stack frame of the <code>main</code> (the <del class="critic"><em>callee</em></del> caller).  In this example, this value is copied into the memory location of <code>y</code>.</p>
+<p><img alt="stack" src="figures/stack/stack.004.png" /></p>
+<p>What would happen if we change the value of <code>a</code> within <code>add</code>?</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="nf">add</span><span class="p">(</span><span class="kt">long</span> <span class="n">a</span><span class="p">,</span> <span class="kt">long</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">sum</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+  <span class="n">a</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>  <span class="c1">// change a</span>
+  <span class="k">return</span> <span class="n">sum</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">long</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="kt">long</span> <span class="n">y</span><span class="p">;</span>
+  <span class="n">y</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<p>In this example, we change the value of <code>a</code> in the call stack of <code>add</code> to 42.  This does not affect any variable in <code>main</code>, since the changes apply only within the stack frame of <code>add</code>.</p>
+<p>A common bug by beginners is to try to write a function this way:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">add</span><span class="p">(</span><span class="kt">long</span> <span class="n">sum</span><span class="p">,</span> <span class="kt">long</span> <span class="n">a</span><span class="p">,</span> <span class="kt">long</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">sum</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">long</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="kt">long</span> <span class="n">sum</span><span class="p">;</span>
+  <span class="n">add</span><span class="p">(</span><span class="n">sum</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<p>Here, there are two versions of <code>sum</code>, one in the stack frame of <code>main</code>, the other in the stack frame of <code>add</code>.  When we change <code>sum</code> in <code>add</code>, we are changing a local copy which will eventually get deleted.  The assignment to <code>sum</code> in Line 2 does not affect the variable <code>sum</code> on Line 8 of <code>main</code>.</p>
+<p>This explanation explains why a function is a black box, we can only pass in parameters and get a value in return.  Nothing else gets in and out.  There are no "side effects" -- whatever happens in the function, stays in the function and does not affect the caller (excepts if it reads or writes to the standard input/output).   Such a function is sometimes called a "pure function".</p>
+<h2 id="automatic-variable">Automatic Variable</h2>
+<p>Because of the way the memory for the variables are automatically allocated and deallocated when a function is invoked and when the function returns, we call these variables <em>automatic variables</em> or <em>auto</em> variable for short.  </p>
+<p>There are two other types of variables, <em>global variable</em>, which we have mentioned is a very very bad programming practice in Lecture 5 and is banned from CS1010, and <em>static variable</em>, which could be useful in rare occasions but it is again a bug-prone feature of C and so using <code>static</code> variable in CS1010 is not allowed.</p>
+<h2 id="stack-size">Stack Size</h2>
+<p>The OS typically reserves a limited amount of memory for each program for the stack.  You can find out, on your system, what is the maximum allocated stack size with the command
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>ulimit -s
+</code></pre></div>
+</td></tr></table></p>
+<p>On our CS1010 PE hosts, the limit is 8 MB.  </p>
+<h2 id="problem-set-13">Problem Set 13</h2>
+<h3 id="problem-131">Problem 13.1</h3>
+<p>Trace through what gets stored in the call stack when we run the following programs:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="cp"></span>
+
+<span class="kt">long</span> <span class="nf">square</span><span class="p">(</span><span class="kt">long</span> <span class="n">x</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">double</span> <span class="nf">hypotenuse_of</span><span class="p">(</span><span class="kt">long</span> <span class="n">base</span><span class="p">,</span> <span class="kt">long</span> <span class="n">height</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">square</span><span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="o">+</span> <span class="n">square</span><span class="p">(</span><span class="n">height</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">hypotenuse_of</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="problem-132">Problem 13.2</h3>
+<p>Trace through what gets stored in the call stack when we run the following programs:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;cs1010.h&quot;</span><span class="cp"></span>
+
+<span class="kt">long</span> <span class="nf">factorial</span><span class="p">(</span><span class="kt">long</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="mi">-1</span><span class="p">)</span> <span class="o">*</span> <span class="n">n</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">factorial</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="problem-133">Problem 13.3</h3>
+<p>What will be printed by the program below?
+Trace through what gets stored in the call stack when we run the following programs:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;cs1010.h&quot;</span><span class="cp"></span>
+
+<span class="kt">void</span> <span class="nf">incr</span><span class="p">(</span><span class="kt">long</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">long</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="n">incr</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+    <span class="n">incr</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+    <span class="n">cs1010_print_long</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>The variable <code>sum</code> is not necessary and the function can be better written as a one-liner <code>return a + b;</code>.  But I introduce the additional variable <code>sum</code> here to make the example more meaningful in explaining about stack frame.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
 </div>
                 
               
@@ -999,27 +1227,6 @@ slides</a> |
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-        
-          <a href="midterm.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Midterm
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

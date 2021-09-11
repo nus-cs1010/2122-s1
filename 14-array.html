@@ -1,0 +1,1456 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://nus-cs1010.github.io/2122-s1/14-array.html">
+      
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.6">
+    
+    
+      
+        <title>Unit 15: Array I - CS1010 Programming Methodology</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.cb6bc1d0.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.39b8e14a.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unit-15-array-i" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://nus-cs1010.github.io/2122-s1" title="CS1010 Programming Methodology" class="md-header-nav__button md-logo" aria-label="CS1010 Programming Methodology">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            CS1010 Programming Methodology
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              Unit 15: Array I
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://nus-cs1010.github.io/2122-s1" title="CS1010 Programming Methodology" class="md-nav__button md-logo" aria-label="CS1010 Programming Methodology">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    CS1010 Programming Methodology
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="midterm.html" class="md-nav__link">
+        Midterm
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pe1.html" class="md-nav__link">
+        PE1
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+      
+      <label class="md-nav__link" for="nav-4">
+        General
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="General" data-md-level="1">
+        <label class="md-nav__title" for="nav-4">
+          <span class="md-nav__icon md-icon"></span>
+          General
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about.html" class="md-nav__link">
+        About CS1010
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="outcomes.html" class="md-nav__link">
+        Learning Outcomes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="schedule.html" class="md-nav__link">
+        Schedule
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="accounts.html" class="md-nav__link">
+        Accounts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="policies.html" class="md-nav__link">
+        Policies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutors.html" class="md-nav__link">
+        Teaching Team
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+      
+      <label class="md-nav__link" for="nav-5">
+        Notes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Notes" data-md-level="1">
+        <label class="md-nav__title" for="nav-5">
+          <span class="md-nav__icon md-icon"></span>
+          Notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01-program.html" class="md-nav__link">
+        1. What is a Program?
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02-algo.html" class="md-nav__link">
+        2. Computational Problem & Algorithms
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03-func.html" class="md-nav__link">
+        3. Functions
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04-type.html" class="md-nav__link">
+        4. Types
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05-first-c.html" class="md-nav__link">
+        5. First C Program
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="06-cs1010-io.html" class="md-nav__link">
+        6. CS1010 I/O
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="07-arithmetic-ops.html" class="md-nav__link">
+        7. Arithmetic Operations
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="08-if-else.html" class="md-nav__link">
+        8. Conditional Statement
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="09-logical-exp.html" class="md-nav__link">
+        9. Logical Expression
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="10-assert.html" class="md-nav__link">
+        10. Assertions
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="11-loop.html" class="md-nav__link">
+        11. Loops
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="12-invariant.html" class="md-nav__link">
+        12. Invariant
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" >
+      
+      <label class="md-nav__link" for="nav-6">
+        Exercises
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Exercises" data-md-level="1">
+        <label class="md-nav__title" for="nav-6">
+          <span class="md-nav__icon md-icon"></span>
+          Exercises
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ex00.html" class="md-nav__link">
+        0. Echo, Divide, Ones, BMI, Quadratic
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ex01.html" class="md-nav__link">
+        1. Odd, Sum, Triangle, Burger
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ex02.html" class="md-nav__link">
+        2. Date, GCD, Leap, Multiple
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ex03.html" class="md-nav__link">
+        3. Three, Factor, Parity, Nine, HDB
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ex04.html" class="md-nav__link">
+        4. Binary, Onigiri, Fibonacci
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" >
+      
+      <label class="md-nav__link" for="nav-7">
+        Assignments
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Assignments" data-md-level="1">
+        <label class="md-nav__title" for="nav-7">
+          <span class="md-nav__icon md-icon"></span>
+          Assignments
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="assignment.html" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="as01.html" class="md-nav__link">
+        1. Pyramid, Digits, Suffix, Taxi
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="as02.html" class="md-nav__link">
+        2. Collatz, Rectangle, Prime, Pattern
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="readings.html" class="md-nav__link">
+        Readings
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="c-in-cs1010.html" class="md-nav__link">
+        C in CS1010
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="library.html" class="md-nav__link">
+        CS1010 I/O Library
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="style.html" class="md-nav__link">
+        C Style Convention
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="messages.html" class="md-nav__link">
+        Compiler Messages
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13" >
+      
+      <label class="md-nav__link" for="nav-13">
+        Software/Tools
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Software/Tools" data-md-level="1">
+        <label class="md-nav__title" for="nav-13">
+          <span class="md-nav__icon md-icon"></span>
+          Software/Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="environments.html" class="md-nav__link">
+        Programming Environments
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="github.html" class="md-nav__link">
+        GitHub
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="unix.html" class="md-nav__link">
+        UNIX
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="clang.html" class="md-nav__link">
+        CLang
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vim.html" class="md-nav__link">
+        Vim
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="make.html" class="md-nav__link">
+        Make
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tmate.html" class="md-nav__link">
+        TMate
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="zoom.html" class="md-nav__link">
+        Zoom
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="panopto/panopto.html" class="md-nav__link">
+        Panopto
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="1819s1.html" class="md-nav__link">
+        18/19 Semester 1
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    Learning Objectives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-first-compound-data-type" class="md-nav__link">
+    Your First Compound Data Type
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array-declaration" class="md-nav__link">
+    Array Declaration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-the-array-elements" class="md-nav__link">
+    Accessing the Array Elements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array-initialization" class="md-nav__link">
+    Array Initialization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-1-array-as-lookup-table" class="md-nav__link">
+    Example 1: Array As Lookup Table
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-2-array-as-list" class="md-nav__link">
+    Example 2: Array As List
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array-index-out-of-bound" class="md-nav__link">
+    Array Index Out of Bound
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-facts-about-arrays" class="md-nav__link">
+    Other Facts About Arrays
+  </a>
+  
+    <nav class="md-nav" aria-label="Other Facts About Arrays">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variable-length-array" class="md-nav__link">
+    Variable Length Array
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skipping-elements-during-initialization" class="md-nav__link">
+    Skipping Elements During Initialization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skipping-the-size-in-declaration" class="md-nav__link">
+    Skipping the Size in Declaration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#determining-the-number-of-elements-in-the-array" class="md-nav__link">
+    Determining the Number of Elements in the Array
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamically-allocated-array" class="md-nav__link">
+    Dynamically Allocated Array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returning-an-array-from-a-function" class="md-nav__link">
+    Returning an Array from a Function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cs1010-io-library" class="md-nav__link">
+    CS1010 I/O Library
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-set-15" class="md-nav__link">
+    Problem Set 15
+  </a>
+  
+    <nav class="md-nav" aria-label="Problem Set 15">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-151" class="md-nav__link">
+    Problem 15.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-152" class="md-nav__link">
+    Problem 15.2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-153" class="md-nav__link">
+    Problem 15.3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-complete-code-example" class="md-nav__link">
+    Appendix: Complete Code Example
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="unit-15-array-i">Unit 15: Array I</h1>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>After this unit, students should:</p>
+<ul>
+<li>understand the concept of a compound data type</li>
+<li>be able to manipulate arrays in C, including:<ul>
+<li>declaring an array of a particular type and length</li>
+<li>accessing the elements within an array</li>
+</ul>
+</li>
+<li>be aware that when declaring arrays, they are done so with a fixed-length</li>
+<li>be able to define an array as a function parameter</li>
+<li>be aware of the difference of pass by value and pass by reference, and that arrays, as parameters correspond to the latter, and consequently, the need to also indicate the length of an array as another parameter</li>
+<li>be aware of potential errors when array variables are treated as non-array variables and vice versa</li>
+<li>be aware that we cannot change the length of an array, only declare a new one of different length</li>
+<li>be aware that we may check the length of an array using the sizeof operator</li>
+<li>be aware that VLA should be avoided</li>
+<li>be able to use the CS1010 library functions to read arrays of longs or doubles</li>
+</ul>
+<h2 id="your-first-compound-data-type">Your First Compound Data Type</h2>
+<p>We now look at the first of the two compound data types in C --  arrays.  </p>
+<p>A variable can be declared to be of an array, in which case it can hold one or more values.  An array variable can only store values of the <em>same</em> type <span class="arithmatex">\(T\)</span>.  We say that the array variable is an array of <span class="arithmatex">\(T\)</span>.  For instance, we can declare a variable <code>marks</code> to be an array of <code>long</code>, in which case, <code>marks</code> can hold one or more <code>long</code> values.  </p>
+<h2 id="array-declaration">Array Declaration</h2>
+<p>The declaration syntax for an array in C takes the following form:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="n">marks</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+</code></pre></div>
+</td></tr></table>
+<p>We use the square bracket <code>[</code> and <code>]</code> to indicate that the variable <code>marks</code> is an array.  The number <code>10</code> indicates that <code>marks</code> holds 10 <code>long</code> values.</p>
+<p>Once declared, the variables in the array are uninitialized and will contain whatever value happened to be in the memory at that time.</p>
+<h2 id="accessing-the-array-elements">Accessing the Array Elements</h2>
+<p>We can access the array elements using the <em>index</em> of the element, starting from 0.  For instance, to initialize the marks for the first three students to 1, 2, 4, respectively, we can write:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="n">marks</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+<span class="n">marks</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="n">marks</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="n">marks</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+</code></pre></div>
+</td></tr></table>
+<div class="admonition tip">
+<p class="admonition-title">Same syntax, two different meanings</p>
+<p>Beginners tend to confuse with the following:
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="n">marks</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+<span class="n">marks</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</code></pre></div>
+</td></tr></table></p>
+<p><code>marks[10]</code> appears twice but it has two different meanings.  In the first line, we are <em>declaring</em> an array called <code>marks</code> of size 10.  In the second line, we are <em>using</em> the array <code>marks</code>, and accessing the element with index 10 (which is not valid). </p>
+</div>
+<h2 id="array-initialization">Array Initialization</h2>
+<p>Initializing a large array using the method above could be tedious.  Alternatively, we can initialize an array using a list of values when we declare the array.  </p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="n">marks</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">};</span>
+</code></pre></div>
+</td></tr></table>
+<p>If we do not specify a value during initialization, it will be set to 0 by default.  </p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="n">marks</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="p">};</span>
+<span class="c1">// marks[8] and marks[9] are both initialized to 0</span>
+</code></pre></div>
+</td></tr></table>
+<p>Note that, after the declaration, we can no longer using this technique to reinitialized or initialize the array.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="n">marks</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+<span class="n">marks</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">};</span>  <span class="c1">// error</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="example-1-array-as-lookup-table">Example 1: Array As Lookup Table</h2>
+<p>One way the array is useful is that it can be used as a lookup table.</p>
+<h2 id="example-2-array-as-list">Example 2: Array As List</h2>
+<p>We can now revisit the flowchart for <span class="arithmatex">\(max\)</span> and write the corresponding code.  The code would look like this:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="nf">max</span><span class="p">(</span><span class="kt">long</span> <span class="n">list</span><span class="p">[],</span> <span class="kt">long</span> <span class="n">length</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">long</span> <span class="n">max_so_far</span> <span class="o">=</span> <span class="n">list</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">length</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">max_so_far</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">max_so_far</span> <span class="o">=</span> <span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">max_so_far</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<p>Please see the <a href="#appendix">Appendix</a> for the complete code.</p>
+<p>Note that, in the type of the array passed into the function above, we only need to use <code>[]</code> without specifying the length.  It is also almost always necessary to pass in the number of elements in the array together with the array so that we know how many elements are there to process.  To understand why, we have to understand something called <em>array decay</em>.  This is left as a topic for another unit.</p>
+<h2 id="array-index-out-of-bound">Array Index Out of Bound</h2>
+<p>A common bug when we work with arrays is accessing a location beyond what is allocated to the array.  Unlike other languages like Java, which checks the bound for you, C does not.  So we could write the following code and it would compile perfectly.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">long</span> <span class="n">a</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<p>Running this, however, would lead to <em>memory corruption</em>, since we are writing to <code>a[10]</code> (the 11-th element) but we only asked for 10 elements for the array <code>a</code>.  So we are writing to a memory that we are not supposed to and thus causing your program to behave incorrectly.</p>
+<p>Similarly, reading from a memory location that we are not supposed to could lead to a misbehave program.  You have seen this in Problem 1.1(d).</p>
+<h2 id="other-facts-about-arrays">Other Facts About Arrays</h2>
+<h3 id="variable-length-array">Variable Length Array</h3>
+<p>C also allows declaration of an array where the number of elements depends on the value of a variable.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="n">num_of_students</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="kt">long</span> <span class="n">marks</span><span class="p">[</span><span class="n">num_of_students</span><span class="p">];</span>
+</code></pre></div>
+</td></tr></table>
+<p>Such arrays, where the number of elements (or length) depends on the value of a variable, are sometimes called <em>variable-length array</em>, or VLA.  This is a misnomer since once the array is created, the length is fixed.  Changing the value of the variable <code>num_of_students</code> above will not change the length of <code>marks</code>.</p>
+<p><em>VLA should not be used</em> in CS1010.  Even outside of CS1010, VLA should be used with extreme care.  A VLA is allocated on the stack, which typically has very limited memory.  If the stack runs out of memory, your program would crash!  The situation is worse if the size of the VLA is read as an input from the users -- this implies that an external user could enter a malicious input to crash your program.   You should use dynamically allocated array instead (see below for a teaser and a later unit for details).</p>
+<h3 id="skipping-elements-during-initialization">Skipping Elements During Initialization</h3>
+<p>If we have a large array, and we want most of it to be initialized to 0, and only some non-zero, we can use <em>element designators</em>, putting the index of the element we want to initialize to non-zero in square brackets <code>[</code> and <code>]</code>.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="n">vector</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">99</span><span class="p">]</span> <span class="o">=</span> <span class="mi">-1</span><span class="p">};</span>
+</code></pre></div>
+</td></tr></table>
+<p>This statement initializes <code>vector[0]</code> to 1, <code>vector[5]</code> to 2, <code>vector[6]</code> to 3, and <code>vector[99]</code> to -1.  The rest of the elements will be 0.</p>
+<h3 id="skipping-the-size-in-declaration">Skipping the Size in Declaration</h3>
+<p>If you supply an initialization list, the number of elements already indicates the length to the compiler, so you can skip the length.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="n">marks</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,}</span>
+</code></pre></div>
+</td></tr></table>
+<p>This makes it easy to add or remove items from the array, without having to remember to keep the array length consistent.</p>
+<h3 id="determining-the-number-of-elements-in-the-array">Determining the Number of Elements in the Array</h3>
+<p>C provides a <code>sizeof</code> operator, which returns the number of bytes allocated to a type.  We can use <code>sizeof long</code> for instance, to determine the number of bytes allocated to <code>long</code> on a platform.  We can also use <code>sizeof</code> on a variable instead of the type.  This becomes useful to determine, programmatically, the length of an array (esp if the array length is skipped in the array declaration).  We can calculate the number of elements in <code>marks</code> with</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="n">num_of_elem</span> <span class="o">=</span> <span class="k">sizeof</span> <span class="n">marks</span><span class="o">/</span><span class="k">sizeof</span> <span class="n">marks</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="dynamically-allocated-array">Dynamically Allocated Array</h2>
+<p>It is often not possible to determine the length of the array beforehand.  So, it is useful to be able to allocate an array with a length that is determined during runtime (not hard-coding the length of the array in the program).</p>
+<p>For instance, if I want to keep a <code>marks</code> array for a module, it is unclear how big I should set the array to.  How big is big enough?  While I can use a variable-length array for this purpose, it is not ideal -- if the system does not have enough memory to store the array, the program would simply crash with a segfault and there is no way to recover from this.</p>
+<p>For this reason, it is useful to request memory from the OS which we will manage ourselves in our program.  Unlike memory space on the call stack which is managed entirely by the OS, there is another region of memory called the <em>heap</em>, which we can use.  We can request for memory from <em>heap</em> using the method <code>calloc()</code> and return the memory to the heap when we are done with <code>free()</code>.  We will visit these in more detail later, but this shallow understanding is enough for now.</p>
+<h2 id="returning-an-array-from-a-function">Returning an Array from a Function</h2>
+<h2 id="cs1010-io-library">CS1010 I/O Library</h2>
+<p>To wrap up this unit, we will look at the CS1010 library functions that help us read in an array of either <code>long</code> values or <code>double</code> values.  These functions, <code>cs1010_read_long_array</code> or <code>cs1010_read_double_array</code> takes in a parameter, which is the number of elements to read, and it returns the array allocated within the function.</p>
+<p>For instance, to read in an array of 100 integers, we can write:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="o">*</span><span class="n">marks</span><span class="p">;</span>
+<span class="n">marks</span> <span class="o">=</span> <span class="n">cs1010_read_long_array</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">cs1010_println_long</span><span class="p">(</span><span class="n">marks</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<p>This should be straightforward enough.  There are, however, two cases to consider.  What if the OS failed to allocate the memory for our array?  In this case, marks would be <code>NULL</code> and access <code>marks[i]</code> would cause a segfault. Second, we must return the memory allocated to us back to the OS once we are done.  To let go of this memory, we call the function <code>free</code>.  The complete code looks like this:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="o">*</span><span class="n">marks</span><span class="p">;</span>
+<span class="n">marks</span> <span class="o">=</span> <span class="n">cs1010_read_long_array</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">marks</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// signal error and return</span>
+<span class="p">}</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">cs1010_println_long</span><span class="p">(</span><span class="n">marks</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="p">}</span>
+<span class="c1">// do other things to marks</span>
+  <span class="o">:</span>
+<span class="n">free</span><span class="p">(</span><span class="n">marks</span><span class="p">);</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="problem-set-15">Problem Set 15</h2>
+<h3 id="problem-151">Problem 15.1</h3>
+<p>Write the function <code>average</code> that takes an array of <span class="arithmatex">\(k\)</span> integers and <span class="arithmatex">\(k\)</span> and returns the average of the <span class="arithmatex">\(k\)</span> values in the array.</p>
+<h3 id="problem-152">Problem 15.2</h3>
+<p>Explain why the following would lead to senseless output:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">long</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="n">cs1010_println_long</span><span class="p">(</span><span class="n">max</span><span class="p">(</span><span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="mi">10</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<p>How about the following? Would the output be correct?</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">long</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="n">cs1010_println_long</span><span class="p">(</span><span class="n">max</span><span class="p">(</span><span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span> <span class="c1">// change 10 to 1</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="problem-153">Problem 15.3</h3>
+<p>Explain how the following code iterates through every element in the list when called with an array of length <code>length</code> as the first argument.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="nf">max</span><span class="p">(</span><span class="kt">long</span> <span class="o">*</span><span class="n">list</span><span class="p">,</span> <span class="kt">long</span> <span class="n">length</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">long</span> <span class="n">max_so_far</span><span class="p">;</span>
+  <span class="kt">long</span> <span class="o">*</span><span class="n">curr</span><span class="p">;</span>
+
+  <span class="n">max_so_far</span> <span class="o">=</span> <span class="o">*</span><span class="n">list</span><span class="p">;</span>
+  <span class="n">curr</span> <span class="o">=</span> <span class="n">list</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">length</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="n">curr</span> <span class="o">&gt;</span> <span class="n">max_so_far</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">max_so_far</span> <span class="o">=</span> <span class="o">*</span><span class="n">curr</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">curr</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">max_so_far</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="appendix-complete-code-example">Appendix: Complete Code Example</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;cs1010.h&quot;</span><span class="cp"></span>
+
+<span class="kt">long</span> <span class="nf">days_till_beginning_of</span><span class="p">(</span><span class="kt">long</span> <span class="n">month</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">long</span> <span class="n">days_in_month</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">31</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">};</span>
+  <span class="kt">long</span> <span class="n">num_of_days</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">month</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">num_of_days</span> <span class="o">+=</span> <span class="n">days_in_month</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">num_of_days</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">long</span> <span class="n">month</span> <span class="o">=</span> <span class="n">cs1010_read_long</span><span class="p">();</span>
+  <span class="kt">long</span> <span class="n">day</span> <span class="o">=</span> <span class="n">cs1010_read_long</span><span class="p">();</span>
+  <span class="n">cs1010_println_long</span><span class="p">(</span><span class="n">day</span> <span class="o">+</span> <span class="n">days_till_beginning_of</span><span class="p">(</span><span class="n">month</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="nf">max</span><span class="p">(</span><span class="kt">long</span> <span class="n">list</span><span class="p">[],</span> <span class="kt">long</span> <span class="n">length</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">long</span> <span class="n">max_so_far</span> <span class="o">=</span> <span class="n">list</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">length</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">max_so_far</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">max_so_far</span> <span class="o">=</span> <span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">max_so_far</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">long</span> <span class="n">a</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">-1</span><span class="p">,</span> <span class="mi">-5</span><span class="p">};</span>
+  <span class="n">cs1010_println_long</span><span class="p">(</span><span class="n">max</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">10</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright by Department of Computer Science, National University of Singapore 2021
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/vendor.53cc9318.min.js"></script>
+      <script src="assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: ".",
+          features: [],
+          search: Object.assign({
+            worker: "assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+      
+    
+  </body>
+</html>
