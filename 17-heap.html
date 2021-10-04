@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://nus-cs1010.github.io/2122-s1/01-program.html">
+        <link rel="canonical" href="https://nus-cs1010.github.io/2122-s1/17-heap.html">
       
       <link rel="shortcut icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
     
     
       
-        <title>1. What is a Program? - CS1010 Programming Methodology</title>
+        <title>17. Heap - CS1010 Programming Methodology</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#unit-1-what-is-a-program" class="md-skip">
+        <a href="#unit-17-heap" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              1. What is a Program?
+              17. Heap
             
           </span>
         </div>
@@ -351,77 +351,11 @@
           
 
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        1. What is a Program?
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="01-program.html" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="01-program.html" class="md-nav__link">
       1. What is a Program?
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#learning-outcomes" class="md-nav__link">
-    Learning Outcomes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-a-computer-program" class="md-nav__link">
-    What is a (computer) program?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-computer-executes-a-program" class="md-nav__link">
-    How computer executes a program
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#from-machine-code-to-high-level-programming-language" class="md-nav__link">
-    From Machine Code to High-level Programming Language
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-goals-of-cs1010" class="md-nav__link">
-    The Goals of CS1010
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -625,11 +559,104 @@
           
 
 
+  
 
-  <li class="md-nav__item">
-    <a href="17-heap.html" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        17. Heap
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="17-heap.html" class="md-nav__link md-nav__link--active">
       17. Heap
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    Learning Objectives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-on-heap" class="md-nav__link">
+    Variables on Heap
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manual-memory-allocation-deallocation" class="md-nav__link">
+    Manual Memory Allocation / Deallocation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-deallocation" class="md-nav__link">
+    Memory Deallocation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-reallocation" class="md-nav__link">
+    Memory Reallocation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cs1010-io-library" class="md-nav__link">
+    CS1010 I/O Library
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-set" class="md-nav__link">
+    Problem Set
+  </a>
+  
+    <nav class="md-nav" aria-label="Problem Set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-set-171" class="md-nav__link">
+    Problem Set 17.1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1114,37 +1141,64 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#learning-outcomes" class="md-nav__link">
-    Learning Outcomes
+  <a href="#learning-objectives" class="md-nav__link">
+    Learning Objectives
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-is-a-computer-program" class="md-nav__link">
-    What is a (computer) program?
+  <a href="#variables-on-heap" class="md-nav__link">
+    Variables on Heap
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-computer-executes-a-program" class="md-nav__link">
-    How computer executes a program
+  <a href="#manual-memory-allocation-deallocation" class="md-nav__link">
+    Manual Memory Allocation / Deallocation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#from-machine-code-to-high-level-programming-language" class="md-nav__link">
-    From Machine Code to High-level Programming Language
+  <a href="#memory-deallocation" class="md-nav__link">
+    Memory Deallocation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-goals-of-cs1010" class="md-nav__link">
-    The Goals of CS1010
+  <a href="#memory-reallocation" class="md-nav__link">
+    Memory Reallocation
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cs1010-io-library" class="md-nav__link">
+    CS1010 I/O Library
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-set" class="md-nav__link">
+    Problem Set
+  </a>
+  
+    <nav class="md-nav" aria-label="Problem Set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-set-171" class="md-nav__link">
+    Problem Set 17.1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1161,30 +1215,180 @@
               
                 
                 
-                <h1 id="unit-1-what-is-a-program">Unit 1: What is a Program?</h1>
-<h2 id="learning-outcomes">Learning Outcomes</h2>
-<p>After this unit, students should:</p>
+                <h1 id="unit-17-heap">Unit 17: Heap</h1>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>After completing this unit, students should:</p>
 <ul>
-<li>have an idea of what is a program and how a program is executed by a computer</li>
-<li>understand the basic terminologies: machine code, assembly language, and higher-level programming languages</li>
+<li>understand the differences between the stack and the heap</li>
+<li>be able to use <code>malloc</code> and <code>calloc</code> to declare dynamically-sized arrays on the heap</li>
+<li>understand the importance of (i) checking for NULL and (ii) free the memory allocated on the heap</li>
+<li>aware of the possibility of memory leakage and avoid common mistakes that could lead to memory leaks</li>
 </ul>
-<h2 id="what-is-a-computer-program">What is a (computer) program?</h2>
-<p>Despite all the wonderful and amazing things that computers can do, computers are not very smart. In fact, they are pretty dumb. Computers can only follow the instructions given by a human. A computer program is a sequence of step-by-step instructions given to computers to manipulate data in order to perform a certain task.</p>
-<p>Programming is the art and science of writing a computer program, and that is what you will learn to do in CS1010.</p>
-<h2 id="how-computer-executes-a-program">How computer executes a program</h2>
-<p>In order to learn how to write a program, it is important to have an overview of how a computer executes a program.  You will learn in details how this is done in CS2100/CS2106 or EE2024/CG2271, but for CS1010, we will take a very simplistic and high-level view of this process.</p>
-<p>The two important components of a computer we will discuss for CS1010 is the CPU, or <em>central processing unit</em> and the memory, which is a generalized term for where we store the data to be processed or manipulated by the CPU, as well as the instructions to do so.  A memory location is addressable using a <em>memory address</em>.  </p>
-<p>The instructions to the CPU comes in the form of <em>machine code</em>, a sequence of bits (1s and 0s) that is interpreted and then followed by the CPU to do certain things.  These machine code could instruct the CPU, for instance, to compare if a particular number at a certain memory location is more than 0, to add one number to another, or to execute another instruction at another memory location.  The data stored in the memory is also stored as a sequence of 1s and 0s.</p>
-<h2 id="from-machine-code-to-high-level-programming-language">From Machine Code to High-level Programming Language</h2>
-<p>While it is possible for us, human, to write machine code directly, few actually do since it is challenging to do so. Different CPUs understand different sets of machine code; it is tedious to figure out where each piece of data is located in the memory (this location is actually determined by the operating system).  The resulting code, even when it is correct and easy to read and understand by the machine, are often hard to decipher for a human.
-Simple operations such as comparing two numbers to see which one is bigger might require several instructions to perform.</p>
-<p>To get around the readability problem, programmers can code in <em>assembly language</em> -- a human-readable form of machine code, where each instruction, instead of represented by 0s and 1s, is represented by a mnemonic (such as <code>decr</code>, <code>incr</code>, <code>store</code>, <code>add</code>, etc.)</p>
-<p>Writing assembly code does not address the issues of machine-dependent code and the tediousness of programming.  Early programmers (in the fifties) understood this and designed <em>high-level programming languages</em>, where programmers can describe the operations that they wish to do in a language closer to their intention that is machine independent.  A program written in one of these programming languages is then <em>compiled</em> into machine code for a specific CPU for execution using a compiler.</p>
-<p><img alt="C compile run" src="figures/c-compile-run/c-compile-run.001.png" /></p>
-<p>The first commercially available language is FORTRAN from IBM in the 1950s.  Among many early programming languages, C (birth year 1972) is the only one that is still popular and widely used today,  <a href="readings.html#why-c">For many reasons</a>, C is the language of choice for CS1010.  </p>
-<h2 id="the-goals-of-cs1010">The Goals of CS1010</h2>
-<p>This brings us to the goals of CS1010.  First, you will learn the most important syntax element of the C programming language.  Second, you will learn how a C program behaves, in relation to how a program is executed and how data are stored and manipulated in memory.  Third, you will learn the various tools and techniques that will help you produce good and correct C programs.</p>
-<p>The last, and the most important and challenging goal of CS1010, however, is that you will learn how to write programs to solve computational problems.  Learning to write a program that does what you want it to do is actually not difficult.  <em>Knowing what you want your program to do is the more challenging part!</em></p>
+<h2 id="variables-on-heap">Variables on Heap</h2>
+<p>We have already seen what a call stack is and how the call stack works in <a href="13-call-stack.html">Unit 13</a>.  There is another important area of memory used by our programs, called the <em>heap</em>.</p>
+<p>The memory allocation on the heap can be done automatically or manually.  For variables allocated on the heap, its lifetime is either the same as the lifetime of the <em>whole</em> program.  An example of such a variable is a <em>global</em> variable -- a variable that is declared <em>outside</em> of any function and can be read or write anywhere in the program.  We have banned the use of global variables in CS1010.  Using a global variable makes your code hard to understand or reason about:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="n">foo</span><span class="p">();</span>
+<span class="c1">// { x == ?? }</span>
+</code></pre></div>
+</td></tr></table>
+<p>Suppose <code>x</code> is a global variable, we cannot assert anything about the property of <code>x</code> after calling <code>foo</code>, since <code>x</code> can be modified by <code>foo</code> or any function it calls, even though we <em>never pass <code>x</code> into <code>foo</code></em>.  This is worse than passing an array as we have seen in <a href="16-call-by-reference.html">Unit 16</a>!  Since now, to assert something about <code>x</code>, we need to trace through every line the code to how <code>x</code> is updated, even if the function does not take in <code>x</code> as a parameter.</p>
+<h2 id="manual-memory-allocation-deallocation">Manual Memory Allocation / Deallocation</h2>
+<p>Allocating memory on the heap, however, is useful if we want to allocate an array dynamically, i.e., not knowing what is the size of the array when we write the program.  Often, we need an array whose size depends on the input from the user, such as reading a string or reading a sequence of numbers.  We cannot use a fixed-length array unless we know for sure that the input size is limited, and we cannot use a variable-length array, since we may get a segfault if the array size is too big for the stack.  The only viable solution is to allocate the array on the heap.</p>
+<p>The C standard library provides a few functions related to memory allocation on the heap.  The header file for these functions is <code>stdlib.h</code>.  We are interested in <code>malloc</code> and <code>calloc</code>.  <code>malloc</code> (memory allocation) is declared as:
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="o">*</span><span class="nf">malloc</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">size</span><span class="p">);</span>
+</code></pre></div>
+</td></tr></table></p>
+<p>It takes in a parameter, <code>size</code>, which is the number of bytes of memory to be allocated and returns a pointer to the memory allocated if successful, or <code>NULL</code> otherwise.  This is a general function so the type of pointer returned is <code>void *</code> rather than a pointer to a specific type.  </p>
+<p>The type of <code>size</code> is <code>size_t</code>, which is an unsigned integer type defined in <code>stdlib.h</code> to represent the size of a type/variable in memory. You can read a <code>size_t</code> variable from the standard input using the CS1010 library function <code>cs1010_read_size_t()</code>.</p>
+<p>The function <code>calloc</code> (clear allocation) is declared as:
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="o">*</span><span class="nf">calloc</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">count</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">size</span><span class="p">);</span>
+</code></pre></div>
+</td></tr></table></p>
+<p><code>calloc</code> allocates memory for <code>count</code> items, each of <code>size</code> number of bytes, in a contiguous region in the memory and initializes all bits in this memory region to 0.  Except for the fact that <code>calloc</code> initializes the bits to 0, <code>calloc(count, size)</code> is the same as <code>malloc(count * size)</code>.</p>
+<p>We have seen in <a href="05-first-c.html">Unit 5</a> that the number of bytes needed to represent a type depends on the platform.  Suppose we want to allocate enough memory for, say, 10 <code>long</code> values, how do we know how many bytes are needed?  A <code>long</code> can be 4 bytes on some platforms, 8 bytes on others.  For this purpose, C provides a <code>sizeof</code> operator, that returns the number of bytes needed for a type or a variable (of type <code>size_t</code>)  So, to allocate memory for 10 <code>long</code> values, we say:
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="o">*</span><span class="n">array</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="mi">10</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">long</span><span class="p">));</span>
+</code></pre></div>
+</td></tr></table></p>
+<h2 id="memory-deallocation">Memory Deallocation</h2>
+<p>Even though the memory available on the heap is larger than the stack, it is not unlimited, and therefore we should still use the memory judiciously.   In particular, after we are done using the memory allocated to us, we should call the method <code>free</code>, passing in the pointer the memory region allocated, to have the memory region deallocated, returned to the OS to be reused by others.</p>
+<p>A common bug is for a programmer to access a memory that has been freed or free an allocated memory region more than once.  This would cause strange behaviors, possible crashes in random places if we access memory that is being used by others.  It is a good practice to set the pointer to NULL after <code>free</code>-ing the memory region so that we do not accidentally use it.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>free(buffer);
+buffer = NULL;
+</code></pre></div>
+</td></tr></table>
+<p>Another common bug is for programmers to request memory via <code>malloc</code> or related functions, but forgot to <code>free</code> it back to the OS.  As a result, as the program runs, it starts to hog the memory and the system will become slower and slower.   This bug is known as <em>memory leak</em>.</p>
+<p>Another possible bug is for programmers to change the pointer to the region of memory allocated.  For instance,
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>long *buffer = calloc(how_many, sizeof(long));
+buffer = cs1010_read_long_array(how_many);
+</code></pre></div>
+</td></tr></table></p>
+<p>After we execute the code such as the above, the pointer <code>buffer</code> will point to something new, and there is no longer a pointer pointing to allocate memory.  The memory allocated becomes unreachable, and therefore we can no longer free it!</p>
+<p>In CS1010, from now on, you are to make sure that memory that is allocated via <code>malloc</code> and related functions are <code>free</code> after it is used, including those allocated in the CS1010 I/O library.  The <a href="library.html">API documentation</a> tells you what are the values returned by the library that should be deallocated by the caller via <code>free</code>.</p>
+<h2 id="memory-reallocation">Memory Reallocation</h2>
+<p>If we allocate an array on the heap, we can even change the size of the array dynamically during run-time.  For instance, there could be cases where we don't know the size of the array we need.  We can allocate an array, say, of size <code>n</code>, at the beginning of our program.  As we populate the array, we may realize that <code>n</code> is too small, and we need a bigger array.  We can use the method <code>realloc</code> to reallocate our array to a larger size as needed.  Interested students can read the man page for <code>realloc</code> for more details. </p>
+<h2 id="cs1010-io-library">CS1010 I/O Library</h2>
+<p>To wrap up this unit, we will look at the CS1010 library functions that help us read in an array of either <code>long</code> values or <code>double</code> values.  These functions, <code>cs1010_read_long_array</code> or <code>cs1010_read_double_array</code> take in a parameter, which is the number of elements to read (of type <code>size_t</code>) and it returns a pointer to the array allocated within the function.</p>
+<p>A typical usage is as follows: we first read the size of the array <code>size</code> with <code>cs1010_read_size_t()</code>, then use <code>cs1010_read_long_array(size)</code> to read the array.</p>
+<p>Here is the incomplete version:
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">size_t</span> <span class="n">num_of_students</span> <span class="o">=</span> <span class="n">cs1010_read_size_t</span><span class="p">();</span>
+<span class="kt">long</span> <span class="o">*</span><span class="n">marks</span><span class="p">;</span>
+<span class="n">marks</span> <span class="o">=</span> <span class="n">cs1010_read_long_array</span><span class="p">(</span><span class="n">num_of_students</span><span class="p">);</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num_of_students</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">cs1010_println_long</span><span class="p">(</span><span class="n">marks</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table></p>
+<p>This should be straightforward enough.  There are, however, two cases to consider.  What if the OS failed to allocate the memory for our array?  In this case, marks would be <code>NULL</code> and access <code>marks[i]</code> would cause a segfault. Second, we must return the memory allocated to us back to the OS once we are done.  To let go of this memory, we call the function <code>free</code>.  The complete code looks like this:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">size_t</span> <span class="n">num_of_students</span> <span class="o">=</span> <span class="n">cs1010_read_size_t</span><span class="p">();</span>
+<span class="kt">long</span> <span class="o">*</span><span class="n">marks</span><span class="p">;</span>
+<span class="n">marks</span> <span class="o">=</span> <span class="n">cs1010_read_long_array</span><span class="p">(</span><span class="n">num_of_students</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">marks</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// signal error and return</span>
+<span class="p">}</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num_of_students</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">cs1010_println_long</span><span class="p">(</span><span class="n">marks</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="p">}</span>
+
+<span class="c1">// do other things to marks</span>
+  <span class="o">:</span>
+
+<span class="n">free</span><span class="p">(</span><span class="n">marks</span><span class="p">);</span>
+</code></pre></div>
+</td></tr></table>
+<p>The CS1010 I/O library, internally, allocates memory on the heap so that we can read in words, lines, or arrays of arbitrary length.</p>
+<p>The following shows the example of how <code>cs1010_read_long_array</code> is implemented with <code>calloc</code>.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">long</span><span class="o">*</span> <span class="nf">cs1010_read_long_array</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">how_many</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">long</span> <span class="o">*</span><span class="n">buffer</span> <span class="o">=</span> <span class="n">calloc</span><span class="p">(</span><span class="n">how_many</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">long</span><span class="p">));</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">buffer</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kt">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">how_many</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">buffer</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">cs1010_read_long</span><span class="p">();</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="n">buffer</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="problem-set">Problem Set</h2>
+<h3 id="problem-set-171">Problem Set 17.1</h3>
+<p>Draw the call stack and the heap, showing what happened when we run the following code:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">foo</span><span class="p">(</span><span class="kt">long</span> <span class="o">*</span><span class="n">y</span><span class="p">,</span> <span class="kt">long</span> <span class="o">*</span><span class="n">z</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">-7</span><span class="p">;</span>
+  <span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">-8</span><span class="p">;</span>
+  <span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+  <span class="n">z</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>  
+  <span class="kt">long</span> <span class="n">y</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">};</span>
+  <span class="kt">long</span> <span class="o">*</span><span class="n">z</span> <span class="o">=</span> <span class="n">calloc</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">long</span><span class="p">));</span>
+
+  <span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+  <span class="n">z</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+
+  <span class="n">foo</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
                 
               
               
@@ -1203,7 +1407,7 @@ Simple operations such as comparing two numbers to see which one is bigger might
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="tutors.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="16-call-by-reference.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1212,19 +1416,19 @@ Simple operations such as comparing two numbers to see which one is bigger might
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Teaching Team
+                16. Call-by-Reference
               </div>
             </div>
           </a>
         
         
-          <a href="02-algo.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="18-string.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                2. Computational Problem & Algorithms
+                18. String
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

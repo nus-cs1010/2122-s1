@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="stylesheets/cs1010.css">
+<link rel="stylesheet" type="text/css" href="stylesheets/dark.css">
+<title>CS1010 AY20/21 S1 Lecture 6</title>
+<meta charset="utf-8">
+</head>
+<body>
+<textarea id="source">
+class: middle, center
+
+# Lecture 7
+
+### 3 October 2021
+
+.smaller[
+Admin Matters<br>
+Unit 15: **Pointer**<br>
+Unit 16: **Call-by-Reference**<br>
+Unit 17: **Heap**<br>
+Unit 18: **String**<br>
+]
+---
+class: middle
+
+### Assignment 4 and Quiz 7
+
+- Due Wednesday night (23:59)
+
+---
+class: middle
+
+### Assignment 5 onwards
+
+- Write per-function documentation for your code
+
+---
+class: middle
+
+### Tutorial 6
+
+- Problem Sets 15-18
+
+---
+class: middle
+
+### Lab 6
+
+- Exercise on call-by-reference and dynamically allocated arrays.
+
+---
+class: middle
+
+### Variable 
+
+- a place in memory that holds one or more values
+- we can access a variable through its name or its memory address
+
+---
+class: middle
+
+### Address-of operator `&`
+
+- if `x` is the name of a variable, `&x` is its memory address.
+- if `x` as the type `T`, `&x` has the type `*T` (pointer to `T` / address of `T`)
+
+---
+class: middle
+
+.tiny[
+```C
+#include "cs1010.h"
+
+void add(long sum, long a, long b) {
+  sum = a + b;
+  cs1010_println_pointer(&sum);
+}
+
+int main()
+{
+  long x = 1;
+  long sum = 0;
+  add(sum, x, 10);
+  cs1010_println_pointer(&sum);
+}
+```
+]
+
+---
+class: middle
+
+### Address-of operator `&`
+
+if `x` is the name of a varible, `&x` is its memory address.
+
+---
+class: bottom
+
+.tiny[
+Version: 1.1
+
+Last Updated: Mon Sep 14 11:12:21 +08 2020
+]
+</textarea>
+
+<script src="https://remarkjs.com/downloads/remark-latest.min.js">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+<script src="javascripts/counter.js">
+</script>
+<script>
+remark.macros.scale = function (percentage) {
+	var url = this;
+	return '<img src="' + url + '" style="width: ' + percentage + '" />';
+};
+// ![:scale 50%](image.jpg)
+
+var slideshow = remark.create({
+    navigation: {
+	    scroll: false
+	},
+	ratio: '16:9',
+	highlightStyle: 'monokai',
+    slideNumberFormat: 'AY2021 S1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%current%',
+});
+ // Setup MathJax
+  MathJax.Hub.Config({
+	  tex2jax: {
+		inlineMath: [['$', '$']],
+		// inlineMath: [['$', '$'], ['\\(', '\\)']],
+		displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+		skipTags: ['script', 'noscript', 'style', 'pre']
+	  }
+  });
+
+  MathJax.Hub.Configured();
+</script>
+</body>
+</html>

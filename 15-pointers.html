@@ -16,7 +16,7 @@
     
     
       
-        <title>Unit 15: Memory Addresses or Pointers - CS1010 Programming Methodology</title>
+        <title>15. Pointer - CS1010 Programming Methodology</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#unit-15-memory-addresses-or-pointers" class="md-skip">
+        <a href="#unit-15-pointers" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              Unit 15: Memory Addresses or Pointers
+              15. Pointer
             
           </span>
         </div>
@@ -325,12 +325,14 @@
       
 
 
+  
+
 
   
-  <li class="md-nav__item md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
       Notes
@@ -522,6 +524,172 @@
   <li class="md-nav__item">
     <a href="14-array.html" class="md-nav__link">
       14. Array
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        15. Pointer
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="15-pointers.html" class="md-nav__link md-nav__link--active">
+      15. Pointer
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    Learning Objectives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-address" class="md-nav__link">
+    Memory Address
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-address-of-operator" class="md-nav__link">
+    The Address-of Operator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-dereference-operator" class="md-nav__link">
+    The Dereference Operator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-the-value-via-pointer" class="md-nav__link">
+    Changing the Value via Pointer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-rules-about-using-pointers" class="md-nav__link">
+    Basic Rules About Using Pointers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pointer-of-pointer-of-pointer" class="md-nav__link">
+    Pointer of Pointer (of Pointer..)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-null-pointer" class="md-nav__link">
+    The NULL Pointer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-set-15" class="md-nav__link">
+    Problem Set 15
+  </a>
+  
+    <nav class="md-nav" aria-label="Problem Set 15">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-151" class="md-nav__link">
+    Problem 15.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-152" class="md-nav__link">
+    Problem 15.2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="16-call-by-reference.html" class="md-nav__link">
+      16. Call-by-Reference
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="17-heap.html" class="md-nav__link">
+      17. Heap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="18-string.html" class="md-nav__link">
+      18. String
     </a>
   </li>
 
@@ -1089,7 +1257,7 @@
               
                 
                 
-                <h1 id="unit-15-memory-addresses-or-pointers">Unit 15: Memory Addresses or Pointers</h1>
+                <h1 id="unit-15-pointers">Unit 15: Pointers</h1>
 <h2 id="learning-objectives">Learning Objectives</h2>
 <p>After this unit, students should:</p>
 <ul>
@@ -1107,18 +1275,20 @@
 <li>understand why we cannot only change the address referenced by a variable</li>
 <li>understand the units being stored by a pointer and thus, how arithmetic operations would affect pointers</li>
 <li>be aware of pointers to pointers (and more), and the possibility of multiple levels of dereferencing</li>
-<li>be aware of the `NULL pointer, understand what it represents, and be able to use it</li>
+<li>be aware of the <code>NULL</code> pointer, understand what it represents, and be able to use it</li>
 </ul>
 <h2 id="memory-address">Memory Address</h2>
-<p>Every memory location has an address.  Unlike many higher-level languages, such as Java, Python, and JavaScript, C allows us direct access to memory addresses.  This empowers programmers to do wonderful things that cannot be done in other languages.  But, it is also dangerous at the same time -- using it improperly can lead to bugs that are hard to track down and debug.</p>
+<p>You have learned that each variable must have three things: (i) a name, (ii) a type, and (iii) a value.  A variable must be stored somewhere in the memory.  Every location in the memory has an address.  So, there is a fourth thing that every variable must have: a memory address.</p>
+<p>Unlike many higher-level languages, such as Java, Python, and JavaScript, C allows us direct access to memory addresses.  This empowers programmers to do wonderful things that cannot be done in other languages.  But, it is also dangerous at the same time -- using it improperly can lead to bugs that are hard to track down and debug.</p>
 <h2 id="the-address-of-operator">The Address-of Operator</h2>
-<p>C has an operator called "address-of", denoted by <code>&amp;</code>.  This operator returns, well, the address of a variable.</p>
+<p>Given a variable, we can get its memory address with the "address-of" operator, denoted by <code>&amp;</code>.</p>
 <p>Let say that we have a variable
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="n">c</span><span class="p">;</span>
 </code></pre></div>
 </td></tr></table></p>
-<p>The expression <code>&amp;c</code> has the type "address of <code>long</code>" and evaluates to a number that corresponds to the memory address of <code>c</code>.  Note that "address of <code>long</code>" and <code>long</code> are two different types to C.  In general, the expression <code>&amp;x</code> has the type "address of <span class="arithmatex">\(T\)</span>" where <span class="arithmatex">\(T\)</span> is the type of variable <code>x</code>.</p>
-<p>Suppose we want to print out the address of <code>c</code>.  We cannot use <code>cs1010_println_long(&amp;c)</code>, since the type does not match.  We can, however, typecast the address of a variable into <code>long</code> and print it out to examine its value.  Consider this:</p>
+<p>We can refer to the memory address of <code>c</code> with the expression <code>&amp;c</code>. The expression <code>&amp;c</code> has the type "address of a <code>long</code>" and evaluates to a number that corresponds to the memory address of <code>c</code>.  Note that "address of a <code>long</code>" and <code>long</code> are two different types to C.  In general, the expression <code>&amp;x</code> has the type "address of <span class="arithmatex">\(T\)</span>" where <span class="arithmatex">\(T\)</span> is the type of variable <code>x</code>.</p>
+<p>You have also seen in <a href="14-array.html">Unit 14</a> that a variable that stores a memory address is called a pointer.  So we also interchangeably refer to the type of <code>&amp;c</code> as "pointer to a <code>long</code>".</p>
+<p>Suppose we want to print out the address of <code>c</code>.  We cannot use <code>cs1010_println_long(&amp;c)</code>, since the type does not match.  The CS1010 library has a function to print a pointer variable, which prints out the address in decimal format.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -1136,15 +1306,15 @@
 
 <span class="kt">void</span> <span class="nf">add</span><span class="p">(</span><span class="kt">long</span> <span class="n">sum</span><span class="p">,</span> <span class="kt">long</span> <span class="n">a</span><span class="p">,</span> <span class="kt">long</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">sum</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
-  <span class="n">cs1010_println_long</span><span class="p">((</span><span class="kt">long</span><span class="p">)</span><span class="o">&amp;</span><span class="n">sum</span><span class="p">);</span>
+  <span class="n">cs1010_println_pointer</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sum</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 <span class="p">{</span>
   <span class="kt">long</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-  <span class="kt">long</span> <span class="n">sum</span><span class="p">;</span>
+  <span class="kt">long</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
   <span class="n">add</span><span class="p">(</span><span class="n">sum</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
-  <span class="n">cs1010_println_long</span><span class="p">((</span><span class="kt">long</span><span class="p">)</span><span class="o">&amp;</span><span class="n">sum</span><span class="p">);</span>
+  <span class="n">cs1010_println_pointer</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sum</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
@@ -1154,32 +1324,19 @@
 140723025685552
 </code></pre></div>
 </td></tr></table></p>
-<p>Your results will most likely be different since the OS allocates different regions of the memory to this program every time it is run.  </p>
+<p>Your results will most likely be different since the OS allocates different regions of the memory to this program every time it is run.</p>
 <p><img alt="pointers" src="figures/pointers/pointers.001.png" /></p>
 <h2 id="the-dereference-operator">The Dereference Operator</h2>
-<p>The dereference operator is the reversed of address-of and is denoted by <code>*</code>.  I call it "location-of-address".  We use this operator in two places:</p>
+<p>The dereference operator is the reversed of address-of and is denoted by <code>*</code>.  Think of this as the "location-of" operator.  We use this operator in two places:</p>
 <ul>
-<li>to declare an "address" variable, and</li>
+<li>to declare a pointer variable, and</li>
 <li>to reference the location of an address.</li>
 </ul>
-<p>We can declare a variable that is an address type.  We need to tell C the type of the variable this address is referencing.  For instance,</p>
+<p>You have seen how we can declare a pointer variable in <a href="14-array.html">Unit 14</a>.  For example,</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">double</span> <span class="o">*</span><span class="n">addr</span><span class="p">;</span>
 </code></pre></div>
 </td></tr></table>
-<p>declares a variable <code>addr</code> that is an address to a variable of type <code>double</code>.  The way to read this is that <code>*addr</code>, or location-of-address <code>addr</code> is of type <code>double</code>, so <code>addr</code> is an address of a location containing a <code>double</code>.</p>
-<div class="admonition warn">
-<p class="admonition-title">Common Bug</p>
-<p>It is possible to write as
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">double</span><span class="o">*</span> <span class="n">addr</span><span class="p">;</span>
-</code></pre></div>
-</td></tr></table>
-too, but this is not recommended.  Suppose you want to declare two addresses, you might write,
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">double</span><span class="o">*</span> <span class="n">from_addr</span><span class="p">,</span> <span class="n">to_addr</span><span class="p">;</span>
-</code></pre></div>
-</td></tr></table>
-thinking that both <code>from_addr</code> and <code>to_addr</code> are of type <code>double*</code>.  But C treats <code>to_addr</code> as a <code>double</code>, not an address of a <code>double</code>!  In any case, if you follow CS1010 style, you shouldn't be declaring two variables in one line.</p>
-</div>
-<p>Another name for a variable of type address is <em>pointer</em>.  We can visualize a pointer as pointing to some location in the memory.</p>
+<p>declares a variable <code>addr</code> that is an address to a variable of type <code>double</code>.  The way to read this is that <code>*addr</code> (or the memory location of <code>addr</code>) stores a variable of type <code>double</code>, so <code>addr</code> is an address of a memory location containing a <code>double</code>.</p>
 <h2 id="changing-the-value-via-pointer">Changing the Value via Pointer</h2>
 <p>Suppose we declare a pointer to a <code>double</code> variable (or, for short, a <code>double</code> pointer):
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">double</span> <span class="o">*</span><span class="n">addr</span><span class="p">;</span>
@@ -1200,7 +1357,7 @@ thinking that both <code>from_addr</code> and <code>to_addr</code> are of type <
 </code></pre></div>
 </td></tr></table></p>
 <p>back-to-back, the program will almost certainly segfault, because the pointer variable <code>addr</code> is not initialized, so it is pointing to the location of whatever address happens to be in the memory at that time.</p>
-<p>We should point addr to a value location first, like this:
+<p>We should point <code>addr</code> to a valid location first, like this:
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1216,6 +1373,16 @@ thinking that both <code>from_addr</code> and <code>to_addr</code> are of type <
 </code></pre></div>
 </td></tr></table></p>
 <p>I am just doing it the complicated way (which you should avoid unless you have good reasons to do so) to demonstrate the concept of pointers.</p>
+<p>Note that the two lines:
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">double</span> <span class="o">*</span><span class="n">addr</span><span class="p">;</span>
+<span class="n">addr</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">c</span><span class="p">;</span>
+</code></pre></div>
+</td></tr></table></p>
+<p>can be shorten to:
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">double</span> <span class="o">*</span><span class="n">addr</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">c</span><span class="p">;</span>
+</code></pre></div>
+</td></tr></table></p>
 <h2 id="basic-rules-about-using-pointers">Basic Rules About Using Pointers</h2>
 <ol>
 <li>
@@ -1231,7 +1398,8 @@ thinking that both <code>from_addr</code> and <code>to_addr</code> are of type <
 <span class="n">addr</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">radius</span><span class="p">;</span> <span class="c1">// not ok</span>
 </code></pre></div>
 </td></tr></table>
-<p>Line <ins class="critic">5</ins> above would lead to a compilation error since we try to point a <code>double</code> pointer to a <code>long</code>.  </p>
+<p>Line 5 above would lead to a compilation error since we try to point a <code>double</code> pointer to a <code>long</code>.  </p>
+<p>One exception to this rule is the type <code>void *</code>.  A pointer to <code>void</code> has a special place in C and it can be used to point to any other type without type errors.  The function <code>cs1010_println_pointer</code>, for instance, takes in a parameter of type <code>void *</code>, hence we can pass a pointer of any type to this function as an argument.</p>
 </li>
 <li>
 <p>We cannot change the address of a variable.  For instance</p>
@@ -1259,8 +1427,9 @@ thinking that both <code>from_addr</code> and <code>to_addr</code> are of type <
 </code></pre></div>
 </td></tr></table></p>
 <p>Suppose that <code>x</code> is stored in memory address 1000, after Line 4, <code>ptr</code> would have the value of 1000.
-After the line <code>ptr += 1</code>, using normal arithmetic operation, we would think that <code>ptr</code> will have a value of 1001.  However, the semantic for arithmetic operation is different for pointers.  The <code>+</code> operation for <code>ptr</code> causes the <code>ptr</code> variable to move forward by the size of the variable pointed to by the pointer.  In this example, <code>ptr</code> points to <code>long</code>, assuming that <code>long</code> is 8 bytes, after <code>ptr += 1</code>, <code>ptr</code> will have the value of 1008.</p>
+After the line <code>ptr += 1</code>, using normal arithmetic operation, we would think that <code>ptr</code> will have a value of 1001.  However, the semantic for arithmetic operations differ for pointers.  The <code>+</code> operation for <code>ptr</code> causes the <code>ptr</code> variable to move forward by the size of the variable pointed to by the pointer.  In this example, <code>ptr</code> points to <code>long</code>, assuming that <code>long</code> is 8 bytes, after <code>ptr += 1</code>, <code>ptr</code> will have the value of 1008.</p>
 <p>We can only do addition and subtraction for pointers.</p>
+<p>Note that the array notation <code>a[i]</code> is synonym with <code>*(a + i)</code>.  </p>
 </li>
 </ol>
 <h2 id="pointer-of-pointer-of-pointer">Pointer of Pointer (of Pointer..)</h2>
@@ -1434,6 +1603,41 @@ After the line <code>ptr += 1</code>, using normal arithmetic operation, we woul
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="14-array.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                14. Array
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="16-call-by-reference.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                16. Call-by-Reference
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

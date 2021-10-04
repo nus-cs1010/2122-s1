@@ -526,6 +526,58 @@
   </li>
 
         
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="15-pointers.html" class="md-nav__link">
+      15. Pointer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="16-call-by-reference.html" class="md-nav__link">
+      16. Call-by-Reference
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="17-heap.html" class="md-nav__link">
+      17. Heap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="18-string.html" class="md-nav__link">
+      18. String
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -786,9 +838,86 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        CS1010 I/O Library
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
     <a href="library.html" class="md-nav__link md-nav__link--active">
       CS1010 I/O Library
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-library" class="md-nav__link">
+    Using the Library
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the Library">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    Header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linking" class="md-nav__link">
+    Linking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-of-a-single-value" class="md-nav__link">
+    Reading of a Single Value
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-of-multiple-values" class="md-nav__link">
+    Reading of Multiple Values
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#printing-of-a-single-value" class="md-nav__link">
+    Printing of a Single Value
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clearing-screen" class="md-nav__link">
+    Clearing screen
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -996,6 +1125,69 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-library" class="md-nav__link">
+    Using the Library
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the Library">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    Header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linking" class="md-nav__link">
+    Linking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-of-a-single-value" class="md-nav__link">
+    Reading of a Single Value
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-of-multiple-values" class="md-nav__link">
+    Reading of Multiple Values
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#printing-of-a-single-value" class="md-nav__link">
+    Printing of a Single Value
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clearing-screen" class="md-nav__link">
+    Clearing screen
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1010,14 +1202,14 @@
                 <h1 id="the-cs1010-io-library">The CS1010 I/O Library</h1>
 <p>To help students get started with C programming without worrying too much about the details and pitfalls of using <code>printf</code> and <code>scanf</code>, we provide a simple-to-use library to read and write integers, floating point numbers, and strings.  </p>
 <p>The libraries are pre-installed in <a href="environments.html">CS1010 programming environments</a>, with <code>cs1010.h</code> located under <code>~cs1010/include</code> and <code>libcs1010.a</code> located under <code>~cs1010/lib</code>.</p>
-<h1 id="using-the-library">Using the Library</h1>
-<h2 id="header">Header</h2>
+<h2 id="using-the-library">Using the Library</h2>
+<h3 id="header">Header</h3>
 <p>To use the CS1010 I/O library, you should <code>#include</code> the file <code>cs1010.h</code>, like this:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;cs1010.h&quot;</span><span class="cp"></span>
 </code></pre></div>
 </td></tr></table>
 <p>at the top of your C program.</p>
-<h2 id="linking">Linking</h2>
+<h3 id="linking">Linking</h3>
 <p>The CS1010 I/O library is provided as the file <code>libcs1010.a</code>.  To link to the library, you need to compile with <code>-lcs1010</code>.  Usually, you need to specify where you can find <code>cs1010.h</code> with the <code>-I</code> flag, and <code>libcs1010.a</code> with the <code>-L</code> flag.  </p>
 <p>On the CS1010 programming environment, you would need to compile using the command line:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>clang -I ~cs1010/include -L ~cs1010/lib hello.c -lcs1010
@@ -1025,7 +1217,7 @@
 </td></tr></table>
 <p>Although it is a long string to type, you should type it once and use up arrow in bash to go back to this command over-and-over again.   For advanced students, we suggest that you put this in a shell script so that you just need to run the shell script to compile the program.  </p>
 <p>We have also automated this for you for your assignments and exercises using the <code>make</code> command.</p>
-<h2 id="reading-of-a-single-value">Reading of a Single Value</h2>
+<h3 id="reading-of-a-single-value">Reading of a Single Value</h3>
 <p>The CS1010 library supports reading of <code>long</code> value, <code>double</code> value, and strings (both space-separated words and newline-separated lines) from the standard input.  For <code>long</code> and <code>double</code>. The relevant methods are:</p>
 <ul>
 <li>
@@ -1073,12 +1265,20 @@ Returns NULL if there is an error.  If the returned value is non-NULL, the calle
 </code></pre></div>
 </td></tr></table></p>
 </li>
+<li>
+<p><code>size_t cs1010_read_size_t()</code><br>
+(<ins class="critic">NEW</ins>) Returns a <code>size_t</code> value from the standard input.  An error message will be printed (to <code>stderr</code>) if the input sequence is not a valid <code>size_t</code> value -- in which case the value <code>0</code> will be returned.  Example:
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">size_t</span> <span class="n">size</span> <span class="o">=</span> <span class="n">cs1010_read_size_t</span><span class="p">();</span>
+</code></pre></div>
+</td></tr></table></p>
+</li>
 </ul>
 <h2 id="reading-of-multiple-values">Reading of Multiple Values</h2>
-<p>The CS1010 library also supports reading of multiple values.  </p>
+<p>The CS1010 library also supports reading of multiple values.</p>
+<p>(<ins class="critic">NEW</ins>) These funtions takes in an argument of type <code>size_t</code> instead of <code>long</code>.</p>
 <ul>
 <li>
-<p><code>long* cs1010_read_long_array(long k)</code><br>
+<p><code>long* cs1010_read_long_array(size_t k)</code><br>
 Returns <code>k</code> numbers of <code>long</code> values read from the standard input stored in an array.  An error message will be printed (to <code>stderr</code>) for each input that is not a valid <code>long</code> value -- in which case the value <code>LONG_MAX</code> will be populated in the corresponding array element.  Returns NULL if there is a memory allocation error.  If the returned value is non-NULL, the caller is responsible for freeing the memory allocated by calling <code>free</code>.
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
@@ -1086,7 +1286,9 @@ Returns <code>k</code> numbers of <code>long</code> values read from the standar
 4
 5
 6
-7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">long</span><span class="o">*</span> <span class="n">values</span> <span class="o">=</span> <span class="n">cs1010_read_long_array</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">size_t</span> <span class="n">k</span> <span class="o">=</span> <span class="n">cs1010_read_size_t</span><span class="p">();</span>
+<span class="kt">long</span><span class="o">*</span> <span class="n">values</span> <span class="o">=</span> <span class="n">cs1010_read_long_array</span><span class="p">(</span><span class="n">k</span><span class="p">);</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">values</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">// Do something with array values</span>
    <span class="o">:</span>
@@ -1097,8 +1299,8 @@ Returns <code>k</code> numbers of <code>long</code> values read from the standar
 </td></tr></table></p>
 </li>
 <li>
-<p><code>double* cs1010_read_double_array(long k)</code><br>
-Returns <code>k</code> numbers of <code>double</code> values read from the standard input stored in an array.  An error message will be printed (to <code>stderr</code>) for each input that is not a valid <code>double</code> value -- in which case the value <code>DBL_MAX</code> will be populated in the corresponding array element.<br />
+<p><code>double* cs1010_read_double_array(size_t k)</code><br>
+Returns <code>k</code> numbers of <code>double</code> values read from the standard input stored in an array.  An error message will be printed (to <code>stderr</code>) for each input that is not a valid <code>double</code> value -- in which case the value <code>DBL_MAX</code> will be populated in the corresponding array element.
 Returns NULL if there is a memory allocation error.  If the returned value is non-NULL, the caller is responsible for freeing the memory allocated by calling <code>free</code>.
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
@@ -1106,7 +1308,9 @@ Returns NULL if there is a memory allocation error.  If the returned value is no
 4
 5
 6
-7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">double</span><span class="o">*</span> <span class="n">values</span> <span class="o">=</span> <span class="n">cs1010_read_double_array</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">size_t</span> <span class="n">k</span> <span class="o">=</span> <span class="n">cs1010_read_size_t</span><span class="p">();</span>
+<span class="kt">double</span><span class="o">*</span> <span class="n">values</span> <span class="o">=</span> <span class="n">cs1010_read_double_array</span><span class="p">(</span><span class="n">k</span><span class="p">);</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">values</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">// Do something with array values</span>
    <span class="o">:</span>
@@ -1117,7 +1321,7 @@ Returns NULL if there is a memory allocation error.  If the returned value is no
 </td></tr></table></p>
 </li>
 <li>
-<p><code>char** cs1010_read_word_array(long k)</code><br>
+<p><code>char** cs1010_read_word_array(size_t k)</code><br>
 Returns <code>k</code> white-space-separated words read from the standard input stored in an array.  The notion of "word" is the same to <code>cs1010_read_word()</code>.<br />
 Returns NULL if there is a memory allocation error.  If the returned value is non-NULL, the caller is responsible for freeing the memory allocated for each word and for the whole array by calling <code>free</code>.
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
@@ -1129,12 +1333,14 @@ Returns NULL if there is a memory allocation error.  If the returned value is no
  7
  8
  9
-10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="o">**</span> <span class="n">words</span> <span class="o">=</span> <span class="n">cs1010_read_word_array</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">size_t</span> <span class="n">k</span> <span class="o">=</span> <span class="n">cs1010_read_size_t</span><span class="p">();</span>
+<span class="kt">char</span><span class="o">**</span> <span class="n">words</span> <span class="o">=</span> <span class="n">cs1010_read_word_array</span><span class="p">(</span><span class="n">k</span><span class="p">);</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">words</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">// Do something with array words</span>
    <span class="o">:</span>
    <span class="o">:</span>
-  <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">k</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">free</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
   <span class="p">}</span>
   <span class="n">free</span><span class="p">(</span><span class="n">words</span><span class="p">);</span>
@@ -1143,8 +1349,8 @@ Returns NULL if there is a memory allocation error.  If the returned value is no
 </td></tr></table></p>
 </li>
 <li>
-<p><code>char** cs1010_read_line_array(long k)</code><br>
-Returns <code>k</code> new-line-separated words read from the standard input stored in an array.  The notion of line is the same to <code>cs1010_read_line()</code>.<br />
+<p><code>char** cs1010_read_line_array(size_t k)</code><br>
+Returns <code>k</code> new-line-separated words read from the standard input stored in an array.  The notion of line is the same to <code>cs1010_read_line()</code>. 
 Returns NULL if there is a memory allocation error.  If the returned value is non-NULL, the caller is responsible for freeing the memory allocated for each line and for the whole array by calling <code>free</code>.
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
@@ -1155,16 +1361,22 @@ Returns NULL if there is a memory allocation error.  If the returned value is no
  7
  8
  9
-10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="o">**</span> <span class="n">lines</span> <span class="o">=</span> <span class="n">cs1010_read_line_array</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">lines</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
-  <span class="c1">// Do something with array lines</span>
-   <span class="o">:</span>
-   <span class="o">:</span>
-  <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">free</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-  <span class="p">}</span>
-  <span class="n">free</span><span class="p">(</span><span class="n">lines</span><span class="p">);</span>
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">size_t</span> <span class="n">k</span> <span class="o">=</span> <span class="n">cs1010_read_size_t</span><span class="p">();</span>
+<span class="kt">char</span><span class="o">**</span> <span class="n">lines</span> <span class="o">=</span> <span class="n">cs1010_read_line_array</span><span class="p">(</span><span class="n">k</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">lines</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Deal with error</span>
+  <span class="k">return</span><span class="p">;</span>
 <span class="p">}</span>
+<span class="c1">// Do something with array lines</span>
+  <span class="o">:</span>
+  <span class="o">:</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">k</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">free</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="p">}</span>
+<span class="n">free</span><span class="p">(</span><span class="n">lines</span><span class="p">);</span>
 </code></pre></div>
 </td></tr></table></p>
 </li>
@@ -1209,6 +1421,15 @@ Print a given string <code>str</code> to the standard output.  These functions a
 <p>There is no <code>cs1010_print_char</code> method.  You can use <code>putchar</code> from the C standard library
 for this purpose.</p>
 </div>
+<ul>
+<li><code>void cs1010_print_pointer(void *ptr)</code> and <code>void cs1010_println_pointer(void *ptr)</code><br>
+(<ins class="critic">NEW</ins>) Print a given pointer <code>ptr</code> to the standard output in decimal format.
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="kt">long</span> <span class="o">*</span><span class="n">x</span><span class="p">;</span>
+  <span class="n">cs1010_println_pointer</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x</span><span class="p">);</span>
+</code></pre></div>
+</td></tr></table></li>
+</ul>
 <h2 id="clearing-screen">Clearing screen</h2>
 <p>The CS1010 library provides a function to clear your screen. 
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="n">cs1010_clear_screen</span><span class="p">();</span>
