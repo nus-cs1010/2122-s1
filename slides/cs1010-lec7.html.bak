@@ -192,7 +192,7 @@ class: middle
 ---
 class: middle,center
 
-       | Size Known in Advanced | Size Determined During Run-time 
+       | Size Known in Advanced | Size Deteremined During Run-time 
 -------|-----------------------|-----------------------------------
 Stack  | Fixed-size Array      | VLA (stay away)      
 Heap   | stay away             | `malloc` / `calloc`  
