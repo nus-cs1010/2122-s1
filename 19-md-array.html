@@ -1381,7 +1381,7 @@
 <p>Such an array is called a two-dimensional array, or 2D array.  We can have a 3D array, 4D array, and so on.</p>
 <p>We have seen three types of arrays.  On the stack, we have fixed-length arrays and variable-length arrays.  On the heap, we have dynamically allocated arrays.  A 2D array can mix different types of arrays.  Since we ban the use of variable length arrays, we will focus on fixed-length arrays and dynamically allocated arrays only.</p>
 <p>The example <code>matrix</code> above is a fixed-length 2D array.  In the memory, a continuous space to store 200 <code>long</code> values is been allocated.  We can visualize this as having 10 rows of <code>long</code> array, each array contains 20 columns of <code>long</code> values.</p>
-<p>Since <code>matrix[i]</code> is an array in the example above, <code>matrix[i]</code> decays to <code>&amp;matrix[i][0]</code>, the address of the first element in matrix[i].  After decay, <code>matrix[i]</code> can be treated as having the type <code>long *</code>.  </p>
+<p>Since <code>matrix[i]</code> is an array in the example above, <code>matrix[i]</code> decays to <code>&amp;matrix[i][0]</code>, the address of the first element in matrix[i].  After decay, <code>matrix[i]</code> can be treated as having the type <code>long *</code>.</p>
 <p>Further, since <code>matrix[i]</code> is a 1D array, we can pass <code>matrix[i]</code>, which is one of the rows in <code>matrix</code>, just like a normal 1D array:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
