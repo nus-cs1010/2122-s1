@@ -1541,11 +1541,11 @@ takes <span class="arithmatex">\(O(f_i)\)</span> time, where <span class="arithm
 <span class="cm"> *         Breaking ties by choosing the smaller index.</span>
 <span class="cm"> * @pre list is not NULL and list[0] .. list[last] are valid.</span>
 <span class="cm"> */</span>
-<span class="kt">long</span> <span class="nf">max</span><span class="p">(</span><span class="kt">long</span> <span class="n">last</span><span class="p">,</span> <span class="k">const</span> <span class="kt">long</span> <span class="n">list</span><span class="p">[])</span>
+<span class="kt">size_t</span> <span class="nf">max</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">last</span><span class="p">,</span> <span class="k">const</span> <span class="kt">long</span> <span class="n">list</span><span class="p">[])</span>
 <span class="p">{</span>
   <span class="kt">long</span> <span class="n">max_so_far</span> <span class="o">=</span> <span class="n">list</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
-  <span class="kt">long</span> <span class="n">max_index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">last</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">size_t</span> <span class="n">max_index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">last</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">max_so_far</span><span class="p">)</span> <span class="p">{</span>
       <span class="n">max_so_far</span> <span class="o">=</span> <span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
       <span class="n">max_index</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
@@ -1562,10 +1562,10 @@ takes <span class="arithmatex">\(O(f_i)\)</span> time, where <span class="arithm
 <span class="cm"> * @pre list is not NULL and list[0]..list[n-1] are valid</span>
 <span class="cm"> * @post The list is sorted.</span>
 <span class="cm"> */</span>
-<span class="kt">void</span> <span class="nf">selection_sort</span><span class="p">(</span><span class="kt">long</span> <span class="n">n</span><span class="p">,</span> <span class="kt">long</span> <span class="n">list</span><span class="p">[</span><span class="n">n</span><span class="p">])</span>
+<span class="kt">void</span> <span class="nf">selection_sort</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">n</span><span class="p">,</span> <span class="kt">long</span> <span class="n">list</span><span class="p">[</span><span class="n">n</span><span class="p">])</span>
 <span class="p">{</span>
-  <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">j</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kt">long</span> <span class="n">max_pos</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">list</span><span class="p">);</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">size_t</span> <span class="n">j</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">size_t</span> <span class="n">max_pos</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">list</span><span class="p">);</span>
     <span class="n">swap</span><span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="n">max_pos</span><span class="p">,</span> <span class="n">j</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">}</span>
