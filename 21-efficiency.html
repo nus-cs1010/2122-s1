@@ -773,6 +773,32 @@
   </li>
 
         
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="22-search.html" class="md-nav__link">
+      22. Searching
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="23-sort.html" class="md-nav__link">
+      23. Sorting
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1502,7 +1528,7 @@
 <p>Here, we improve the efficiency of <code>is_prime</code> by (i) returning <code>false</code> as soon as we found "proof" that the input is not a prime, and (ii) not checking for divisor that is redundant.</p>
 <h3 id="worst-case-performance">Worst-Case Performance</h3>
 <p>The two techniques we employed above behave slightly differently.  For (i), we <em>opportunistically</em> stop our computation once we know the answer when the input is not a prime.  However, in the <em>worst case</em>, when the input is a prime, we still have to check through all <span class="arithmatex">\(n-2\)</span> divisors, from 2 up to <span class="arithmatex">\(n-1\)</span>, before we can conclude that the input is a prime.  Thus, for (i), we make our program faster for certain inputs but in the worst case, we are not able to speed up the program.</p>
-<p>The second technique is more interesting and more fruitful.  With a little math, we can show that we only need to check for the divisor up to <span class="arithmatex">\(\sqrt{n}\)</span>.  Here, we are improving the <em>worst case</em> performance of <code>is_prime</code>, so whether the input is prime or not, we always have a speedup.  </p>
+<p>The second technique is more interesting and more fruitful.  With a little math, we can show that we only need to check for the divisor up to <span class="arithmatex">\(\sqrt{n}\)</span>.  Here, we are improving the <em>worst case</em> performance of <code>is_prime</code>, so whether the input is prime or not, we always have a speedup.</p>
 <p>How much is the speed up in the worst case?  In the input above, with the original slow code, in the worst case, I need to check through ~10,000,000,001 divisors.  With the faster version, I only need to check ~<span class="arithmatex">\(\sqrt{10,000,000,001}\)</span> = ~10,000 divisors.  That's where the five orders of magnitude speedup come from!</p>
 <h2 id="no-duplication">No Duplication</h2>
 <p>The second principle to improving the efficiency of the program is that <em>"No duplication"</em> -- we should not repeat work that has been done before.</p>
@@ -1673,26 +1699,22 @@ This sum is the sum of an arithmetic series and equals to <span class="arithmate
 <p>Let <span class="arithmatex">\(T(n)\)</span> is the running time of <code>fib(n)</code>.  Since <code>fib(n)</code> calls <code>fib(n-1)</code> and <code>fib(n-2)</code>,
 we can write <span class="arithmatex">\(T(n) = T(n-1) + T(n-2)\)</span>.  Just like the recursive function there is a base case: <span class="arithmatex">\(T(n) = O(1)\)</span> if <span class="arithmatex">\(n \le 2\)</span>.</p>
 <p>Note that <span class="arithmatex">\(O(1)\)</span> is also known as constant running time<sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
-<p>The equation for <span class="arithmatex">\(T(n)\)</span> above is known as a <em>recurrence relation</em>.  There are standard techniques to solve it (search for Master Theorem on the web), but we won't go into them in CS1010.  We will solve it from the first principle, by expanding the equation and observing the
-pattern.</p>
+<p>The equation for <span class="arithmatex">\(T(n)\)</span> above is known as a <em>recurrence relation</em>.  There are standard techniques to solve it (search for Master Theorem on the web), but we won't go into them in CS1010.  We will solve it from the first principle, by expanding the equation and observing the pattern.</p>
 <p>We know that <span class="arithmatex">\(T(n-1) &gt; T(n-2)\)</span>.  So,</p>
 <div class="arithmatex">\[
-T(n-2) + T(n-2) &lt; T(n) &lt; T(n-1) + T(n-1),
+T(n) &lt; T(n-1) + T(n-1),
 \]</div>
 <p>therefore,</p>
 <div class="arithmatex">\[
-2T(n-2) &lt; T(n) &lt; 2T(n-1).
+T(n) &lt; 2T(n-1).
 \]</div>
 <p>So</p>
 <div class="arithmatex">\[
 T(n) &lt; 2T(n-1) &lt; 4T(n-2) &lt; 8T(n-3) &lt; .. 2^{n-1}T(1) &lt; O(\frac{1}{2}2^n)
 \]</div>
-<p>and</p>
-<div class="arithmatex">\[
-T(n) &gt; 2T(n-2) &gt; 4T(n-3) &gt; 8T(n-4) &gt; .. 2^{n-2}T(1) &gt; O(\frac{1}{4}2^n)
-\]</div>
 <p>Since we can drop the multiplicative constant in Big-O notation, we have <span class="arithmatex">\(T(n) = O(2^n)\)</span>.</p>
 <p>This explains why the recursive solution to Fibonacci is so much slower than the iterative version, which is <span class="arithmatex">\(O(n)\)</span> -- one grows exponentially while the other linearly in terms of <span class="arithmatex">\(n\)</span>.</p>
+<p><ins class="critic">Note: the original note contains the derivation of relation <span class="arithmatex">\(T(n) &gt; O(\frac{1}{4}2^n)\)</span>, which is buggy.  The correct derivation of this turns out to be more complicated than I intended. I therefore omit it in the revised version.</ins></p>
 <h2 id="example-collatz">Example: Collatz</h2>
 <p>Not every program has a running time that is easy to analyze.  For instance, take <code>collatz</code>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
@@ -1815,13 +1837,13 @@ T(n) &gt; 2T(n-2) &gt; 4T(n-3) &gt; 8T(n-4) &gt; .. 2^{n-2}T(1) &gt; O(\frac{1}{
           </a>
         
         
-          <a href="ex00.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="22-search.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                0. Echo, Divide, Ones, BMI, Quadratic
+                22. Searching
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

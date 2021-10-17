@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://nus-cs1010.github.io/2122-s1/17-heap.html">
+        <link rel="canonical" href="https://nus-cs1010.github.io/2122-s1/22-search.html">
       
       <link rel="shortcut icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
     
     
       
-        <title>17. Heap - CS1010 Programming Methodology</title>
+        <title>22. Searching - CS1010 Programming Methodology</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#unit-17-heap" class="md-skip">
+        <a href="#unit-23-searching" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              17. Heap
+              22. Searching
             
           </span>
         </div>
@@ -559,104 +559,11 @@
           
 
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        17. Heap
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="17-heap.html" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="17-heap.html" class="md-nav__link">
       17. Heap
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#learning-objectives" class="md-nav__link">
-    Learning Objectives
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#variables-on-heap" class="md-nav__link">
-    Variables on Heap
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#manual-memory-allocation-deallocation" class="md-nav__link">
-    Manual Memory Allocation / Deallocation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#memory-deallocation" class="md-nav__link">
-    Memory Deallocation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#memory-reallocation" class="md-nav__link">
-    Memory Reallocation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cs1010-io-library" class="md-nav__link">
-    CS1010 I/O Library
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#problem-set" class="md-nav__link">
-    Problem Set
-  </a>
-  
-    <nav class="md-nav" aria-label="Problem Set">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#problem-set-171" class="md-nav__link">
-    Problem Set 17.1
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -717,11 +624,111 @@
           
 
 
+  
 
-  <li class="md-nav__item">
-    <a href="22-search.html" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        22. Searching
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="22-search.html" class="md-nav__link md-nav__link--active">
       22. Searching
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    Learning Objectives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linear-search" class="md-nav__link">
+    Linear Search
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binary-search" class="md-nav__link">
+    Binary Search
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-is-it-correct" class="md-nav__link">
+    Why is it correct?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-efficient-is-binary-search" class="md-nav__link">
+    How Efficient is Binary Search
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-magic-of-binary-search" class="md-nav__link">
+    The "Magic" of Binary Search
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-set-22" class="md-nav__link">
+    Problem Set 22
+  </a>
+  
+    <nav class="md-nav" aria-label="Problem Set 22">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-221" class="md-nav__link">
+    Problem 22.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-222" class="md-nav__link">
+    Problem 22.2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1278,51 +1285,58 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#variables-on-heap" class="md-nav__link">
-    Variables on Heap
+  <a href="#linear-search" class="md-nav__link">
+    Linear Search
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#manual-memory-allocation-deallocation" class="md-nav__link">
-    Manual Memory Allocation / Deallocation
+  <a href="#binary-search" class="md-nav__link">
+    Binary Search
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#memory-deallocation" class="md-nav__link">
-    Memory Deallocation
+  <a href="#why-is-it-correct" class="md-nav__link">
+    Why is it correct?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#memory-reallocation" class="md-nav__link">
-    Memory Reallocation
+  <a href="#how-efficient-is-binary-search" class="md-nav__link">
+    How Efficient is Binary Search
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cs1010-io-library" class="md-nav__link">
-    CS1010 I/O Library
+  <a href="#the-magic-of-binary-search" class="md-nav__link">
+    The "Magic" of Binary Search
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#problem-set" class="md-nav__link">
-    Problem Set
+  <a href="#problem-set-22" class="md-nav__link">
+    Problem Set 22
   </a>
   
-    <nav class="md-nav" aria-label="Problem Set">
+    <nav class="md-nav" aria-label="Problem Set 22">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#problem-set-171" class="md-nav__link">
-    Problem Set 17.1
+  <a href="#problem-221" class="md-nav__link">
+    Problem 22.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-222" class="md-nav__link">
+    Problem 22.2
   </a>
   
 </li>
@@ -1345,80 +1359,12 @@
               
                 
                 
-                <h1 id="unit-17-heap">Unit 17: Heap</h1>
+                <h1 id="unit-23-searching">Unit 23: Searching</h1>
 <h2 id="learning-objectives">Learning Objectives</h2>
-<p>After completing this unit, students should:</p>
-<ul>
-<li>understand the differences between the stack and the heap</li>
-<li>be able to use <code>malloc</code> and <code>calloc</code> to declare dynamically-sized arrays on the heap</li>
-<li>understand the importance of (i) checking for NULL and (ii) free the memory allocated on the heap</li>
-<li>aware of the possibility of memory leakage and avoid common mistakes that could lead to memory leaks</li>
-</ul>
-<h2 id="variables-on-heap">Variables on Heap</h2>
-<p>We have already seen what a call stack is and how the call stack works in <a href="13-call-stack.html">Unit 13</a>.  There is another important area of memory used by our programs, called the <em>heap</em>.</p>
-<p>The memory allocation on the heap can be done automatically or manually.  For variables allocated on the heap, its lifetime is either the same as the lifetime of the <em>whole</em> program.  An example of such a variable is a <em>global</em> variable -- a variable that is declared <em>outside</em> of any function and can be read or write anywhere in the program.  We have banned the use of global variables in CS1010.  Using a global variable makes your code hard to understand or reason about:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-<span class="n">foo</span><span class="p">();</span>
-<span class="c1">// { x == ?? }</span>
-</code></pre></div>
-</td></tr></table>
-<p>Suppose <code>x</code> is a global variable, we cannot assert anything about the property of <code>x</code> after calling <code>foo</code>, since <code>x</code> can be modified by <code>foo</code> or any function it calls, even though we <em>never pass <code>x</code> into <code>foo</code></em>.  This is worse than passing an array as we have seen in <a href="16-call-by-reference.html">Unit 16</a>!  Since now, to assert something about <code>x</code>, we need to trace through every line the code to how <code>x</code> is updated, even if the function does not take in <code>x</code> as a parameter.</p>
-<h2 id="manual-memory-allocation-deallocation">Manual Memory Allocation / Deallocation</h2>
-<p>Allocating memory on the heap, however, is useful if we want to allocate an array dynamically, i.e., not knowing what is the size of the array when we write the program.  Often, we need an array whose size depends on the input from the user, such as reading a string or reading a sequence of numbers.  We cannot use a fixed-length array unless we know for sure that the input size is limited, and we cannot use a variable-length array, since we may get a segfault if the array size is too big for the stack.  The only viable solution is to allocate the array on the heap.</p>
-<p>The C standard library provides a few functions related to memory allocation on the heap.  The header file for these functions is <code>stdlib.h</code>.  We are interested in <code>malloc</code> and <code>calloc</code>.  <code>malloc</code> (memory allocation) is declared as:
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="o">*</span><span class="nf">malloc</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">size</span><span class="p">);</span>
-</code></pre></div>
-</td></tr></table></p>
-<p>It takes in a parameter, <code>size</code>, which is the number of bytes of memory to be allocated and returns a pointer to the memory allocated if successful, or <code>NULL</code> otherwise.  This is a general function so the type of pointer returned is <code>void *</code> rather than a pointer to a specific type.  </p>
-<p>The type of <code>size</code> is <code>size_t</code>, which is an unsigned integer type defined in <code>stdlib.h</code> to represent the size of a type/variable in memory. You can read a <code>size_t</code> variable from the standard input using the CS1010 library function <code>cs1010_read_size_t()</code>.</p>
-<p>The function <code>calloc</code> (clear allocation) is declared as:
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="o">*</span><span class="nf">calloc</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">count</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">size</span><span class="p">);</span>
-</code></pre></div>
-</td></tr></table></p>
-<p><code>calloc</code> allocates memory for <code>count</code> items, each of <code>size</code> number of bytes, in a contiguous region in the memory and initializes all bits in this memory region to 0.  Except for the fact that <code>calloc</code> initializes the bits to 0, <code>calloc(count, size)</code> is the same as <code>malloc(count * size)</code>.</p>
-<p>We have seen in <a href="05-first-c.html">Unit 5</a> that the number of bytes needed to represent a type depends on the platform.  Suppose we want to allocate enough memory for, say, 10 <code>long</code> values, how do we know how many bytes are needed?  A <code>long</code> can be 4 bytes on some platforms, 8 bytes on others.  For this purpose, C provides a <code>sizeof</code> operator, that returns the number of bytes needed for a type or a variable (of type <code>size_t</code>)  So, to allocate memory for 10 <code>long</code> values, we say:
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="o">*</span><span class="n">array</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="mi">10</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">long</span><span class="p">));</span>
-</code></pre></div>
-</td></tr></table></p>
-<h2 id="memory-deallocation">Memory Deallocation</h2>
-<p>Even though the memory available on the heap is larger than the stack, it is not unlimited, and therefore we should still use the memory judiciously.   In particular, after we are done using the memory allocated to us, we should call the method <code>free</code>, passing in the pointer the memory region allocated, to have the memory region deallocated, returned to the OS to be reused by others.</p>
-<p>A common bug is for a programmer to access a memory that has been freed or free an allocated memory region more than once.  This would cause strange behaviors, possible crashes in random places if we access memory that is being used by others.  It is a good practice to set the pointer to NULL after <code>free</code>-ing the memory region so that we do not accidentally use it.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>free(buffer);
-buffer = NULL;
-</code></pre></div>
-</td></tr></table>
-<p>Another common bug is for programmers to request memory via <code>malloc</code> or related functions, but forgot to <code>free</code> it back to the OS.  As a result, as the program runs, it starts to hog the memory and the system will become slower and slower.   This bug is known as <em>memory leak</em>.</p>
-<p>Another possible bug is for programmers to change the pointer to the region of memory allocated.  For instance,
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>long *buffer = calloc(how_many, sizeof(long));
-buffer = cs1010_read_long_array(how_many);
-</code></pre></div>
-</td></tr></table></p>
-<p>After we execute the code such as the above, the pointer <code>buffer</code> will point to something new, and there is no longer a pointer pointing to allocate memory.  The memory allocated becomes unreachable, and therefore we can no longer free it!</p>
-<p>In CS1010, from now on, you are to make sure that memory that is allocated via <code>malloc</code> and related functions are <code>free</code> after it is used, including those allocated in the CS1010 I/O library.  The <a href="library.html">API documentation</a> tells you what are the values returned by the library that should be deallocated by the caller via <code>free</code>.</p>
-<h2 id="memory-reallocation">Memory Reallocation</h2>
-<p>If we allocate an array on the heap, we can even change the size of the array dynamically during run-time.  For instance, there could be cases where we don't know the size of the array we need.  We can allocate an array, say, of size <code>n</code>, at the beginning of our program.  As we populate the array, we may realize that <code>n</code> is too small, and we need a bigger array.  We can use the method <code>realloc</code> to reallocate our array to a larger size as needed.  Interested students can read the man page for <code>realloc</code> for more details. </p>
-<h2 id="cs1010-io-library">CS1010 I/O Library</h2>
-<p>To wrap up this unit, we will look at the CS1010 library functions that help us read in an array of either <code>long</code> values or <code>double</code> values.  These functions, <code>cs1010_read_long_array</code> or <code>cs1010_read_double_array</code> take in a parameter, which is the number of elements to read (of type <code>size_t</code>) and it returns a pointer to the array allocated within the function.</p>
-<p>A typical usage is as follows: we first read the size of the array <code>size</code> with <code>cs1010_read_size_t()</code>, then use <code>cs1010_read_long_array(size)</code> to read the array.</p>
-<p>Here is the incomplete version:
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">size_t</span> <span class="n">num_of_students</span> <span class="o">=</span> <span class="n">cs1010_read_size_t</span><span class="p">();</span>
-<span class="kt">long</span> <span class="o">*</span><span class="n">marks</span><span class="p">;</span>
-<span class="n">marks</span> <span class="o">=</span> <span class="n">cs1010_read_long_array</span><span class="p">(</span><span class="n">num_of_students</span><span class="p">);</span>
-<span class="k">for</span> <span class="p">(</span><span class="kt">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num_of_students</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">cs1010_println_long</span><span class="p">(</span><span class="n">marks</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-<span class="p">}</span>
-</code></pre></div>
-</td></tr></table></p>
-<p>This should be straightforward enough.  There are, however, two cases to consider.  What if the OS failed to allocate the memory for our array?  In this case, marks would be <code>NULL</code> and access <code>marks[i]</code> would cause a segfault. Second, we must return the memory allocated to us back to the OS once we are done.  To let go of this memory, we call the function <code>free</code>.  The complete code looks like this:</p>
+<p>After this unit students should be familiar with linear search and binary search algorithm, including understanding how the algorithms work, implementing the algorithms, arguing their correctness, and analyzing their running time.</p>
+<h2 id="linear-search">Linear Search</h2>
+<p>Let's continue the discussion on efficiency on one of the fundamental problems in computing: how to look for something.  Given a list of items <span class="arithmatex">\(L\)</span> and query item <span class="arithmatex">\(q\)</span>, we wish find if <span class="arithmatex">\(q\)</span> is in <span class="arithmatex">\(L\)</span>.  If <span class="arithmatex">\(q\)</span> is in <span class="arithmatex">\(L\)</span>, then we return the index of <span class="arithmatex">\(q\)</span>.  Otherwise, we return -1.</p>
+<p>Let's write a function to solve this.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -1430,56 +1376,23 @@ buffer = cs1010_read_long_array(how_many);
  9
 10
 11
-12
-13
-14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">size_t</span> <span class="n">num_of_students</span> <span class="o">=</span> <span class="n">cs1010_read_size_t</span><span class="p">();</span>
-<span class="kt">long</span> <span class="o">*</span><span class="n">marks</span><span class="p">;</span>
-<span class="n">marks</span> <span class="o">=</span> <span class="n">cs1010_read_long_array</span><span class="p">(</span><span class="n">num_of_students</span><span class="p">);</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">marks</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
-  <span class="c1">// signal error and return</span>
-<span class="p">}</span>
-<span class="k">for</span> <span class="p">(</span><span class="kt">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num_of_students</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">cs1010_println_long</span><span class="p">(</span><span class="n">marks</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-<span class="p">}</span>
-
-<span class="c1">// do other things to marks</span>
-  <span class="o">:</span>
-
-<span class="n">free</span><span class="p">(</span><span class="n">marks</span><span class="p">);</span>
-</code></pre></div>
-</td></tr></table>
-<p>The CS1010 I/O library, internally, allocates memory on the heap so that we can read in words, lines, or arrays of arbitrary length.</p>
-<p>The following shows the example of how <code>cs1010_read_long_array</code> is implemented with <code>calloc</code>.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">long</span><span class="o">*</span> <span class="nf">cs1010_read_long_array</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">how_many</span><span class="p">)</span>
-<span class="p">{</span>
-  <span class="kt">long</span> <span class="o">*</span><span class="n">buffer</span> <span class="o">=</span> <span class="n">calloc</span><span class="p">(</span><span class="n">how_many</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">long</span><span class="p">));</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">buffer</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * Look for q in list[i]..list[j].</span>
+<span class="cm"> *</span>
+<span class="cm"> * @return -1 if not found, the position of q in list otherwise.</span>
+<span class="cm"> */</span>
+<span class="kt">long</span> <span class="nf">search</span><span class="p">(</span><span class="kt">long</span> <span class="n">n</span><span class="p">,</span> <span class="k">const</span> <span class="kt">long</span> <span class="n">list</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="kt">long</span> <span class="n">q</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">q</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">i</span><span class="p">;</span>
   <span class="p">}</span>
-
-  <span class="k">for</span> <span class="p">(</span><span class="kt">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">how_many</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">buffer</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">cs1010_read_long</span><span class="p">();</span>
-  <span class="p">}</span>
-
-  <span class="k">return</span> <span class="n">buffer</span><span class="p">;</span>
+  <span class="k">return</span> <span class="mi">-1</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-<h2 id="problem-set">Problem Set</h2>
-<h3 id="problem-set-171">Problem Set 17.1</h3>
-<p>Draw the call stack and the heap, showing what happened when we run the following code:</p>
+<p>What is the worst-case running time, expressed in Big-O notation, of the function above?  Suppose the query <span class="arithmatex">\(q\)</span> is not in the list, we will have to scan the whole list, once.  The worst case running time is, therefore, <span class="arithmatex">\(O(n)\)</span>.</p>
+<p>Can we do better?  It turns out that this running time <span class="arithmatex">\(O(n)\)</span> is also the best that we can do because we cannot be sure that <span class="arithmatex">\(q\)</span> does not exist until we check every single element in the list.  So there is no shortcut.</p>
+<p>In previous units, we have seen recursive, divide-and-conquer solution for <code>max</code>.  We can easily adapt it to search as well:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -1498,27 +1411,211 @@ buffer = cs1010_read_long_array(how_many);
 16
 17
 18
-19</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">foo</span><span class="p">(</span><span class="kt">long</span> <span class="o">*</span><span class="n">y</span><span class="p">,</span> <span class="kt">long</span> <span class="o">*</span><span class="n">z</span><span class="p">)</span>
-<span class="p">{</span>
-  <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">-7</span><span class="p">;</span>
-  <span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">-8</span><span class="p">;</span>
-  <span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
-  <span class="n">z</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
-<span class="p">}</span>
-
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>  
-  <span class="kt">long</span> <span class="n">y</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">};</span>
-  <span class="kt">long</span> <span class="o">*</span><span class="n">z</span> <span class="o">=</span> <span class="n">calloc</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">long</span><span class="p">));</span>
-
-  <span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
-  <span class="n">z</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
-
-  <span class="n">foo</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">);</span>
+19</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * Look for q in list[i]..list[j].</span>
+<span class="cm"> *</span>
+<span class="cm"> * @return -1 if not found, the position of q in list otherwise.</span>
+<span class="cm"> */</span>
+<span class="kt">long</span> <span class="nf">search</span><span class="p">(</span><span class="k">const</span> <span class="kt">long</span> <span class="n">list</span><span class="p">[],</span> <span class="kt">long</span> <span class="n">i</span><span class="p">,</span> <span class="kt">long</span> <span class="n">j</span><span class="p">,</span> <span class="kt">long</span> <span class="n">q</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="mi">-1</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="kt">long</span> <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">list</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">==</span> <span class="n">q</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">mid</span><span class="p">;</span>
+  <span class="p">}</span> 
+  <span class="kt">long</span> <span class="n">found</span> <span class="o">=</span> <span class="n">search</span><span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">mid</span><span class="mi">-1</span><span class="p">,</span> <span class="n">q</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">found</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span> 
+    <span class="k">return</span> <span class="n">found</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">search</span><span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="n">mid</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">q</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
+<p>We then call this function with:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">search</span><span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="mi">-1</span><span class="p">,</span> <span class="n">q</span><span class="p">);</span>
+</code></pre></div>
+</td></tr></table>
+<p>In the code above, we first handle the base case where <code>i &gt; j</code>, which means that the sublist <code>list[i]..list[j]</code> to search for <code>q</code> in, is empty.  In this
+case, <code>q</code> is not found and we return -1.  If the list <code>list[i] .. list[j]</code> is not empty, we check the element in the middle if it is <code>q</code>.  If we have not yet find <code>q</code>, then we first search the left sublist.  If still not found, we search the right sublist. and return the result.</p>
+<p>In the worst case, when <code>q</code> is not in the list, we still have to check through every element in the list.  So the running time is still <span class="arithmatex">\(O(n)\)</span>.  It is no faster than searching with a for loop.</p>
+<p>We can also argue that the running time of the code above is <span class="arithmatex">\(O(n)\)</span>, using the recurrence relation:</p>
+<div class="arithmatex">\[
+   T(n)=
+\begin{cases}
+    2T(\frac{n}{2}) + 1,&amp; \text{if } n &gt; 1\\
+    1,           &amp; \text{otherwise}
+\end{cases}
+\]</div>
+<p>Here, </p>
+<div class="arithmatex">\[
+\begin{align*}
+T(n) &amp;= 2T(\frac{n}{2}) + 1  \\
+     &amp;= 4T(\frac{n}{4}) + 2 = ..  \\
+     &amp;= 2^kT(\frac{n}{2^k}) + k = .. \\ 
+     &amp;= nT(1) + \log n  \\
+     &amp;= O(n) \\
+\end{align*}
+\]</div>
+<h2 id="binary-search">Binary Search</h2>
+<p>But, do we always have to check every element in the list?  It turns out that, like many real-life situations, <em>if the input list is sorted</em>, we do not have to scan through every element.  We can eliminate a huge chunk of the elements based on whether a chosen element is bigger or smaller than <span class="arithmatex">\(q\)</span>.</p>
+<p>Suppose that the input list is sorted in increasing order.  Pick a random element <span class="arithmatex">\(x\)</span> from the list.  Any element to the left of <span class="arithmatex">\(x\)</span> must be less than or equal to <span class="arithmatex">\(x\)</span>, and any element to the right of <span class="arithmatex">\(x\)</span> must be greater or equal to <span class="arithmatex">\(x\)</span>. </p>
+<p><img alt="property" src="figures/search-and-sort/search-and-sort.001.png" style="width:300px" /></p>
+<p>Suppose that <span class="arithmatex">\(q &gt; x\)</span>, then we know that <span class="arithmatex">\(q\)</span> must be to the right of <span class="arithmatex">\(x\)</span>, there is no need to search to the left of <span class="arithmatex">\(x\)</span>.  Otherwise, <span class="arithmatex">\(q &lt; x\)</span>, and <span class="arithmatex">\(q\)</span> must be to the left of <span class="arithmatex">\(x\)</span>, and there is no need to search to the right of <span class="arithmatex">\(x\)</span>.</p>
+<p>We can modify the earlier recursive function into the one below.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * Look for q in list[i]..list[j].</span>
+<span class="cm"> *</span>
+<span class="cm"> * @pre list is sorted</span>
+<span class="cm"> * @return -1 if not found, the position of q in list otherwise.</span>
+<span class="cm"> */</span>
+<span class="kt">long</span> <span class="nf">search</span><span class="p">(</span><span class="k">const</span> <span class="kt">long</span> <span class="n">list</span><span class="p">[],</span> <span class="kt">long</span> <span class="n">i</span><span class="p">,</span> <span class="kt">long</span> <span class="n">j</span><span class="p">,</span> <span class="kt">long</span> <span class="n">q</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="mi">-1</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="kt">long</span> <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">list</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">==</span> <span class="n">q</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">mid</span><span class="p">;</span>
+  <span class="p">}</span> 
+  <span class="k">if</span> <span class="p">(</span><span class="n">list</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">q</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">search</span><span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">mid</span><span class="mi">-1</span><span class="p">,</span> <span class="n">q</span><span class="p">);</span>
+  <span class="p">}</span> 
+  <span class="k">return</span> <span class="n">search</span><span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="n">mid</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">q</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<p>We have changed the function so that it only search either the left side or the right side, but never both.</p>
+<p>The search algorithm above is called <em>binary search</em> since it repeatedly cut the range of values to search by half.</p>
+<h2 id="why-is-it-correct">Why is it correct?</h2>
+<p>It is not obvious at first glance that the code above correctly searches for <span class="arithmatex">\(q\)</span> in <span class="arithmatex">\(L\)</span>. </p>
+<p>Let's analyze this function more systematically by writing an assertion for this function.  What we want to do here is to eliminate elements in the array that cannot possibly contain <span class="arithmatex">\(q\)</span> -- these are elements outside of the <code>list[i]</code> .. <code>list[j]</code> range.  In other words, we want to assert that </p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// { q is not in list[0]..list[i-1] and list[j+1]..list[n-1] }</span>
+</code></pre></div>
+</td></tr></table>
+<p>at the beginning of the function.  In other words, this is a precondition for the function.</p>
+<p><img alt="property" src="figures/search-and-sort/search-and-sort.002.png" style="width:400px" /></p>
+<p>Let's see if this precondition is true at the beginning.  Since <span class="arithmatex">\(i\)</span> is <span class="arithmatex">\(0\)</span> and <span class="arithmatex">\(j\)</span> is <span class="arithmatex">\(n-1\)</span>, the ranges <code>list[0]..list[i-1]</code> and <code>list[j+1]..list[n-1]</code> are empty, so the assertion is true.</p>
+<p>What happen if <span class="arithmatex">\(i &gt; j\)</span>?  This implies that <span class="arithmatex">\(i - 1 &gt; j - 1\)</span>, so the range <code>list[0]</code>..<code>list[i-1]</code> and the range <code>list[j+1]</code>..<code>list[n-1]</code> overlap.  We can be sure that <span class="arithmatex">\(q\)</span> is not anywhere in <code>list</code>. </p>
+<p>Let's see how we ensure this assertion is true in the recursive call.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>       <span class="o">:</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">list</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">q</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nf">search</span><span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">mid</span><span class="mi">-1</span><span class="p">,</span> <span class="n">q</span><span class="p">);</span>
+  <span class="p">}</span> 
+       <span class="o">:</span>
+</code></pre></div>
+</td></tr></table>
+<p>Line 3 of the snippet above is invoked only if <code>list[mid] &gt; q</code>.  Since the array <code>list</code> is sorted, we know for sure that any element in <code>list[mid+1]</code>..<code>list[j]</code> is larger than <span class="arithmatex">\(q\)</span>.  So, <span class="arithmatex">\(q\)</span> cannot be anywhere in that range.  We can assert, between Lines 2 and 3 above:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// { q is not in list[0]..list[i-1] and list[mid]..list[n-1] }</span>
+</code></pre></div>
+</td></tr></table>
+<p>Thus, when Line 3 is invoked, the same assertion holds true.  You can apply the same argument to the call:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="k">return</span> <span class="nf">search</span><span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="n">mid</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">q</span><span class="p">);</span>
+</code></pre></div>
+</td></tr></table>
+<p>To summarize, we annotate the code above with the assertions:
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * Look for q in list[i]..list[j].</span>
+<span class="cm"> *</span>
+<span class="cm"> * @pre list is sorted</span>
+<span class="cm"> * @pre q is not in list[0]..list[i-1] and list[j+1]..list[n-1]</span>
+<span class="cm"> * @return -1 if not found, the position of q in list otherwise.</span>
+<span class="cm"> */</span>
+<span class="kt">long</span> <span class="nf">search</span><span class="p">(</span><span class="k">const</span> <span class="kt">long</span> <span class="n">list</span><span class="p">[],</span> <span class="kt">long</span> <span class="n">i</span><span class="p">,</span> <span class="kt">long</span> <span class="n">j</span><span class="p">,</span> <span class="kt">long</span> <span class="n">q</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// { q is not in list[0]..list[n-1] }</span>
+    <span class="k">return</span> <span class="mi">-1</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="kt">long</span> <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">list</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">==</span> <span class="n">q</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">mid</span><span class="p">;</span>
+  <span class="p">}</span> 
+  <span class="k">if</span> <span class="p">(</span><span class="n">list</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">q</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// { q is not in list[0]..list[i-1] and list[mid]..list[n-1] }</span>
+    <span class="k">return</span> <span class="n">search</span><span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">mid</span><span class="mi">-1</span><span class="p">,</span> <span class="n">q</span><span class="p">);</span>
+  <span class="p">}</span> 
+  <span class="c1">// { q is not in list[0]..list[mid] and list[j+1]..list[n-1] }</span>
+  <span class="k">return</span> <span class="n">search</span><span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="n">mid</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">q</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table></p>
+<h2 id="how-efficient-is-binary-search">How Efficient is Binary Search</h2>
+<p>We have seen that if the input list is not sorted, then we minimally have to check every element in the list, leading to an <span class="arithmatex">\(O(n)\)</span> algorithm.</p>
+<p>With a sorted input and using binary search, however, we can do a better.  Let's consider the worst case, where <span class="arithmatex">\(q\)</span> is not in the list.  Note that every comparison we make, we reduce the range of elements to search by half, until we reach one element.  We start with <span class="arithmatex">\(n\)</span> elements that could possibly contain <span class="arithmatex">\(q\)</span>.  After one comparison, we are left with <span class="arithmatex">\(n/2\)</span>.  After another comparison, we are left with <span class="arithmatex">\(n/4\)</span>, etc.  It takes only <span class="arithmatex">\(O(\log n)\)</span> steps until we reach one element in the list.  This is a big improvement over <span class="arithmatex">\(O(n)\)</span> time: Suppose n is 1,000,000,000,000,000.  Instead of scanning through and comparing one quadrillion elements, we only need to compare 50 of them!</p>
+<p>We can also argue that the running time of the code above is <span class="arithmatex">\(O(\log n)\)</span>, using the recurrence relation:</p>
+<div class="arithmatex">\[
+   T(n)=
+\begin{cases}
+    T(\frac{n}{2}) + 1,&amp; \text{if } n &gt; 1\\
+    1,           &amp; \text{otherwise}
+\end{cases}
+\]</div>
+<p>Now,</p>
+<div class="arithmatex">\[
+\begin{align*}
+T(n) &amp;= T(\frac{n}{2}) + 1  \\
+     &amp;= T(\frac{n}{4}) + 2 = ..  \\
+     &amp;= T(\frac{n}{2^k}) + k = .. \\ 
+     &amp;= T(1) + \log n  \\
+     &amp;= O(\log n) \\
+\end{align*}
+\]</div>
+<h2 id="the-magic-of-binary-search">The "Magic" of Binary Search</h2>
+<p>How did we reduce the running time of searching from <span class="arithmatex">\(O(n)\)</span>, where we have to check every element, to <span class="arithmatex">\(O(\log n)\)</span>?  The secret ingredient here is that <em>we exploit the underlying property</em> of the input array -- in this case, the fact that the array is sorted -- to help us eliminate some possibilities, allowing us to avoid redundant checks.</p>
+<p>As you will see in your upcoming assignment, exploiting underlying properties of inputs is a crucial weapon we have in speeding up our algorithm.</p>
+<h2 id="problem-set-22">Problem Set 22</h2>
+<h3 id="problem-221">Problem 22.1</h3>
+<p>Re-write the binary search algorithm using a loop.</p>
+<h3 id="problem-222">Problem 22.2</h3>
+<p>Instead of returning -1 if the query <code>q</code> is not found, modify the binary search algorithm in Problem 22.1 such that it returns either:</p>
+<ul>
+<li>a position <code>k</code>, such as <code>a[k] &lt;= q &lt;= a[k+1]</code>. </li>
+<li><code>-1</code> if <code>q &lt; a[0]</code> </li>
+<li><code>n-1</code> if <code>q &gt; a[n-1]</code></li>
+</ul>
                 
               
               
@@ -1537,7 +1634,7 @@ buffer = cs1010_read_long_array(how_many);
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="16-call-by-reference.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="21-efficiency.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1546,19 +1643,19 @@ buffer = cs1010_read_long_array(how_many);
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                16. Call-by-Reference
+                21. Efficiency
               </div>
             </div>
           </a>
         
         
-          <a href="18-string.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="23-sort.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                18. String
+                23. Sorting
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
