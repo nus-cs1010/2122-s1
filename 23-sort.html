@@ -1455,17 +1455,17 @@
 <span class="cm"> * @pre in[i] is between 0 and MAX for all i.</span>
 <span class="cm"> * @post out[] is sorted</span>
 <span class="cm"> */</span>
-<span class="kt">void</span> <span class="nf">counting_sort</span><span class="p">(</span><span class="k">const</span> <span class="kt">long</span> <span class="n">in</span><span class="p">[],</span> <span class="kt">long</span> <span class="n">out</span><span class="p">[],</span> <span class="kt">long</span> <span class="n">len</span><span class="p">)</span>
+<span class="kt">void</span> <span class="nf">counting_sort</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">len</span><span class="p">,</span> <span class="k">const</span> <span class="kt">long</span> <span class="n">in</span><span class="p">[</span><span class="n">len</span><span class="p">],</span> <span class="kt">long</span> <span class="n">out</span><span class="p">[</span><span class="n">len</span><span class="p">])</span>
 <span class="p">{</span>
-  <span class="kt">long</span> <span class="n">freq</span><span class="p">[</span><span class="n">MAX</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">0</span> <span class="p">};</span>
+  <span class="kt">size_t</span> <span class="n">freq</span><span class="p">[</span><span class="n">MAX</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">0</span> <span class="p">};</span>
 
-  <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">freq</span><span class="p">[</span><span class="n">in</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
   <span class="p">}</span>
 
-  <span class="kt">long</span> <span class="n">outpos</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="kt">size_t</span> <span class="n">outpos</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
   <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">MAX</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">j</span> <span class="o">=</span> <span class="n">outpos</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">outpos</span> <span class="o">+</span> <span class="n">freq</span><span class="p">[</span><span class="n">i</span><span class="p">];</span> <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">size_t</span> <span class="n">j</span> <span class="o">=</span> <span class="n">outpos</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">outpos</span> <span class="o">+</span> <span class="n">freq</span><span class="p">[</span><span class="n">i</span><span class="p">];</span> <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
       <span class="n">out</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
     <span class="p">}</span>
     <span class="n">outpos</span> <span class="o">+=</span> <span class="n">freq</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
@@ -1482,7 +1482,7 @@ three steps of counting sort.</p>
 <p>Let's verify now with a more formal and systematic way.  The inner loop:
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
-3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">j</span> <span class="o">=</span> <span class="n">outpos</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">outpos</span> <span class="o">+</span> <span class="n">freq</span><span class="p">[</span><span class="n">i</span><span class="p">];</span> <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="k">for</span> <span class="p">(</span><span class="kt">size_t</span> <span class="n">j</span> <span class="o">=</span> <span class="n">outpos</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">outpos</span> <span class="o">+</span> <span class="n">freq</span><span class="p">[</span><span class="n">i</span><span class="p">];</span> <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
       <span class="n">out</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
     <span class="p">}</span>
 </code></pre></div>
@@ -1643,18 +1643,16 @@ takes <span class="arithmatex">\(O(f_i)\)</span> time, where <span class="arithm
 10
 11
 12
-13
-14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">bubble_pass</span><span class="p">(</span><span class="kt">long</span> <span class="n">last</span><span class="p">,</span> <span class="kt">long</span> <span class="n">a</span><span class="p">[])</span>
-<span class="p">{</span>
-  <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">last</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">bubble_pass</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">last</span><span class="p">,</span> <span class="kt">long</span> <span class="n">a</span><span class="p">[])</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">last</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span> <span class="p">{</span>
       <span class="n">swap</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
     <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="kt">void</span> <span class="nf">bubble_sort</span><span class="p">(</span><span class="kt">long</span> <span class="n">n</span><span class="p">,</span> <span class="kt">long</span> <span class="n">a</span><span class="p">[</span><span class="n">n</span><span class="p">])</span> <span class="p">{</span>
-  <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">last</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">last</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="n">last</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+<span class="kt">void</span> <span class="nf">bubble_sort</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">n</span><span class="p">,</span> <span class="kt">long</span> <span class="n">a</span><span class="p">[</span><span class="n">n</span><span class="p">])</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">size_t</span> <span class="n">last</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">last</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="n">last</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">bubble_pass</span><span class="p">(</span><span class="n">last</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">}</span>
@@ -1663,7 +1661,7 @@ takes <span class="arithmatex">\(O(f_i)\)</span> time, where <span class="arithm
 <p>How many steps does it take to bubble-sort an array of <span class="arithmatex">\(n\)</span> elements?   Since the <span class="arithmatex">\(i\)</span>-th pass scans through <span class="arithmatex">\(n-i\)</span> elements, and there are a <span class="arithmatex">\(n\)</span> passes in total, the analysis is similar to the one we did for the algorithm to compute the selection sort -- bubble sort takes <span class="arithmatex">\(O(n^2)\)</span> steps.</p>
 <h2 id="insertion-sort">Insertion Sort</h2>
 <p>The next sorting algorithm we are going to discuss is the insertion sort.  This is another classic algorithm, that could perform better than bubble sort in some scenarios.  The idea of insertion sort is simple: we partition the input list into two, a sorted partition, and an unsorted partition.  Then we repeatedly take the first element from the unsorted partition, find its rightful place in the sorted partition, and <em>insert</em> it into place.  We start with a sorted partition of one element, and we end if the sorted partition contains all the elements.</p>
-<p>Take <code>8 4 23 42 16 15</code> as an example.  I will use <code>|</code> to partition the array into a left sorted partition, and a right, unsorted, partition.  </p>
+<p>Take <code>8 4 23 42 16 15</code> as an example.  I will use <code>|</code> to partition the array into a left sorted partition, and a right, unsorted, partition.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>8 | 4 23 42 16 15
 </code></pre></div>
 </td></tr></table>
@@ -1703,26 +1701,26 @@ takes <span class="arithmatex">\(O(f_i)\)</span> time, where <span class="arithm
 13
 14
 15
-16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">insert</span><span class="p">(</span><span class="kt">long</span> <span class="n">a</span><span class="p">[],</span> <span class="kt">long</span> <span class="n">curr</span><span class="p">)</span>
+16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">insert</span><span class="p">(</span><span class="kt">long</span> <span class="n">a</span><span class="p">[],</span> <span class="kt">size_t</span> <span class="n">curr</span><span class="p">)</span>
 <span class="p">{</span>
-  <span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="n">curr</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="kt">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="n">curr</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
   <span class="kt">long</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">curr</span><span class="p">];</span>
-  <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">temp</span> <span class="o">&lt;</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="p">{</span>
-    <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">temp</span> <span class="o">&lt;</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span> <span class="p">{</span>
+    <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
     <span class="n">i</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
   <span class="p">}</span>
-  <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+  <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kt">void</span> <span class="nf">insertion_sort</span><span class="p">(</span><span class="kt">long</span> <span class="n">n</span><span class="p">,</span> <span class="kt">long</span> <span class="n">a</span><span class="p">[</span><span class="n">n</span><span class="p">])</span> <span class="p">{</span>
-  <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">curr</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">curr</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">curr</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+<span class="kt">void</span> <span class="nf">insertion_sort</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">n</span><span class="p">,</span> <span class="kt">long</span> <span class="n">a</span><span class="p">[</span><span class="n">n</span><span class="p">])</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">size_t</span> <span class="n">curr</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">curr</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">curr</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">insert</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">curr</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
 <h2 id="animation">Animation</h2>
-<p>Animations for various sorting algorithms, including some which you will learn in CS2040C, are available online on <a href="https://visualgo.net/bn/sorting">VisuAlgo</a></p>
+<p>Animations for various sorting algorithms, including some which you will learn in CS2040C, are available online on <a href="https://visualgo.net/bn/sorting">VisuAlgo</a>.</p>
 <h2 id="problem-set-23">Problem Set 23</h2>
 <h3 id="problem-231">Problem 23.1</h3>
 <p>In the implementation of bubble sort above, we always make <span class="arithmatex">\(n-1\)</span> passes through the array.  It is, however, possible to stop the whole sorting procedure, when a pass through the array does not lead to any swapping.  Modify the code above to achieve this optimization.</p>
