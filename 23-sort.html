@@ -1703,7 +1703,7 @@ takes <span class="arithmatex">\(O(f_i)\)</span> time, where <span class="arithm
 15
 16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">insert</span><span class="p">(</span><span class="kt">long</span> <span class="n">a</span><span class="p">[],</span> <span class="kt">size_t</span> <span class="n">curr</span><span class="p">)</span>
 <span class="p">{</span>
-  <span class="kt">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="n">curr</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="kt">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="n">curr</span><span class="p">;</span>
   <span class="kt">long</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">curr</span><span class="p">];</span>
   <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">temp</span> <span class="o">&lt;</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span> <span class="p">{</span>
     <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
