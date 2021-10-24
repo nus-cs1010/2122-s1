@@ -16,7 +16,7 @@
     
     
       
-        <title>Unit 26: N Queens - CS1010 Programming Methodology</title>
+        <title>26. N-Queens - CS1010 Programming Methodology</title>
       
     
     
@@ -102,7 +102,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              Unit 26: N Queens
+              26. N-Queens
             
           </span>
         </div>
@@ -325,12 +325,14 @@
       
 
 
+  
+
 
   
-  <li class="md-nav__item md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
       Notes
@@ -640,6 +642,151 @@
     <a href="23-sort.html" class="md-nav__link">
       23. Sorting
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="24-tower.html" class="md-nav__link">
+      24. Tower of Hanoi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="25-permutation.html" class="md-nav__link">
+      25. Permutattion
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        26. N-Queens
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="26-queens.html" class="md-nav__link md-nav__link--active">
+      26. N-Queens
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    Learning Objectives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#searching-and-bracktacking" class="md-nav__link">
+    Searching and Bracktacking
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursive-formulation" class="md-nav__link">
+    Recursive Formulation
+  </a>
+  
+    <nav class="md-nav" aria-label="Recursive Formulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate-all-permutations" class="md-nav__link">
+    Generate All Permutations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#making-it-faster-pruning-impossible-solutions" class="md-nav__link">
+    Making It Faster: Pruning Impossible Solutions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-set-26" class="md-nav__link">
+    Problem Set 26
+  </a>
+  
+    <nav class="md-nav" aria-label="Problem Set 26">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-261" class="md-nav__link">
+    Problem 26.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-262" class="md-nav__link">
+    Problem 26.2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-complete-code" class="md-nav__link">
+    Appendix: Complete Code
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1791,6 +1938,41 @@ The generalized <span class="arithmatex">\(n\)</span>-queens problems were intro
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="25-permutation.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                25. Permutattion
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="ex00.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                0. Echo, Divide, Ones, BMI, Quadratic
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
